@@ -13,8 +13,11 @@ html(lang="ru")
         title #{title}
 
         link(rel="preload" href="css/main.css" as="style")
+        link(rel="stylesheet" href="css/main.css" type="text/css")
 
-        //link(rel="preload" href="/local/css/fonts/raty.woff2" as="font" crossorigin)
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet")
 
         link(rel="apple-touch-icon" sizes="180x180" href="favicon/xapple-touch-icon.png.pagespeed.ic.fg1H9XNPx6.webp")
         link(rel="icon" type="image/png" href="favicon/xfavicon-32x32.png.pagespeed.ic.jyhCVJTC09.webp" sizes="32x32")
@@ -34,4 +37,4 @@ html(lang="ru")
         footer.footer#footer
             include footer/footer
 
-        script(src="js/script.js")
+        script(src="js/script.js" async)

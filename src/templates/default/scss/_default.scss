@@ -34,11 +34,10 @@ body {
     padding: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    font-family: 'Gilroy', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-weight: normal;
     font-style: normal;
     color: $color-font-primary;
-    background: #fff url('../img/background.jpg') center 70px no-repeat;
     background-size: 120%;
 
     @media (min-width: $md) {
