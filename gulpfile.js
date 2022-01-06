@@ -94,11 +94,11 @@ function buildJs() {
         .pipe(browserSync.stream());
 }
 
-function buildFonts() {
-    return src('src/fonts/**/*')
-        .pipe(dest('build/fonts'))
-        .pipe(browserSync.stream());
-}
+// function buildFonts() {
+//     return src('src/fonts/**/*')
+//         .pipe(dest('build/fonts'))
+//         .pipe(browserSync.stream());
+// }
 
 function buildImages() {
     return src('src/img/**/*')
@@ -142,7 +142,7 @@ function server() {
 watch('src/**/*.scss', buildStyles);
 watch('src/**/*.pug', buildHtml);
 watch('src/**/*.js', buildJs);
-watch('src/fonts/**/*', buildFonts);
+// watch('src/fonts/**/*', buildFonts);
 watch('src/img/**/*', buildImages);
 watch('src/video/**/*', buildVideo);
 watch('.htaccess', buildHtaccess);
@@ -156,7 +156,7 @@ exports.default = series(
         buildStyles,
         buildHtml,
         buildJs,
-        buildFonts,
+        // buildFonts,
         buildImages,
         buildVideo,
         buildHtaccess,
