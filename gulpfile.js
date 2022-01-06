@@ -106,6 +106,12 @@ function buildImages() {
         .pipe(browserSync.stream());
 }
 
+function buildFavicon() {
+    return src('src/favicon/*')
+        .pipe(dest('build/favicon'))
+        .pipe(browserSync.stream());
+}
+
 function buildHtaccess() {
     return src('.htaccess')
         .pipe(dest('build'))
@@ -141,6 +147,7 @@ watch('src/img/**/*', buildImages);
 watch('src/video/**/*', buildVideo);
 watch('.htaccess', buildHtaccess);
 watch('*.php', buildPhp);
+watch('src/favicon/*', buildFavicon);
 
 // Build project
 exports.default = series(
@@ -153,7 +160,8 @@ exports.default = series(
         buildImages,
         buildVideo,
         buildHtaccess,
-        buildPhp
+        buildPhp,
+        buildFavicon
     ),
     server
 );
