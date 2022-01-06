@@ -1,0 +1,180 @@
+@import "../scss/variables";
+
+.modal {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // position: fixed;
+    // width: 100%;
+    // height: 100%;
+    // top: 0;
+    // left: -9999px;
+    // opacity: 0;
+    // background-color: rgba(255, 255, 255, 0.5);
+    // backdrop-filter: blur(0);
+    // z-index: 100;
+    // overflow: auto;
+    // transition:
+    //         left 0s linear .5s,
+    //         opacity .2s linear .2s,
+    //         backdrop-filter .2s linear .2s;
+
+    // &.show {
+    //     left: 0;
+    //     opacity: 1;
+    //     backdrop-filter: blur(5px);
+    //     transition:
+    //             left 0s linear 0s,
+    //             opacity .15s linear 0s,
+    //             backdrop-filter .15s linear 0s;
+
+    //     .modal__dialog {
+    //         opacity: 1;
+    //         transform: translate(0,0);
+    //     }
+    // }
+
+    // &__dialog {
+    //     position: relative;
+    //     width: 288px;
+    //     margin: .5rem;
+    //     opacity: 0;
+    //     transform: translateY(-20px);
+    //     transition: all .3s ease-out;
+
+    //     @media (min-width: $md) {
+    //         width: 480px;
+    //     }
+
+    //     &_hide {
+    //         opacity: 0 !important;
+    //         transform: translateY(-20px) !important;
+    //     }
+    // }
+
+    // &__content {
+    //     background: $color-back-primary;
+    //     border: 1px solid $color-accent-secondary;
+    //     box-sizing: border-box;
+    //     box-shadow: 0 10px 10px -10px rgba(48, 48, 48, 0.5);
+    //     border-radius: 10px;
+    //     padding: 20px 20px 30px;
+
+    //     @media (min-width: $md) {
+    //         padding: 35px 30px 45px;
+    //     }
+    // }
+
+    // &_video {
+    //     .modal__dialog {
+    //         width: auto;
+    //         max-width: 1000px;
+    //     }
+
+    //     .modal__close {
+    //         background-color: rgba(255, 255, 255, 0.7);
+    //         border-radius: 2px;
+    //         top: 5px;
+    //         right: 5px;
+    //         font-size: 30px;
+    //         z-index: 5;
+    //     }
+    // }
+
+    // &__video-content {
+    //     max-width: 100%;
+    //     height: auto;
+
+    //     video {
+    //         max-width: 100%;
+    //         height: auto;
+    //     }
+    // }
+
+    // &__header {
+    //     margin-bottom: 15px;
+    // }
+
+    // &__title {
+    //     padding: 0;
+    //     margin: 0;
+    //     font-weight: 600;
+    //     font-size: 16px;
+    //     line-height: 19px;
+    //     text-align: center;
+    //     color: $color-font-secondary;
+
+    //     @media (min-width: $md) {
+    //         font-size: 22px;
+    //         line-height: 1.2;
+    //     }
+
+    //     &.modal__title_shared {
+    //         font-weight: 500;
+    //     }
+    // }
+
+    // &__subtitle {
+    //     padding: 0;
+    //     margin: 0;
+    //     font-size: 14px;
+    //     line-height: 17px;
+    //     text-align: center;
+    //     color: $color-font-secondary;
+
+    //     @media (min-width: $md) {
+    //         font-size: 18px;
+    //         line-height: 1.2;
+    //     }
+    // }
+
+    // &__body {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    // }
+
+    // &__footer {
+    //     margin-top: 20px;
+    // }
+
+    // &__close {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     position: absolute;
+    //     width: 40px;
+    //     height: 40px;
+    //     top: 0;
+    //     right: 0;
+
+
+    //     &::before, &::after {
+    //         content: '';
+    //         display: block;
+    //         position: absolute;
+    //         top: 50%;
+    //         left: 50%;
+    //         width: 14px;
+    //         height: 3px;
+    //         background-color: #999;
+    //         transition: background-color .2s linear;
+    //     }
+
+    //     &::before {
+    //         transform: translate(-50%, -50%) rotate(45deg);
+    //     }
+
+    //     &::after {
+    //         transform: translate(-50%, -50%) rotate(-45deg);
+    //     }
+
+    //     @media (min-width: $xl) {
+    //         &:hover {
+    //             &::before, &::after {
+    //                 background-color: $color-accent-primary;
+    //             }
+    //         }
+    //     }
+    // }
+}

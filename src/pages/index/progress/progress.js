@@ -1,0 +1,5 @@
+let progressValueInterval;
+
+$(document).ready(() => {
+
+});
