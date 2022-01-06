@@ -106,6 +106,18 @@ function buildImages() {
         .pipe(browserSync.stream());
 }
 
+function buildHtaccess() {
+    return src('.htaccess')
+        .pipe(dest('build'))
+        .pipe(browserSync.stream());
+}
+
+function buildPhp() {
+    return src('*.php')
+        .pipe(dest('build'))
+        .pipe(browserSync.stream());
+}
+
 function buildVideo() {
     return src('src/video/**/*')
         .pipe(dest('build/video'))
@@ -127,6 +139,8 @@ watch('src/**/*.js', buildJs);
 watch('src/fonts/**/*', buildFonts);
 watch('src/img/**/*', buildImages);
 watch('src/video/**/*', buildVideo);
+watch('.htaccess', buildHtaccess);
+watch('*.php', buildPhp);
 
 // Build project
 exports.default = series(
@@ -137,7 +151,9 @@ exports.default = series(
         buildJs,
         buildFonts,
         buildImages,
-        buildVideo
+        buildVideo,
+        buildHtaccess,
+        buildPhp
     ),
     server
 );
