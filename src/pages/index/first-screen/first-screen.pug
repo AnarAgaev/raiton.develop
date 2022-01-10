@@ -1,5 +1,74 @@
 //- .first-screen_invisible
 section#firstScreen
-    .container
-        .row
-            .col-12
+    .first-screen__header
+        .container
+            .row
+                .col-12
+                    h1 какой матрас подходит именно вам?
+                    h2
+                        | Узнайте, ответив
+                        br
+                        | на 7 вопросов за 1 минуту
+
+    .first-screen__body
+        .container
+            .row
+                .col-12
+                    .first-screen__presentation
+                        button.first-screen__widget#showPresentation
+                            img(src="img/widget-back.png" alt="")
+                            span
+
+                        .first-screen__labels
+                            h5
+                                include ../../../img/star.svg
+                                | Выбор
+                                br
+                                | звезд
+                            p
+                                | Легендарные
+                                br
+                                | матрасы Sealy
+                                br
+                                | эксклюзивно
+                                br
+                                | в Райтон
+
+                            span
+                                include ../../../img/label.svg
+
+                .col-12
+                    .first-screen__content
+                        .first-screen__consultation
+                            .first-screen__links
+                                a(href="https://www.whatsapp.com/" target="_blank")
+                                   include ../../../img/icon-wa.svg
+                                button
+                                    | Получить консультацию
+                                    br
+                                    | от эксперта Райтон
+
+                            .first-screen__logo
+                                include ../../../img/logo-content.svg
+
+                        .first-screen__button
+                            p
+                                | Узнайте о подходящих матрасах
+                                br
+                                | прямо сейчас он-лайн
+                                include ../../../img/button-arr.svg
+
+                            button.btn
+                                | ПРОЙТИ ТЕСТ
+                                span
+                                    include ../../../img/icon-btn.svg
+
+
+                            span бесплатно и без регистрации
+
+                        .first-screen__result
+                            p По результатам теста вы получите:
+
+                            ul
+                                li Подборку матрасов точно под Ваши потребности
+                                li Чек-лист “Как выбрать идеальные матрас и подушку для здорового сна”

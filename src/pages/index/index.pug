@@ -3,17 +3,16 @@ extends ../../templates/default/template
 
 //- Variables for include this in used template
 block variables
-    - let title       = 'Raiton quiz landing'
+    - let title       = 'Райтон - матрас, который подходит именно вам.'
     - let description = 'Write description for this page here'
     - let keywords    = 'Write keywords for this page here'
     - let pageClass   = 'page-index'
 
 block content
-    //- include first-screen/first-screen
-    //- include questions-caption/questions-caption
+    include first-screen/first-screen
 
     //- section#activeQuestionPlace
 
-    //- include questions/question
+    include questions/questions
 
     //- include results/results
