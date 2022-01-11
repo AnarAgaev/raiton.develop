@@ -1,0 +1,71 @@
+//- .hidden
+
+.container.question#weightSingle.hidden
+    .row
+        .col-12
+            .question__caption.emerging
+                h2.question__title Какой вес у спящего?
+                p.question__subtitle
+                    span
+                        | Чтобы достичь максимального ортопедического эффекта, разгрузить позвоночник и мышцы  и высыпаться с комфортом.
+                        br
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias culpa cum cupiditate dolores eaque exercitationem fugiat harum laudantium nemo odit porro quaerat quam quos repellat soluta temporibus, veritatis voluptate. Consequatur?
+                    button
+
+        .col-12
+            .question__list.emerging
+
+                label.question__item.question__item_simple
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="weightSingle"
+                        data-question="Какой вес у спящего?"
+                        data-answer="До 100 кг."
+                        data-next-step-id="#")
+                    span.question__val До 100 кг
+
+                label.question__item.question__item_simple
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="weightSingle"
+                        data-question="Какой вес у спящего?"
+                        data-answer="До 120 кг."
+                        data-next-step-id="#")
+                    span.question__val До 120 кг
+
+                label.question__item.question__item_simple
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="weightSingle"
+                        data-question="Какой вес у спящего?"
+                        data-answer="Больше 120 кг."
+                        data-next-step-id="#")
+                    span.question__val Больше 120 кг
+
+                label.question__item.question__item_simple
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="weightSingle"
+                        data-question="Какой вес у спящего?"
+                        data-answer="Не знаю, покажите все варианты."
+                        data-next-step-id="#")
+                    span.question__val
+                        | Не знаю,
+                        br
+                        | покажите все
+                        br
+                        | варианты
+
+        .col-12
+            .question__comment.emerging
+                h3
+                    | Система начала подбор. Продолжайте отвечать
+                    include ../../../img/question-spin.svg
+                p(style="background-image: url('../../img/question-pic-23.png');")
+
+        .col-12
+            .question__btn.emerging
+                p
+                    button.btn.btn_back.btn-prev-step.animation-line(type="button")
+                        include ../../../img/icon-btn-back.svg
+                        span назад

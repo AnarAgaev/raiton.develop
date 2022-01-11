@@ -1,0 +1,67 @@
+//- .hidden
+
+.container.question#childrenAge.hidden
+    .row
+        .col-12
+            .question__caption.emerging
+                h2.question__title Сколько лет ребенку?
+
+        .col-12
+            .question__list.emerging
+
+                label.question__item.question__item_picture
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="childrenAge"
+                        data-question="Сколько лет ребенку?"
+                        data-answer="0-5"
+                        data-next-step-id="#")
+                    span.question__pic(style="background-image: url('img/questions/children-age_1.jpg');")
+                    span.question__val 0-5
+
+                label.question__item.question__item_picture
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="childrenAge"
+                        data-question="Сколько лет ребенку?"
+                        data-answer="6-13"
+                        data-next-step-id="#")
+                    span.question__pic(style="background-image: url('img/questions/children-age_2.jpg');")
+                    span.question__val 6-13
+
+                label.question__item.question__item_picture
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="childrenAge"
+                        data-question="Сколько лет ребенку?"
+                        data-answer="14-18"
+                        data-next-step-id="#")
+                    span.question__pic(style="background-image: url('img/questions/children-age_3.jpg');")
+                    span.question__val 14-18
+
+                label.question__item.question__item_picture
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="childrenAge"
+                        data-question="Сколько лет ребенку?"
+                        data-answer="Покажите все варианты."
+                        data-next-step-id="#")
+                    span.question__pic.question__pic_null ?
+                    span.question__val
+                        | Покажите все
+                        br
+                        | варианты
+
+        .col-12
+            .question__comment.emerging
+                h3
+                    | Система начала подбор. Продолжайте отвечать
+                    include ../../../img/question-spin.svg
+                p(style="background-image: url('../../img/question-pic-34.png');")
+
+        .col-12
+            .question__btn.emerging
+                p
+                    button.btn.btn_back.btn-prev-step.animation-line(type="button")
+                        include ../../../img/icon-btn-back.svg
+                        span назад

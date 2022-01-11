@@ -1,0 +1,86 @@
+//- .hidden
+
+.container.question#hardnessChildren.hidden
+    .row
+        .col-12
+            .question__caption.emerging
+                h2.question__title
+                    | Какой жесткости матрас
+                    br
+                    | нужен Вашему ребенку?
+                p.question__subtitle
+                    span
+                        | Чем жестче матрас — тем лучше он разгружает позвоночник. Чем мягче — тем больше расслабляются и восстанавливаются.
+                        br
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias culpa cum cupiditate dolores eaque exercitationem fugiat harum laudantium nemo odit porro quaerat quam quos repellat soluta temporibus, veritatis voluptate. Consequatur?
+                    button
+
+        .col-12
+            .question__list.emerging
+
+                label.question__item.question__item_simple
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="hardnessChildren"
+                        data-question="Какой жесткости матрас нужен Вашему ребенку?"
+                        data-answer="Жесткий."
+                        data-next-step-id="#")
+                    span.question__val Жесткий
+
+                label.question__item.question__item_simple
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="hardnessChildren"
+                        data-question="Какой жесткости матрас нужен Вашему ребенку?"
+                        data-answer="Двусторонний. Одна сторана мягкая, другая жесткая."
+                        data-next-step-id="#")
+                    span.question__val
+                        | Двусторонний
+                        span.question__val_small
+                            | Одна сторана мягкая,
+                            br
+                            | другая жесткая
+
+                label.question__item.question__item_simple
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="hardnessChildren"
+                        data-question="Какой жесткости матрас нужен Вашему ребенку?"
+                        data-answer="Средний."
+                        data-next-step-id="#")
+                    span.question__val Средний
+
+                label.question__item.question__item_simple
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="hardnessChildren"
+                        data-question="Какой жесткости матрас нужен Вашему ребенку?"
+                        data-answer="Не знаю, нужна консультация."
+                        data-next-step-id="#")
+                    span.question__val
+                        | Не знаю, нужна
+                        br
+                        | консультация
+
+                label.question__item.question__item_simple
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="hardnessChildren"
+                        data-question="Какой жесткости матрас нужен Вашему ребенку?"
+                        data-answer="Мягкий."
+                        data-next-step-id="#")
+                    span.question__val Мягкий
+
+        .col-12
+            .question__comment.emerging
+                h3
+                    | Система начала подбор. Продолжайте отвечать
+                    include ../../../img/question-spin.svg
+                p(style="background-image: url('../../img/question-pic-15.png');")
+
+        .col-12
+            .question__btn.emerging
+                p
+                    button.btn.btn_back.btn-prev-step.animation-line(type="button")
+                        include ../../../img/icon-btn-back.svg
+                        span назад

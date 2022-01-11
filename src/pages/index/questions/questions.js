@@ -1,3 +1,21 @@
+$(document).ready(() => {
+
+    // Открываем и закрываем текст подзаголовка
+    const toggleSubtitle = e => {
+        const _this = e.target,
+            container = $(_this)
+                .closest('.question__subtitle');
+
+        container.toggleClass('opened');
+    };
+
+    $('.question__subtitle button').on('click', toggleSubtitle);
+
+
+});
+
+
+
 // window.toggleQuestionDirection = undefined;
 
 // $(document).ready(function () {

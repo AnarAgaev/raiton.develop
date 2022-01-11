@@ -1,0 +1,64 @@
+//- .hidden
+
+.container.question#forWhom.hidden
+    .row
+        .col-12
+            .question__caption.emerging
+                h2.question__title Кто будет спать на новом матрасе?
+
+        .col-12
+            .question__list.emerging
+
+                label.question__item.question__item_picture
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="forWhom"
+                        data-question="Кто будет спать на новом матрасе?"
+                        data-answer="Ребенок."
+                        data-next-step-id="#")
+                    span.question__pic(style="background-image: url('img/questions/for-whom_1.jpg');")
+                    span.question__val Ребенок
+
+                label.question__item.question__item_picture
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="forWhom"
+                        data-question="Кто будет спать на новом матрасе?"
+                        data-answer="Взрослый."
+                        data-next-step-id="#")
+                    span.question__pic(style="background-image: url('img/questions/for-whom_2.jpg');")
+                    span.question__val Взрослый
+
+                label.question__item.question__item_picture
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="forWhom"
+                        data-question="Кто будет спать на новом матрасе?"
+                        data-answer="Пожилой."
+                        data-next-step-id="#")
+                    span.question__pic(style="background-image: url('img/questions/for-whom_3.jpg');")
+                    span.question__val Пожилой
+
+                label.question__item.question__item_picture
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="forWhom"
+                        data-question="Кто будет спать на новом матрасе?"
+                        data-answer="Пока не знаю."
+                        data-next-step-id="#")
+                    span.question__pic.question__pic_null ?
+                    span.question__val Пока не знаю
+
+        .col-12
+            .question__comment.emerging
+                h2
+                    | Начинайте отвечать
+                    include ../../../img/question-spin.svg
+                p(style="background-image: url('../../img/question-pic-all.png');")
+
+        .col-12
+            .question__btn.emerging
+                p
+                    button.btn.btn_back.btn-prev-step.animation-line(type="button")
+                        include ../../../img/icon-btn-back.svg
+                        span назад

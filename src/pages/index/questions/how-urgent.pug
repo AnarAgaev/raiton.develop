@@ -1,0 +1,66 @@
+//- .hidden
+
+.container.question#howUrgent
+    .row
+        .col-12
+            .question__caption.emerging
+                h2.question__title Как срочно Вам нужен матрас?
+
+        .col-12
+            .question__list.emerging
+
+                label.question__item.question__item_simple
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="howUrgent"
+                        data-question="Как срочно Вам нужен матрас?"
+                        data-answer="Как можно скорее."
+                        data-next-step-id="#")
+                    span.question__val
+                        | Как можно
+                        br
+                        | скорее
+
+                label.question__item.question__item_simple
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="howUrgent"
+                        data-question="Как срочно Вам нужен матрас?"
+                        data-answer="Через 1 месяц."
+                        data-next-step-id="#")
+                    span.question__val Через 1 месяц
+
+                label.question__item.question__item_simple
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="howUrgent"
+                        data-question="Как срочно Вам нужен матрас?"
+                        data-answer="Через 3 месяца."
+                        data-next-step-id="#")
+                    span.question__val Через 3 месяца
+
+                label.question__item.question__item_simple
+                    input.controller.btn-next-step.invisible(
+                        type="radio"
+                        name="howUrgent"
+                        data-question="Как срочно Вам нужен матрас?"
+                        data-answer="Не знаю, пока присматриваюсь."
+                        data-next-step-id="#")
+                    span.question__val
+                        | Не знаю, пока
+                        br
+                        | присматриваюсь
+
+        .col-12
+            .question__comment.emerging
+                h3
+                    | Система начала подбор. Продолжайте отвечать
+                    include ../../../img/question-spin.svg
+                p(style="background-image: url('../../img/question-pic-9.png');")
+
+        .col-12
+            .question__btn.emerging
+                p
+                    button.btn.btn_back.btn-prev-step.animation-line(type="button")
+                        include ../../../img/icon-btn-back.svg
+                        span назад
