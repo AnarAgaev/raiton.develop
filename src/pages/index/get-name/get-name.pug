@@ -1,0 +1,46 @@
+include ../loader/loader
+
+//- .hidden
+.container.question#getNane.hidden
+    .row
+        .col-12
+            .get-name__caption.emerging
+                h2.get-name__title
+                    | Укажите имя для регистрации
+                    br
+                    | в системе
+
+        .col-12
+            .get-name__form.emerging
+                form.form(action="" method="GET")
+                    input(type="hidden" value="form-name" name="form")
+                    label.form__group
+                        input.controller#name(
+                            type="text"
+                            name="name"
+                            data-question="Имя пользователя"
+                            data-answer=""
+                            placeholder="Введите Ваше имя")
+
+                    label.form__group
+                        button.btn.btn-next-step.animation-line(type="button" disabled) к результату
+
+        .col-12
+            .get-name__loader.emerging
+                h2.get-name__title
+                    | Формируем предварительный
+                    br
+                    | результат
+
+                +loader
+
+        .col-12
+            .get-name__check-list.emerging
+                ul
+                    li
+                        include ../../../img/icon-check-list.svg
+                        | Формируем подборку
+
+                    li
+                        include ../../../img/icon-check-list.svg
+                        | Готовим чек-лист

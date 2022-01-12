@@ -1,0 +1,38 @@
+from.form.form_get-contact(action="" method="GET")
+    input(type="hidden" value="form-get-contact" name="form")
+
+    ul.form_get-contact__connects
+        li
+            label
+                input.controller.invisible(
+                    type="radio"
+                    name="connect"
+                    data-question=""
+                    data-answer="WhatsApp")
+                span.icon.icon_whatsapp
+                    include ../../../img/icon-whatsapp.svg
+                span.caption WhatsApp
+                span.checker
+                span.back
+
+        li
+            label
+                input.controller.invisible(
+                    type="radio"
+                    name="connect"
+                    data-question=""
+                    data-answer="Телефон (SMS)")
+                span.icon.icon_phone
+                    include ../../../img/icon-phone.svg
+                span.caption Телефон (SMS)
+                span.checker
+                span.back
+
+    label.form__group
+        input(type="tel"
+            name="phone"
+            value=""
+            placeholder="Введите Ваш номер телефона")
+
+    label.form__group
+        button.btn.btn-next-step.animation-line(type="button" disabled) получить результат

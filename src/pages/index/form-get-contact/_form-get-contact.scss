@@ -1,0 +1,113 @@
+@import "../../../templates/default/scss/variables";
+
+
+.form_get-contact {
+
+    &__connects {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+
+        label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            width: 140px;
+            height: 110px;
+            background: $color-back-primary;
+        }
+
+        .icon {
+            display: block;
+            position: relative;
+            width: 36px;
+            height: 36px;
+            margin-top: 12px;
+
+            svg {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                circle, path {
+                    transition: all .2s linear;
+                }
+            }
+
+            &.icon_whatsapp {
+                .iconWhatsAppFillInactive {
+                    opacity: 1;
+                }
+
+                .iconWhatsAppFillActive {
+                    opacity: 0;
+                }
+            }
+        }
+
+        .caption {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 7px;
+            margin-bottom: 10px;
+            font-weight: normal;
+            font-size: 11px;
+            line-height: 13px;
+            text-align: center;
+        }
+
+        .checker {
+            display: block;
+            position: relative;
+            width: 21px;
+            height: 21px;
+            box-shadow: inset 0 0 0 2px #fff;
+            border: 2px solid #c4c4c4;
+            background-color: transparent;
+            border-radius: 50%;
+            transition: all .2s linear;
+        }
+
+        .back {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+            border-radius: 10px;
+            transition: all .2s linear;
+        }
+
+        input:checked {
+            & ~ .checker {
+                border-color: #828282;
+                background-color: $color-accent-primary;
+            }
+
+            & ~ .back {
+                box-shadow: 0 4px 11px rgba(0, 0, 0, 0.15);
+            }
+
+            & ~ .icon_phone circle {
+                fill: $color-accent-primary;
+            }
+
+            & ~ .icon_whatsapp {
+                .iconWhatsAppFillInactive {
+                    opacity: 0;
+                }
+
+                .iconWhatsAppFillActive {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

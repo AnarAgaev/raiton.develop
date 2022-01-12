@@ -109,7 +109,6 @@ button {
     justify-content: center;
     position: relative;
     width: 100%;
-    text-align: center;
     color: $color-font-secondary;
     outline: 0;
     overflow: hidden;
@@ -121,14 +120,16 @@ button {
     box-sizing: border-box;
     box-shadow: 0 3px 0 #1A7E09, 0 15px 10px -10px rgba(69, 172, 52, 0.8);
     border-radius: 10px;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 18px;
     transition: opacity .3s linear;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
 
     &:disabled {
         cursor: not-allowed;
-        opacity: 0.7;
+        opacity: 0.6;
     }
 
     &_back {
@@ -160,6 +161,7 @@ button {
     width: 100%;
 
     &__group {
+        display: block;
         margin-bottom: 15px;
     }
 }
@@ -175,63 +177,62 @@ input, .input {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    height: 40px;
-    //background: $color-back-primary;
-    border: 1px solid #d3d3d3;
+    height: 50px;
     box-sizing: border-box;
-    box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 999px;
     padding: 0 1rem;
     font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
     cursor: pointer;
+    background: $color-back-primary;
+    border: 1px solid $color-accent-primary;
+    border-radius: 10px;
 
     &::-webkit-input-placeholder {
-        color: #aaa;
+        color: #bbbbbb;
         opacity: 1;
         transition: opacity 0.2s ease;
     }
 
     &::-moz-placeholder {
-        color: #aaa;
+        color: #bbbbbb;
         opacity: 1;
         transition: opacity 0.2s ease;
     }
 
     &:-moz-placeholder {
-        color: #aaa;
+        color: #bbbbbb;
         opacity: 1;
         transition: opacity 0.2s ease;
     }
 
     &:-ms-input-placeholder {
-        color: #aaa;
+        color: #bbbbbb;
         opacity: 1;
         transition: opacity 0.2s ease;
     }
 
     &:focus::-webkit-input-placeholder {
-        color: #aaa;
+        color: #bbbbbb;
         opacity: 0;
         transition: opacity 0.2s ease;
     }
 
     &:focus::-moz-placeholder {
-        color: #aaa;
+        color: #bbbbbb;
         opacity: 0;
         transition: opacity 0.2s ease;
     }
 
     &:focus:-moz-placeholder {
-        color: #aaa;
+        color: #bbbbbb;
         opacity: 0;
         transition: opacity 0.2s ease;
     }
 
     &:focus:-ms-input-placeholder {
-        color: #aaa;
+        color: #bbbbbb;
         opacity: 0;
         transition: opacity 0.2s ease;
     }
