@@ -8,6 +8,20 @@
     margin-top: 20px;
     margin-bottom: 30px;
 
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        margin-left: 70px;
+        opacity: 0.2;
+        width: 109px;
+        height: 132px;
+        background: url("../img/question-back.png") center no-repeat;
+        z-index: -1;
+    }
+
     &__list {
         display: flex;
         justify-content: space-between;

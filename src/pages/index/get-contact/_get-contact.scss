@@ -49,4 +49,87 @@
             border-top: 7px solid $color-back-secondary;
         }
     }
+
+    &__list {
+        margin-top: 15px;
+
+        li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 19px;
+
+            &::before {
+                content: "";
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: $color-accent-primary;
+                font-weight: bold;
+                font-size: 10px;
+                line-height: 12px;
+                color: $color-font-secondary;
+            }
+        }
+
+        li:first-child {
+            padding: 0;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            
+            &::before {
+                display: none;
+            }
+        }
+
+        li:nth-child(2)::before {
+            content: "1";
+        }
+        li:nth-child(3)::before {
+            content: "2";
+        }
+    }
+
+    &__presentation {
+        width: 288px;
+        height: 401px;
+        margin: 15px auto 30px;
+        background: url("../img/phone-back.png") center no-repeat;
+    }
+
+    &__lock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% + 30px);
+        height: 55px;
+        background-color: $color-accent-primary;
+        margin: 30px -15px 30px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 22px;
+        color: $color-font-secondary;
+        animation: lock-animation 1.3s linear infinite;
+
+        img {
+            position: relative;
+            margin-top: 5px;
+        }
+    }
+}
+
+@keyframes lock-animation {
+    0% { transform: translateY(0px); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(0px); }
+    75% { transform: translateY(5px); }
+    100% { transform: translateY(0px); }
 }

@@ -28,11 +28,13 @@ from.form.form_get-contact(action="" method="GET")
                 span.checker
                 span.back
 
-    label.form__group
-        input(type="tel"
-            name="phone"
-            value=""
-            placeholder="Введите Ваш номер телефона")
+    .controller-wrap
+        //- .hide
+        label.form__group.hide
+            input(type="tel"
+                name="phone"
+                value=""
+                placeholder="Введите Ваш номер телефона")
 
     label.form__group
         button.btn.btn-next-step.animation-line(type="button" disabled) получить результат
