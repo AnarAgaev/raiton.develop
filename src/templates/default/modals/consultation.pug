@@ -1,41 +1,48 @@
-//- #fastConsultationModal.modal.modal_consultation
-//-     .modal__dialog
-//-         .modal__content
-//-             button.modal__close(type='button')
+//- .show
+#fastConsultationModal.modal.modal_consultation
 
-//-             .modal__header
-//-                 h5.modal__title.mb-4 Получите быструю профессиональную консультацию прямо сейчас
+    //- .hidden
+    .modal__dialog
+        .modal__content
+            .modal__body
+                button.modal__close.modalCloseBtn(type='button')
 
-//-             .modal__body.px-4.mb-4
-//-                 ul
-//-                     li Вы узнаете:
-//-                     li Как правильно подобрать уход для вашей кожи;
-//-                     li На какие ингредиенты средств ухода надо обратить особое внимание;
-//-                     li О преимуществах и отличиях средств космецевтики от косметических средств.
+                h5.modal__title
+                    | Получите быструю
+                    br
+                    | профессиональную
+                    br
+                    | консультацию прямо сейчас
 
-//-             .modal__footer
-//-                 form.form(action="" method="POST")
-//-                     input(type="hidden" value="callback" name="form")
-//-                     .form__group
-//-                         label
-//-                             input.form__control(
-//-                                 type='tel'
-//-                                 name="phone"
-//-                                 placeholder='Введите номер телефона')
-//-                     .form__group
-//-                         label
-//-                             input.form__control.controller(
-//-                                 type='text'
-//-                                 name="time"
-//-                                 placeholder='Укажите удобное время для звонка')
-//-                     button.btn(type='submit' disabled) Получить консультацию
+                form.form(action="" method="POST")
+                    input(type="hidden" value="consultation" name="form")
+                    .form__group
+                        label
+                            input.form__control(
+                                type='tel'
+                                name="phone"
+                                placeholder='Введите ваш номер телефона')
+                    .form__group
+                        label
+                            input.form__control.controller(
+                                type='text'
+                                name="time"
+                                placeholder='Укажите удобное время для звонка ')
+                    button.btn(type='submit' disabled) Получить консультацию
 
-//-     .modal__dialog.modal__dialog_hide.hidden
-//-         .modal__content
-//-             button.modal__close(type='button')
+            .modal__footer
+                ul
+                    li Вы узнаете:
+                    li Какой матрас лучше — пружинный или беспружинный, и в чем их преимущества и недостатки?
+                    li Как долго прослужит матрас?
+                    li Какую жесткость матраса выбрать?
+                    li В чем особенности разных наполнителей и что подойдет именно Вам?
 
-//-             .modal__header
-//-                 h5.modal__title СПАСИБО!
-
-//-             .modal__body
-//-                 p.modal__subtitle В течении 30 минут наш дизайнер вам перезвонит.
+    //- .modal__dialog_hide .hidden
+    .modal__dialog.modal__dialog_hide.hidden
+        .modal__content
+            .modal__body.mb-0
+                button.modal__close.modalCloseBtn(type='button')
+                h5.modal__title СПАСИБО!
+                p.modal__subtitle До того, как мы перезвоним, посмотрите больше информации на нашем сайте
+                a.btn.mt-3.modalCloseBtn(href="https://quiz24.ru/" target="_blank") перейти на сайт

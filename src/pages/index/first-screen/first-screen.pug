@@ -43,7 +43,7 @@ section#firstScreen
                             .first-screen__links
                                 a(href="https://www.whatsapp.com/" target="_blank")
                                    include ../../../img/icon-wa.svg
-                                button
+                                button(data-toggle="modal" data-target="#fastConsultationModal")
                                     | Получить консультацию
                                     br
                                     | от эксперта Райтон
@@ -58,7 +58,7 @@ section#firstScreen
                                 | прямо сейчас он-лайн
                                 include ../../../img/button-arr.svg
 
-                            button.btn.animation-line
+                            button.btn.animation-line.go-to-quiz
                                 | ПРОЙТИ ТЕСТ
                                 span
                                     include ../../../img/icon-btn.svg
