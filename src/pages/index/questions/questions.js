@@ -1,5 +1,3 @@
-// window.toggleQuestionDirection = undefined;
-
 $(document).ready(() => {
 
     // Открываем и закрываем текст
@@ -79,6 +77,15 @@ $(document).ready(() => {
             showQuestion(animationDuration, nextQuestion);
             pushQuestionToStepsMap(nextQuestion);
             setQuestionsToBody(animationDuration, nextQuestion);
+
+            /* Чекаем слудующий вопрос и если
+             * это Результаты, запускаем логику
+             * для блока с результатами
+             */
+            if ($(nextQuestion).attr('id') === 'results') {
+                initialResults();
+            }
+
         } else {
             updateQuestionWrapperHeight(prevQuestion);
             toggleQuestions(animationDuration, thisQuestion, prevQuestion);

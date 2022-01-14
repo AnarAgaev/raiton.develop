@@ -73,7 +73,7 @@ STORE = new Proxy(STORE, {
         //     updateEmails(val);
         // }
 
-        // На повпросе преед запросом имени запускаем прогресс
+        // На вопросе преед запросом имени запускаем прогресс
         if (prop === 'howUrgent') {
             initialProgressLoader();
         }

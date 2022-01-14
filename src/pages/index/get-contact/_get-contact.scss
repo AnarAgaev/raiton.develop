@@ -104,27 +104,30 @@
         margin: 15px auto 30px;
         background: url("../img/phone-back.png") center no-repeat;
     }
+}
 
-    &__lock {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: calc(100% + 30px);
-        height: 55px;
-        background-color: $color-accent-primary;
-        margin: 30px -15px 30px;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 22px;
-        color: $color-font-secondary;
-        animation: lock-animation 1.3s linear infinite;
+.lock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% + 30px);
+    height: 55px;
+    background-color: $color-accent-primary;
+    margin: 30px -15px 30px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-font-secondary;
 
-        img {
-            position: relative;
-            margin-top: 5px;
-        }
+    img {
+        position: relative;
+        margin-top: 5px;
     }
 }
+#getContact .lock {
+    animation: lock-animation 1.3s linear infinite;
+}
+
 
 @keyframes lock-animation {
     0% { transform: translateY(0px); }

@@ -1,5 +1,17 @@
 @import "../../../templates/default/scss/variables";
 
+#progress {
+    height: auto;
+    max-height: 200px;
+    opacity: 1;
+    transition: all .5s linear;
+
+    &.hide {
+        max-height: 0;
+        opacity: 0;
+    }
+}
+
 .progress {
     display: flex;
     flex-direction: column;
