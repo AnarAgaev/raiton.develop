@@ -60,6 +60,7 @@
             background-color: $color-accent-primary;
             opacity: 0;
             transition: all .5s ease-out;
+            transition-delay: .3s;
         }
 
         &::after {
@@ -70,21 +71,9 @@
             height: 100%;
             opacity: 0;
             transition: opacity .5s ease-out;
+            transition-delay: 0s;
             background: linear-gradient(267.16deg, #45AC34 7.68%, #67D854 53.18%, #45AC34 90.4%);
             animation: progress 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite;
-        }
-    }
-
-    &__item_progressed {
-       &::before {
-           width: 100%;
-           opacity: 1;
-       }
-    }
-
-    &__item_active {
-        &::after {
-            opacity: 1;
         }
     }
 
@@ -104,4 +93,159 @@
 @keyframes progress {
     from { transform: translateX(-100%); }
     to { transform: translateX(100%); }
+}
+
+[data-current-question="forWhom"] {
+    #progress .progress__item {
+        &:nth-child(1)::before {
+            width: 100%;
+            opacity: 1;
+            transition-delay: 0s;
+        }
+
+        &:nth-child(1)::after {
+            opacity: 1;
+            transition-delay: 1s;
+        }
+    }
+
+    #progressNumber::before { content: "1" }
+}
+
+[data-current-question="childrenAge"] {
+    #progress .progress__item {
+        &:nth-child(-n+2)::before {
+            width: 100%;
+            opacity: 1;
+            transition-delay: 0s;
+        }
+
+        &:nth-child(2)::after {
+            opacity: 1;
+            transition-delay: 1s;
+        }
+    }
+
+    #progressNumber::before { content: "2" }
+}
+
+[data-current-question="hardnessChildren"] {
+    #progress .progress__item {
+        &:nth-child(-n+3)::before {
+            width: 100%;
+            opacity: 1;
+            transition-delay: 0s;
+        }
+
+        &:nth-child(3)::after {
+            opacity: 1;
+            transition-delay: 1s;
+        }
+    }
+
+    #progressNumber::before { content: "3" }
+}
+
+[data-current-question="numberOfPersons"] {
+    #progress .progress__item {
+        &:nth-child(-n+2)::before {
+            width: 100%;
+            opacity: 1;
+            transition-delay: 0s;
+        }
+
+        &:nth-child(2)::after {
+            opacity: 1;
+            transition-delay: 1s;
+        }
+    }
+
+    #progressNumber::before { content: "2" }
+}
+
+[data-current-question="weightOne"],
+[data-current-question="weightTwo"] {
+    #progress .progress__item {
+        &:nth-child(-n+3)::before {
+            width: 100%;
+            opacity: 1;
+            transition-delay: 0s;
+        }
+
+        &:nth-child(3)::after {
+            opacity: 1;
+            transition-delay: 1s;
+        }
+    }
+
+    #progressNumber::before { content: "3" }
+}
+
+[data-current-question="hardnessAdult"] {
+    #progress .progress__item {
+        &:nth-child(-n+4)::before {
+            width: 100%;
+            opacity: 1;
+            transition-delay: 0s;
+        }
+
+        &:nth-child(4)::after {
+            opacity: 1;
+            transition-delay: 1s;
+        }
+    }
+
+    #progressNumber::before { content: "4" }
+}
+
+[data-current-question="quality"] {
+    #progress .progress__item {
+        &:nth-child(-n+5)::before {
+            width: 100%;
+            opacity: 1;
+            transition-delay: 0s;
+        }
+
+        &:nth-child(5)::after {
+            opacity: 1;
+            transition-delay: 1s;
+        }
+    }
+
+    #progressNumber::before { content: "5" }
+}
+
+[data-current-question="howUrgent"] {
+    #progress .progress__item {
+        &:nth-child(-n+6)::before {
+            width: 100%;
+            opacity: 1;
+            transition-delay: 0s;
+        }
+
+        &:nth-child(6)::after {
+            opacity: 1;
+            transition-delay: 1s;
+        }
+    }
+
+    #progressNumber::before { content: "6" }
+}
+
+[data-current-question="getNane"],
+[data-current-question="getContact"] {
+    #progress .progress__item {
+        &:nth-child(-n+7)::before {
+            width: 100%;
+            opacity: 1;
+            transition-delay: 0s;
+        }
+
+        &:nth-child(7)::after {
+            opacity: 1;
+            transition-delay: 1s;
+        }
+    }
+
+    #progressNumber::before { content: "7" }
 }

@@ -60,7 +60,7 @@ $(document).ready(() => {
         if (isFirstGroupChecked && isSecondGroupChecked) {
             handlerBtnToggleStep(el, true);
         }
-    }
+    };
 
     const handlerBtnToggleStep = (btn, direction) => {
         const thisQuestion = $(btn).closest('.question'),
@@ -78,12 +78,14 @@ $(document).ready(() => {
             toggleQuestions(animationDuration, thisQuestion, nextQuestion);
             showQuestion(animationDuration, nextQuestion);
             pushQuestionToStepsMap(nextQuestion);
+            setQuestionsToBody(animationDuration, nextQuestion);
         } else {
             updateQuestionWrapperHeight(prevQuestion);
             toggleQuestions(animationDuration, thisQuestion, prevQuestion);
             showQuestion(animationDuration, prevQuestion);
             removeLastStepFromStepsMap();
             resetAllControllers();
+            setQuestionsToBody(animationDuration, prevQuestion);
 
             /* Удаляем ТЕКУЩИЕ ответы из STORE на тот случаей
              * елси ПЕРЕШЛИ НАЗАД ИЗ ВОПРОСА с множественными
@@ -95,7 +97,7 @@ $(document).ready(() => {
             // т.к. он будет выбран заново
             resetAnswerFromStore(prevQuestion);
         }
-    }
+    };
 
     const hideQuestions = question => {
         question.addClass('hide');
@@ -105,7 +107,7 @@ $(document).ready(() => {
                 .find('.animatible')
                 .css('transition-duration')
         ) * 1000;
-    }
+    };
 
     const toggleQuestions = (timeout, removedQuestion, addedQuestion) => {
         setTimeout(
@@ -120,7 +122,7 @@ $(document).ready(() => {
             },
             timeout
         );
-    }
+    };
 
     const updateQuestionWrapperHeight = addedQuestion => {
         let height;
@@ -136,60 +138,43 @@ $(document).ready(() => {
         addedQuestion.addClass('hidden');
 
         $('#questionsWrap').css('maxHeight', height + questionHelpMaxHeight);
-    }
+    };
 
     const showQuestion = (timeout, addedQuestion) => {
         setTimeout(
             () => addedQuestion.removeClass('hide'),
             timeout + 100
         );
-    }
+    };
 
     const pushQuestionToStepsMap = question => {
         let id = $(question).attr('id');
         STORE.stepsMap.push(`#${id}`);
-    }
+    };
 
     const removeLastStepFromStepsMap = () => {
         STORE.stepsMap.splice(-1, 1);
-    }
+    };
 
     const resetAllControllers = () => {
         $('input.controller').prop('checked', false);
-    }
+    };
 
     const resetAnswerFromStore = question => {
         let prop = question.find('.controller').attr('name');
         if (STORE[prop]) delete STORE[prop];
-    }
+    };
 
-//     // Показываем кнопку Далле и Показать результаты
-//     $('.controller_btn-next').on('input', e => showNextButton(e));
+    const setQuestionsToBody = (timeout, question) => {
+        const id = question.attr('id');
 
-//     const showNextButton = e => {
-//         let step = $(e.target).closest('.step'),
-//             maxHeight = parseFloat(step.css('maxHeight')) + 100,
-//             btnWrap = $(step).find('.btnNextStep__wrap');
+        const updateCurrentQuestion = () => {
+            document
+                .body
+                .dataset
+                .currentQuestion = id;
+        };
 
-
-//         step.css('maxHeight', maxHeight + 'px');
-//         btnWrap.addClass('show');
-
-//     }
-
-//     // Загружаем видео в виджет видео-презентаии
-//     const uploadPresentVideo = () => {
-//         let video = $('#videoBackground'),
-//             source = video.find('source'),
-//             videoModal = $('#videoPresentationModal video'),
-//             sourceModal = video.find('videoModal'),
-//             src = video.data('src');
-
-//         video.attr('src', src);
-//         source.attr('src', src);
-
-//         videoModal.attr('src', src);
-//         sourceModal.attr('src', src);
-//     }
-//     setTimeout(uploadPresentVideo, 1000);
+        setTimeout(updateCurrentQuestion, timeout);
+    };
 });
