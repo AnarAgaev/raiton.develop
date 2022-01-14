@@ -14,27 +14,6 @@ $(document).ready(() => {
 
     $('.question__subtitle button').on('click', toggleSubtitle);
 
-    /* В этой константе храним время, нобходимое для
-     * переключения с одного вопроса на другой для того
-     * чтобы отсечь множественные клики на контроллеры
-     */
-    const BLOCKED_TOGGLE_QUESTIONS_TIMEOUT = 1000;
-
-    let isUnlockedToggleStep = true;
-
-    const blockToggleSteps = () => {
-        isUnlockedToggleStep = false;
-    }
-
-    const unblockToggleSteps = () => {
-        setTimeout(
-            () => {
-                isUnlockedToggleStep = true;
-            },
-            BLOCKED_TOGGLE_QUESTIONS_TIMEOUT
-        )
-    }
-
     // Обрабатываем клик по кнопке вперёд
     $('.btnNextStep').each((idx, el) => {
         $(el).click(
@@ -84,45 +63,37 @@ $(document).ready(() => {
     }
 
     const handlerBtnToggleStep = (btn, direction) => {
-        // if (isUnlockedToggleStep) {
-        if (true) {
+        const thisQuestion = $(btn).closest('.question'),
+            nextQuestionId = $(btn).data('nextStepId'),
+            nextQuestion = nextQuestionId ? $(nextQuestionId) : undefined,
+            prevQuestionId = STORE.stepsMap[STORE.stepsMap.length - 2],
+            prevQuestion = prevQuestionId ? $(prevQuestionId) : undefined;
 
-            const thisQuestion = $(btn).closest('.question'),
-                nextQuestionId = $(btn).data('nextStepId'),
-                nextQuestion = nextQuestionId ? $(nextQuestionId) : undefined,
-                prevQuestionId = STORE.stepsMap[STORE.stepsMap.length - 2],
-                prevQuestion = prevQuestionId ? $(prevQuestionId) : undefined;
+        let animationDuration = hideQuestions(thisQuestion);
 
-            let animationDuration; // Время анимации вопросов в ситлях
+        scrollToQuestionsStart();
 
-            blockToggleSteps();
-            scrollToQuestionsStart();
-            animationDuration = hideQuestions(thisQuestion);
+        if (direction) {
+            updateQuestionWrapperHeight(nextQuestion);
+            toggleQuestions(animationDuration, thisQuestion, nextQuestion);
+            showQuestion(animationDuration, nextQuestion);
+            pushQuestionToStepsMap(nextQuestion);
+        } else {
+            updateQuestionWrapperHeight(prevQuestion);
+            toggleQuestions(animationDuration, thisQuestion, prevQuestion);
+            showQuestion(animationDuration, prevQuestion);
+            removeLastStepFromStepsMap();
+            resetAllControllers();
 
-            if (direction) {
-                updateQuestionWrapperHeight(nextQuestion);
-                toggleQuestions(animationDuration, thisQuestion, nextQuestion);
-                showQuestion(animationDuration, nextQuestion);
-                pushQuestionToStepsMap(nextQuestion);
-            } else {
-                updateQuestionWrapperHeight(prevQuestion);
-                toggleQuestions(animationDuration, thisQuestion, prevQuestion);
-                showQuestion(animationDuration, prevQuestion);
-                removeLastStepFromStepsMap();
-                resetAllControllers();
+            /* Удаляем ТЕКУЩИЕ ответы из STORE на тот случаей
+             * елси ПЕРЕШЛИ НАЗАД ИЗ ВОПРОСА с множественными
+             * ответами (с radio контроллерами)
+             */
+            resetAnswerFromStore(thisQuestion);
 
-                /* Удаляем ТЕКУЩИЕ ответы из STORE на тот случаей
-                 * елси ПЕРЕШЛИ НАЗАД ИЗ ВОПРОСА с множественными
-                 * ответами (с radio контроллерами)
-                 */
-                resetAnswerFromStore(thisQuestion);
-
-                // Удаляем ПРЕДЫДУЩИЕ ответы из STORE
-                // т.к. он будет выбран заново
-                resetAnswerFromStore(prevQuestion);
-            }
-
-            unblockToggleSteps();
+            // Удаляем ПРЕДЫДУЩИЕ ответы из STORE
+            // т.к. он будет выбран заново
+            resetAnswerFromStore(prevQuestion);
         }
     }
 
@@ -154,11 +125,17 @@ $(document).ready(() => {
     const updateQuestionWrapperHeight = addedQuestion => {
         let height;
 
+        /* questionHelpMaxHeight компенсирует показ/скрывтие подскази
+         * в заголовке вопроса. В этой переменной храним высоту от
+         * масимально высокой подсказки
+         */
+        const questionHelpMaxHeight = 500;
+
         addedQuestion.removeClass('hidden');
         height = addedQuestion.height();
         addedQuestion.addClass('hidden');
 
-        $('#questionsWrap').css('maxHeight', height);
+        $('#questionsWrap').css('maxHeight', height + questionHelpMaxHeight);
     }
 
     const showQuestion = (timeout, addedQuestion) => {

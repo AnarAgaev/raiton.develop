@@ -19,10 +19,8 @@ window.IS_DEBUGGING = true;
  * изменение структуры данных
  */
 window.STORE = {
-    // connect: "WhatsApp",
-
     stepsMap: [
-        // При инициализации, схраняем в STORE первый шаг
+        // При инициализации, сохраняем в STORE первый шаг
         '#forWhom',
     ]
 };
@@ -75,8 +73,9 @@ STORE = new Proxy(STORE, {
         //     updateEmails(val);
         // }
 
-        if (prop === '#getNane') {
-            console.log( prop)
+        // На повпросе преед запросом имени запускаем прогресс
+        if (prop === 'howUrgent') {
+            initialProgressLoader();
         }
 
         if (IS_DEBUGGING) {
@@ -149,6 +148,8 @@ $(document).ready(() => {
     };
 
     $('.go-to-quiz').on('click', scrollToQuestionsStart);
+
+    //
 
     // Блокируем отправку всех форм.
     // Данные всегда отправляются асинхронно.

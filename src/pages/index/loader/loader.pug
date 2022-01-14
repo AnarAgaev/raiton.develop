@@ -2,7 +2,7 @@ mixin loader
     .loader#loader
         .loader__body
             .loader__value
-                span.val 80
+                span.val 0
                 span %
 
             .loader__pic
@@ -16,7 +16,7 @@ mixin loader
                         stroke-opacity='1'
                         stroke-width='10'
                     )
-                    circle.loader__circle.progressed(
+                    circle.loader__circle(
                         cx='50%'
                         cy='50%'
                         r='40'
