@@ -15,15 +15,16 @@ section.container.question#getNane.hidden
                 form.form(action="" method="GET")
                     input(type="hidden" value="form-name" name="form")
                     label.form__group
-                        input.controller#name(
+                        input#name(
                             type="text"
                             name="name"
-                            data-question="Имя пользователя"
-                            data-answer=""
                             placeholder="Введите Ваше имя")
 
                     label.form__group
-                        button.btn.btnNextStep.animation-line(type="button" disabled) к результату
+                        button.btn.btnNextStep.animation-line(
+                            type="button"
+                            data-next-step-id="#getContact"
+                            disabled) к результату
 
         .col-12.animatible
             .get-name__loader
