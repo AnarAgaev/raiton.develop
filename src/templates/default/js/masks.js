@@ -36,12 +36,18 @@ $(document).ready(() => {
     // Если телефон валидный,
     // разлокируем кнопки отправки формы
     const checkPhones = () => {
-        $('[type="tel"]')
-            .closest('form')
-            .find('[type="submit"]')
-            .prop({
-                disabled: !validatePhone(STORE.phone)
-            });
+        const wraps = $('[type="tel"]').closest('form'),
+            submits = wraps.find('[type="submit"]'),
+            buttons = wraps.find('[type="button"]'),
+            isCheckedElems = wraps.find('.checked').length > 0;
+
+        submits.prop({disabled: !validatePhone(STORE.phone)});
+
+        if (isCheckedElems && validatePhone(STORE.phone)) {
+            buttons.prop({disabled: false});
+        } else {
+            buttons.prop({disabled: true});
+        }
     };
 
     /* Вешаем маску на контроллер каждого телефона

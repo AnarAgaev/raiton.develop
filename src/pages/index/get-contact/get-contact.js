@@ -1,13 +1,39 @@
-//     // Показываем кнопку Далле и Показать результаты
-//     $('.controller_btn-next').on('input', e => showNextButton(e));
+$(document).ready(() => {
+    $('[name="connect"]').on('input', e => {
 
-//     const showNextButton = e => {
-//         let step = $(e.target).closest('.step'),
-//             maxHeight = parseFloat(step.css('maxHeight')) + 100,
-//             btnWrap = $(step).find('.btnNextStep__wrap');
+        const _this = e.target;
 
+        cloneConnectType(_this);
 
-//         step.css('maxHeight', maxHeight + 'px');
-//         btnWrap.addClass('show');
+    });
 
-//     }
+    const cloneConnectType = (controller) => {
+        const connectType = $(controller).data('answer'),
+
+            wraps = $(`[data-answer="${connectType}"]`)
+                .closest('.connectWrap');
+
+        cleanAllConnectWraps();
+        checkConnectWraps(wraps);
+        unlockPhoneControllers();
+        checkBtnGoToResults();
+    };
+
+    const cleanAllConnectWraps = () =>
+        $('.connectWrap').removeClass('checked');
+
+    const checkConnectWraps = (wraps) =>
+        wraps.addClass('checked');
+
+    const unlockPhoneControllers = () =>
+        $('[type="tel"]')
+            .closest('.form__group')
+            .removeClass('hide');
+
+    const checkBtnGoToResults = () => {
+        const btns = $('.form_get-contact .btnNextStep');
+
+        btns.prop({disabled: !validatePhone(STORE.phone)});
+    }
+
+});

@@ -1,9 +1,9 @@
-from.form.form_get-contact(action="" method="GET")
+form.form.form_get-contact(action="" method="GET")
     input(type="hidden" value="form-get-contact" name="form")
 
     ul.form_get-contact__connects
         li
-            label
+            label.connectWrap
                 input.controller.invisible(
                     type="radio"
                     name="connect"
@@ -16,7 +16,7 @@ from.form.form_get-contact(action="" method="GET")
                 span.back
 
         li
-            label
+            label.connectWrap
                 input.controller.invisible(
                     type="radio"
                     name="connect"
@@ -37,4 +37,7 @@ from.form.form_get-contact(action="" method="GET")
                 placeholder="Введите Ваш номер телефона")
 
     label.form__group
-        button.btn.btnNextStep.animation-line(type="button" disabled) получить результат
+        button.btn.btnNextStep.animation-line(
+            type="button"
+            data-next-step-id="#results"
+            disabled) получить результат

@@ -86,21 +86,21 @@
             transition: all .2s linear;
         }
 
-        input:checked {
-            & ~ .checker {
+        .checked {
+            .checker {
                 border-color: #828282;
                 background-color: $color-accent-primary;
             }
 
-            & ~ .back {
+            .back {
                 box-shadow: 0 4px 11px rgba(0, 0, 0, 0.15);
             }
 
-            & ~ .icon_phone circle {
+            .icon_phone circle {
                 fill: $color-accent-primary;
             }
 
-            & ~ .icon_whatsapp {
+            .icon_whatsapp {
                 .iconWhatsAppFillInactive {
                     opacity: 0;
                 }
