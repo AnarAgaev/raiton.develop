@@ -2,8 +2,8 @@
 
 .container.question#hardnessAdult.hidden
     .row
-        .col-12
-            .question__caption.emerging
+        .col-12.animatible
+            .question__caption
                 h2.question__title Выберите жесткость матраса
                 p.question__subtitle
                     span
@@ -12,25 +12,25 @@
                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias culpa cum cupiditate dolores eaque exercitationem fugiat harum laudantium nemo odit porro quaerat quam quos repellat soluta temporibus, veritatis voluptate. Consequatur?
                     button
 
-        .col-12
-            .question__list.emerging
+        .col-12.animatible
+            .question__list
 
                 label.question__item.question__item_simple
-                    input.controller.btn-next-step.invisible(
+                    input.controller.btnNextStep.invisible(
                         type="radio"
                         name="hardnessAdult"
-                        data-question="Какой жесткости матрас нужен Вашему ребенку?"
+                        data-question="Выберите жесткость матраса?"
                         data-answer="Жесткий."
-                        data-next-step-id="#")
+                        data-next-step-id="#quality")
                     span.question__val Жесткий
 
                 label.question__item.question__item_simple
-                    input.controller.btn-next-step.invisible(
+                    input.controller.btnNextStep.invisible(
                         type="radio"
                         name="hardnessAdult"
-                        data-question="Какой жесткости матрас нужен Вашему ребенку?"
+                        data-question="Выберите жесткость матраса?"
                         data-answer="Двусторонний. Одна сторана мягкая, другая жесткая."
-                        data-next-step-id="#")
+                        data-next-step-id="#quality")
                     span.question__val
                         | Двусторонний
                         span.question__val_small
@@ -39,45 +39,45 @@
                             | другая жесткая
 
                 label.question__item.question__item_simple
-                    input.controller.btn-next-step.invisible(
+                    input.controller.btnNextStep.invisible(
                         type="radio"
                         name="hardnessAdult"
-                        data-question="Какой жесткости матрас нужен Вашему ребенку?"
+                        data-question="Выберите жесткость матраса?"
                         data-answer="Средний."
-                        data-next-step-id="#")
+                        data-next-step-id="#quality")
                     span.question__val Средний
 
                 label.question__item.question__item_simple
-                    input.controller.btn-next-step.invisible(
+                    input.controller.btnNextStep.invisible(
                         type="radio"
                         name="hardnessAdult"
-                        data-question="Какой жесткости матрас нужен Вашему ребенку?"
+                        data-question="Выберите жесткость матраса?"
                         data-answer="Не знаю, нужна консультация."
-                        data-next-step-id="#")
+                        data-next-step-id="#quality")
                     span.question__val
                         | Не знаю, нужна
                         br
                         | консультация
 
                 label.question__item.question__item_simple
-                    input.controller.btn-next-step.invisible(
+                    input.controller.btnNextStep.invisible(
                         type="radio"
                         name="hardnessAdult"
-                        data-question="Какой жесткости матрас нужен Вашему ребенку?"
+                        data-question="Выберите жесткость матраса?"
                         data-answer="Мягкий."
-                        data-next-step-id="#")
+                        data-next-step-id="#quality")
                     span.question__val Мягкий
 
-        .col-12
-            .question__comment.emerging
+        .col-12.animatible
+            .question__comment
                 h3
                     | Система начала подбор. Продолжайте отвечать
                     include ../../../img/question-spin.svg
                 p(style="background-image: url('img/question-pic-15.png');")
 
-        .col-12
-            .question__btn.emerging
+        .col-12.animatible
+            .question__btn
                 p
-                    button.btn.btn_back.btn-prev-step.animation-line(type="button")
+                    button.btn.btn_back.btnPrevStep.animation-line(type="button")
                         include ../../../img/icon-btn-back.svg
                         span назад

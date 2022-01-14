@@ -2,65 +2,65 @@
 
 .container.question#howUrgent.hidden
     .row
-        .col-12
-            .question__caption.emerging
+        .col-12.animatible
+            .question__caption
                 h2.question__title Как срочно Вам нужен матрас?
 
-        .col-12
-            .question__list.emerging
+        .col-12.animatible
+            .question__list
 
                 label.question__item.question__item_simple
-                    input.controller.btn-next-step.invisible(
+                    input.controller.btnNextStep.invisible(
                         type="radio"
                         name="howUrgent"
                         data-question="Как срочно Вам нужен матрас?"
                         data-answer="Как можно скорее."
-                        data-next-step-id="#")
+                        data-next-step-id="#getNane")
                     span.question__val
                         | Как можно
                         br
                         | скорее
 
                 label.question__item.question__item_simple
-                    input.controller.btn-next-step.invisible(
+                    input.controller.btnNextStep.invisible(
                         type="radio"
                         name="howUrgent"
                         data-question="Как срочно Вам нужен матрас?"
                         data-answer="Через 1 месяц."
-                        data-next-step-id="#")
+                        data-next-step-id="#getNane")
                     span.question__val Через 1 месяц
 
                 label.question__item.question__item_simple
-                    input.controller.btn-next-step.invisible(
+                    input.controller.btnNextStep.invisible(
                         type="radio"
                         name="howUrgent"
                         data-question="Как срочно Вам нужен матрас?"
                         data-answer="Через 3 месяца."
-                        data-next-step-id="#")
+                        data-next-step-id="#getNane")
                     span.question__val Через 3 месяца
 
                 label.question__item.question__item_simple
-                    input.controller.btn-next-step.invisible(
+                    input.controller.btnNextStep.invisible(
                         type="radio"
                         name="howUrgent"
                         data-question="Как срочно Вам нужен матрас?"
                         data-answer="Не знаю, пока присматриваюсь."
-                        data-next-step-id="#")
+                        data-next-step-id="#getNane")
                     span.question__val
                         | Не знаю, пока
                         br
                         | присматриваюсь
 
-        .col-12
-            .question__comment.emerging
+        .col-12.animatible
+            .question__comment
                 h3
                     | Система начала подбор. Продолжайте отвечать
                     include ../../../img/question-spin.svg
                 p(style="background-image: url('img/question-pic-9.png');")
 
-        .col-12
-            .question__btn.emerging
+        .col-12.animatible
+            .question__btn
                 p
-                    button.btn.btn_back.btn-prev-step.animation-line(type="button")
+                    button.btn.btn_back.btnPrevStep.animation-line(type="button")
                         include ../../../img/icon-btn-back.svg
                         span назад

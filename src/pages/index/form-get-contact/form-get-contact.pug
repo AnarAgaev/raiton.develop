@@ -7,7 +7,7 @@ from.form.form_get-contact(action="" method="GET")
                 input.controller.invisible(
                     type="radio"
                     name="connect"
-                    data-question=""
+                    data-question="Куда прислать результат?"
                     data-answer="WhatsApp")
                 span.icon.icon_whatsapp
                     include ../../../img/icon-whatsapp.svg
@@ -20,7 +20,7 @@ from.form.form_get-contact(action="" method="GET")
                 input.controller.invisible(
                     type="radio"
                     name="connect"
-                    data-question=""
+                    data-question="Куда прислать результат?"
                     data-answer="Телефон (SMS)")
                 span.icon.icon_phone
                     include ../../../img/icon-phone.svg
@@ -37,4 +37,4 @@ from.form.form_get-contact(action="" method="GET")
                 placeholder="Введите Ваш номер телефона")
 
     label.form__group
-        button.btn.btn-next-step.animation-line(type="button" disabled) получить результат
+        button.btn.btnNextStep.animation-line(type="button" disabled) получить результат

@@ -3,15 +3,15 @@ include ../loader/loader
 //- .hidden
 section.container.question#getNane.hidden
     .row
-        .col-12
-            .get-name__caption.emerging
+        .col-12.animatible
+            .get-name__caption
                 h2.get-name__title
                     | Укажите имя для регистрации
                     br
                     | в системе
 
-        .col-12
-            .get-name__form.emerging
+        .col-12.animatible
+            .get-name__form
                 form.form(action="" method="GET")
                     input(type="hidden" value="form-name" name="form")
                     label.form__group
@@ -23,10 +23,10 @@ section.container.question#getNane.hidden
                             placeholder="Введите Ваше имя")
 
                     label.form__group
-                        button.btn.btn-next-step.animation-line(type="button" disabled) к результату
+                        button.btn.btnNextStep.animation-line(type="button" disabled) к результату
 
-        .col-12
-            .get-name__loader.emerging
+        .col-12.animatible
+            .get-name__loader
                 h2.get-name__title
                     | Формируем предварительный
                     br
@@ -34,8 +34,8 @@ section.container.question#getNane.hidden
 
                 +loader
 
-        .col-12
-            .get-name__check-list.emerging
+        .col-12.animatible
+            .get-name__check-list
                 ul
                     li
                         include ../../../img/icon-check-list.svg

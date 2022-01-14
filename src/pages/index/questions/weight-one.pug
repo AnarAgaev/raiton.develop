@@ -2,8 +2,8 @@
 
 .container.question#weightOne.hidden
     .row
-        .col-12
-            .question__caption.emerging
+        .col-12.animatible
+            .question__caption
                 h2.question__title Какой вес у спящего?
                 p.question__subtitle
                     span
@@ -12,43 +12,43 @@
                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias culpa cum cupiditate dolores eaque exercitationem fugiat harum laudantium nemo odit porro quaerat quam quos repellat soluta temporibus, veritatis voluptate. Consequatur?
                     button
 
-        .col-12
-            .question__list.emerging
+        .col-12.animatible
+            .question__list
 
                 label.question__item.question__item_simple
-                    input.controller.btn-next-step.invisible(
+                    input.controller.btnNextStep.invisible(
                         type="radio"
                         name="weightOne"
                         data-question="Какой вес у спящего?"
                         data-answer="До 100 кг."
-                        data-next-step-id="#")
+                        data-next-step-id="#hardnessAdult")
                     span.question__val До 100 кг
 
                 label.question__item.question__item_simple
-                    input.controller.btn-next-step.invisible(
+                    input.controller.btnNextStep.invisible(
                         type="radio"
                         name="weightOne"
                         data-question="Какой вес у спящего?"
                         data-answer="До 120 кг."
-                        data-next-step-id="#")
+                        data-next-step-id="#hardnessAdult")
                     span.question__val До 120 кг
 
                 label.question__item.question__item_simple
-                    input.controller.btn-next-step.invisible(
+                    input.controller.btnNextStep.invisible(
                         type="radio"
                         name="weightOne"
                         data-question="Какой вес у спящего?"
                         data-answer="Больше 120 кг."
-                        data-next-step-id="#")
+                        data-next-step-id="#hardnessAdult")
                     span.question__val Больше 120 кг
 
                 label.question__item.question__item_simple
-                    input.controller.btn-next-step.invisible(
+                    input.controller.btnNextStep.invisible(
                         type="radio"
                         name="weightOne"
                         data-question="Какой вес у спящего?"
                         data-answer="Не знаю, покажите все варианты."
-                        data-next-step-id="#")
+                        data-next-step-id="#hardnessAdult")
                     span.question__val
                         | Не знаю,
                         br
@@ -56,16 +56,16 @@
                         br
                         | варианты
 
-        .col-12
-            .question__comment.emerging
+        .col-12.animatible
+            .question__comment
                 h3
                     | Система начала подбор. Продолжайте отвечать
                     include ../../../img/question-spin.svg
                 p(style="background-image: url('img/question-pic-23.png');")
 
-        .col-12
-            .question__btn.emerging
+        .col-12.animatible
+            .question__btn
                 p
-                    button.btn.btn_back.btn-prev-step.animation-line(type="button")
+                    button.btn.btn_back.btnPrevStep.animation-line(type="button")
                         include ../../../img/icon-btn-back.svg
                         span назад

@@ -1,4 +1,18 @@
+window.validatePhone = (phone = STORE.phone) => {
+    let regular = /^(\+7)?(\d{3}?)?[\d]{11}$/;
+    return regular.test(phone);
+};
+
+window.validateEmail = (email = STORE.email) => {
+    // Регулярка для email проверяет только
+    // наличие @ и точки
+    let regular = /.+@.+\..+/i;
+    return regular.test(email);
+};
+
 $(document).ready(() => {
+
+// ******************** Обработка телефонных номеров -- START
 
     // Маски для всех телефонов сохраняем
     // в отдельный суперглобальный массив
@@ -17,11 +31,6 @@ $(document).ready(() => {
         $(PHONE_MASKS).each(
             idx => PHONE_MASKS[idx].unmaskedValue = phone
         );
-    };
-
-    // Котроллеры для телефонов - взаимозависимые поля
-    window.updateEmails = (email) => {
-        $('[type="email"]').val(email);
     };
 
     // Если телефон валидный,
@@ -84,4 +93,43 @@ $(document).ready(() => {
         .on('focus', handlerPhoneFocus)
         .on('blur', handlerPhoneBlur)
         .on('input', handlerPhoneInput);
+
+// ******************** Обработка телефонных номеров -- FINISH
+
+// ******************** Обработка емэйлов -- START
+
+    // Котроллеры для телефонов - взаимозависимые поля
+    // window.updateEmails = (email) => {
+    //     $('[type="email"]').val(email);
+    // };
+
+    // // Если email валидный, разблокируем
+    // // кнопки отправки формы
+    // const checkEmail = () => {
+    //     $('[type="email"]')
+    //         .closest('form')
+    //         .find('[type="submit"]')
+    //         .prop({
+    //             disabled: !validateEmail(STORE.email)
+    //         });
+    // };
+
+
+    //     const handlerEmailInput = e => {
+    //         STORE['email'] = $(e.target).val();
+    //         checkEmail();
+    //     };
+
+    //     const handlerEmailBlur = e => {
+    //         if (!validateEmail()) {
+    //             STORE.email = ''; // Нужно для организации взаимозависимых полей
+    //             delete STORE.email;
+    //         }
+    //     };
+
+    //     $('[type="email"]')
+    //         .on('blur', handlerEmailBlur)
+    //         .on('input', handlerEmailInput);
+
+// ******************** Обработка емэйлов -- FINISH
 });

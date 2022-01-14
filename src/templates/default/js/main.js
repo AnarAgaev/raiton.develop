@@ -13,18 +13,6 @@ document.addEventListener(
 
 window.IS_DEBUGGING = true;
 
-window.validatePhone = (phone = STORE.phone) => {
-    let regular = /^(\+7)?(\d{3}?)?[\d]{11}$/;
-    return regular.test(phone);
-};
-
-window.validateEmail = (email = STORE.email) => {
-    // Регулярка для email проверяет только
-    // наличие @ и точки
-    let regular = /.+@.+\..+/i;
-    return regular.test(email);
-};
-
 /* В суперглобальной переменной STORE храним
  * все дынные, введенные пользователем
  * С помощью проксирования, слушаем
@@ -34,6 +22,7 @@ window.STORE = {
     // connect: "WhatsApp",
 
     stepsMap: [
+        // При инициализации, схраняем в STORE первый шаг
         '#forWhom',
     ]
 };
@@ -58,8 +47,11 @@ STORE = new Proxy(STORE, {
         };
 
         if (isPluralController(val)) {
-            // Если в STORE уже есть целевой ответ,
-            // удаляем его, иначе добавляем
+            /* Для контроллеров типа checkbox при снятии
+             * галочки, нужно удалить свойство из STORE.
+             * Поверяем ,если в STORE уже есть целевой
+             * ответ, удаляем его, иначе добавляем
+             */
             isAnswerInStore(val)
                 ? removeAnswerFromStore(val)
                 : addAnswerToStore(val);
@@ -75,12 +67,16 @@ STORE = new Proxy(STORE, {
             updatePhones(val);
         }
 
-        /*
-         * Если в СТОРЕ меняется email, то сразу меняем
-         * email во всех полях ввода email адреса.
-         */
-        if (prop === 'email') {
-            updateEmails(val);
+        // /*
+        //  * Если в СТОРЕ меняется email, то сразу меняем
+        //  * email во всех полях ввода email адреса.
+        //  */
+        // if (prop === 'email') {
+        //     updateEmails(val);
+        // }
+
+        if (prop === '#getNane') {
+            console.log( prop)
         }
 
         if (IS_DEBUGGING) {
@@ -119,69 +115,40 @@ const getPropFromController = (question, answer) => {
         .attr('name');
 };
 
-// // Если email валидный, разблокируем
-// // кнопки отправки формы
-// const checkEmail = () => {
-//     $('[type="email"]')
-//         .closest('form')
-//         .find('[type="submit"]')
-//         .prop({
-//             disabled: !validateEmail(STORE.email)
-//         });
-// };
-
 $(document).ready(() => {
 
-//     const handlerEmailInput = e => {
-//         STORE['email'] = $(e.target).val();
-//         checkEmail();
-//     };
+    /* Слушаем изменение каждого input
+     * В случае всплытия события,
+     * пушим данные в STORE
+     */
+    $('input.controller').on('input', e => {
+        let _this = e.target,
+            prop = $(_this).attr('name'),
+            question = $(_this).data('question'),
+            answer = $(_this).data('answer');
 
-//     const handlerEmailBlur = e => {
-//         if (!validateEmail()) {
-//             STORE.email = ''; // Нужно для организации взаимозависимых полей
-//             delete STORE.email;
-//         }
-//     };
+        STORE[prop] = [question, answer];
 
-//     $('[type="email"]')
-//         .on('blur', handlerEmailBlur)
-//         .on('input', handlerEmailInput);
+        resetAllCheckboxControllers(_this);
+    });
 
-//     /* Слушаем изменение каждого input
-//      * В случае всплытия события,
-//      * пушим данные в STORE
-//      *
-//      */
-
-//     $('input.controller').on('input', e => {
-//         let _this = e.target,
-//             prop = $(_this).attr('name'),
-//             question = $(_this).data('question'),
-//             answer = $(_this).data('answer');
-
-//         STORE[prop] = [question, answer];
-
-//         removeProgressBar();
-//         setTimeout(initialProgressBar, 300);
-//         resetAllCheckboxControllers(_this);
-//     });
-
-//     const resetAllCheckboxControllers = (el) => {
-//         if ($(el).attr('type') === 'radio') {
-//             $('input:checkbox').prop('checked', false);
-//         }
-//     };
+    const resetAllCheckboxControllers = (el) => {
+        if ($(el).attr('type') === 'radio') {
+            $('input:checkbox').prop('checked', false);
+        }
+    };
 
     // Скролл к первому вопросу
-    $('.go-to-quiz').click(() => {
+    window.scrollToQuestionsStart = () => {
         let top = $('#progress').offset().top;
 
         $('body,html').animate(
             { scrollTop: top },
             1000
         );
-    });
+    };
+
+    $('.go-to-quiz').on('click', scrollToQuestionsStart);
 
     // Блокируем отправку всех форм.
     // Данные всегда отправляются асинхронно.

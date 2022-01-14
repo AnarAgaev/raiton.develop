@@ -5,11 +5,16 @@
     position: relative;
     width: 100%;
     height: auto;
+    margin-bottom: 30px;
 
     &__wrap {
         position: relative;
         width: 100%;
         overflow: hidden;
+        height: auto;
+        max-height: 99999px; // max-height: 700px;
+        margin-bottom: 30px;
+        transition: max-height .5s linear;
     }
 
     &__caption {
@@ -246,6 +251,27 @@
         .star {
 
         }
+    }
+}
+
+.animatible {
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform .7s ease-out 0s, opacity .5s linear .3s;
+}
+
+@for $i from 0 through 10 {
+    .animatible:nth-child(#{$i}) {
+        transition-delay: $i * 0.2s;
+    }
+}
+
+.hide {
+    .animatible {
+        transform: translateY(15px);
+        opacity: 0;
+        transition: all .3s linear;
+        transition-delay: 0s;
     }
 }
 

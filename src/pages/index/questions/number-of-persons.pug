@@ -1,44 +1,43 @@
 //- .hidden
-
 .container.question#numberOfPersons.hidden
     .row
-        .col-12
-            .question__caption.emerging
+        .col-12.animatible
+            .question__caption
                 h2.question__title
                     | Сколько человек будут спать
                     br
                     | на новом матрасе?
 
-        .col-12
-            .question__list.emerging
+        .col-12.animatible
+            .question__list
 
                 label.question__item.question__item_picture
-                    input.controller.btn-next-step.invisible(
+                    input.controller.btnNextStep.invisible(
                         type="radio"
                         name="numberOfPersons"
                         data-question="Сколько человек будут спать на новом матрасе?"
                         data-answer="1 человек."
-                        data-next-step-id="#")
+                        data-next-step-id="#weightOne")
                     span.question__pic(style="background-image: url('img/questions/number-of-persons_1.jpg');")
                     span.question__val 1 человек
 
                 label.question__item.question__item_picture
-                    input.controller.btn-next-step.invisible(
+                    input.controller.btnNextStep.invisible(
                         type="radio"
                         name="numberOfPersons"
                         data-question="Сколько человек будут спать на новом матрасе?"
                         data-answer="Двое."
-                        data-next-step-id="#")
+                        data-next-step-id="#weightTwo")
                     span.question__pic(style="background-image: url('img/questions/number-of-persons_2.jpg');")
                     span.question__val Двое
 
                 label.question__item.question__item_picture
-                    input.controller.btn-next-step.invisible(
+                    input.controller.btnNextStep.invisible(
                         type="radio"
                         name="numberOfPersons"
                         data-question="Сколько человек будут спать на новом матрасе?"
                         data-answer="Двое, и иногда ребенок с нами."
-                        data-next-step-id="#")
+                        data-next-step-id="#weightTwo")
                     span.question__pic(style="background-image: url('img/questions/number-of-persons_3.jpg');")
                     span.question__val
                         | Двое, и иногда
@@ -46,28 +45,28 @@
                         | ребенок с нами
 
                 label.question__item.question__item_picture
-                    input.controller.btn-next-step.invisible(
+                    input.controller.btnNextStep.invisible(
                         type="radio"
                         name="numberOfPersons"
                         data-question="Сколько человек будут спать на новом матрасе?"
                         data-answer="Покажите все варианты."
-                        data-next-step-id="#")
+                        data-next-step-id="#weightOne")
                     span.question__pic.question__pic_null ?
                     span.question__val
                         | Покажите все
                         br
                         | варианты
 
-        .col-12
-            .question__comment.emerging
+        .col-12.animatible
+            .question__comment
                 h3
                     | Система начала подбор. Продолжайте отвечать
                     include ../../../img/question-spin.svg
                 p(style="background-image: url('img/question-pic-34.png');")
 
-        .col-12
-            .question__btn.emerging
+        .col-12.animatible
+            .question__btn
                 p
-                    button.btn.btn_back.btn-prev-step.animation-line(type="button")
+                    button.btn.btn_back.btnPrevStep.animation-line(type="button")
                         include ../../../img/icon-btn-back.svg
                         span назад
