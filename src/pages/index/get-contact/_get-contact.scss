@@ -124,8 +124,16 @@
         margin-top: 5px;
     }
 }
+
 #getContact .lock {
     animation: lock-animation 1.3s linear infinite;
+}
+
+#results .lock {
+    img {
+        margin-top: 0;
+        margin-right: 10px;
+    }
 }
 
 
