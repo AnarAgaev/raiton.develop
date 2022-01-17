@@ -1,0 +1,55 @@
+mixin form-present(title)
+    form.form-present(action="#" method="GET")
+        input(type="hidden" value="change-phone" name="form")
+
+        h4= title
+
+        .form-present__stubtitle
+            img(src="" alt=""
+                data-lazy-load-img="../img/present-list.jpg")
+            p
+                strong Чек-лист
+                br
+                | “Как выбрать идеальные матрас и подушку для здорового сна”
+
+            span
+                | Выбрав матрас и подушку
+                br
+                | с помощью&nbsp;
+                strong чек-листа,
+                br
+                | Вы избавитесь от бессонницы,
+                br
+                | болей в спине и шее по утрам.
+
+        .form-present__controllers
+            h5
+                | Подарок ждет Вас в WhatsApp,
+                br
+                | привязанном к вашему номеру
+
+
+            .form__group
+                label.label_present
+                    img(src="" alt=""
+                        data-lazy-load-img="../img/wa-msg.png")
+                    .label_present__wrapper
+                        input.form__control(
+                            type='tel'
+                            name="phone"
+                            placeholder='Номер телефона')
+                        span.label_present__note Номер можно изменить
+
+            .form-present__btn-wrap
+                button.btn(type='submit' disabled)
+                    | ПОЛУЧИТЬ ПОДАРОК
+                    br
+                    | В WHATSAPP
+                span
+                    | Просто переходи в WhatsApp,
+                    br
+                    | подарок уже ждет Вас
+
+
+
+

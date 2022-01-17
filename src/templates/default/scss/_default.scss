@@ -375,5 +375,11 @@ input, .input {
 }
 
 .link {
+    display: inline-block;
+    color: $color-link;
+    text-decoration: underline;
 
+    @media (min-width: $xl) {
+        text-decoration: none;
+    }
 }

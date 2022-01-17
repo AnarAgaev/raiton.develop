@@ -16,7 +16,7 @@
         padding-bottom: 20px;
         overflow: hidden;
 
-        img {
+        span {
             display: block;
             position: relative;
             width: 200px;
@@ -46,9 +46,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 25px;
+        margin-bottom: 30px;
 
         h5 {
-            margin-top: 25px;
             font-weight: 600;
             font-size: 18px;
             line-height: 25px;
@@ -66,15 +67,125 @@
                 margin-bottom: 0;
             }
         }
+    }
+}
 
-        button {
-            display: inline-block;
-            color: $color-link;
-            text-decoration: underline;
+.form-present {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: $color-back-primary;
+    border: 1px solid $color-accent-primary;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 25px 25px 30px;
+    max-width: 300px;
+    margin: 0 auto;
 
-            @media (min-width: $xl) {
-                text-decoration: none;
-            }
+    h4 {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        margin: 0 0 10px;
+    }
+
+    &__stubtitle {
+        margin-top: 10px;
+        margin-bottom: 20px;
+
+        img {
+            display: block;
+            width: 119px;
+            height: auto;
+            margin-right: 5px;
+            float: left;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 16px;
+            padding-top: 10px;
+        }
+
+        span {
+            display: block;
+            width: 100%;
+            margin-top: 40px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+
+    &__controllers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h5 {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form__group {
+            width: 100%;
+        }
+
+        input {
+            padding: 0;
+        }
+    }
+
+    .label_present {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            width: 49px;
+            height: auto;
+        }
+
+        &__wrapper {
+            position: relative;
+            width: 177px;
+        }
+
+        &__note {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 20px;
+            text-align: center;
+        }
+    }
+
+    &__btn-wrap {
+        margin-top: 26px;
+        width: 100%;
+
+        .btn {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 0.3px;
+        }
+
+        span {
+            display: block;
+            margin-top: 13px;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 14px;
+            text-align: center;
         }
     }
 }

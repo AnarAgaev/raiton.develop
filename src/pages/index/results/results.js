@@ -7,11 +7,22 @@ $(document).ready(() => {
             .each((id, el) => {
                 const src = $(el).data('lazyLoadBackground');
 
-                $(el).attr('src', src);
+                $(el).attr('style', `background-image: url("${src}");`);
             })
     };
 
     lazyLoadBackground();  // !!!!!!!!!!!! Убрать когда законю с результатми
+
+    const lazyLoadImg = () => {
+        $('[data-lazy-load-img]')
+            .each((id, el) => {
+                const src = $(el).data('lazyLoadImg');
+
+                $(el).attr('src', src);
+            })
+    };
+
+    lazyLoadImg();  // !!!!!!!!!!!! Убрать когда законю с результатми
 
 
 

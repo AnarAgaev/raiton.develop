@@ -1,3 +1,5 @@
+include form-present
+
 //- .hidden
 .container.question#results
     .row
@@ -8,9 +10,7 @@
 
         .col-12.animatible
             .results__founders
-                img(src=""
-                    alt=""
-                    data-lazy-load-background="../img/founders.jpg")
+                span(data-lazy-load-background="../img/founders.jpg")
                 h5
                     | Георгий и Татьяна
                     br
@@ -32,3 +32,6 @@
                     | из 3-х наших салонов в Якутске
                     br
                     | и полежать на каждом.
+
+        .col-12.animatible
+            +form-present("А пока забирайте подарок")
