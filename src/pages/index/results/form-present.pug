@@ -2,7 +2,7 @@ mixin form-present(title)
     form.form-present(action="#" method="GET")
         input(type="hidden" value="change-phone" name="form")
 
-        h4= title
+        h4!= title
 
         .form-present__stubtitle
             img(src="" alt=""
@@ -49,7 +49,3 @@ mixin form-present(title)
                     | Просто переходи в WhatsApp,
                     br
                     | подарок уже ждет Вас
-
-
-
-

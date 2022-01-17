@@ -68,6 +68,252 @@
             }
         }
     }
+
+    &__list {
+        margin-top: 30px;
+        margin-bottom: 20px;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: calc(100% + 30px);
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.5;
+            background: url("../img/pattern-reviews.svg") repeat;
+        }
+
+        h5  {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        &-caption {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            margin-bottom: 10px;
+
+            span {
+                color: red;
+            }
+        }
+
+        &-raiting {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                width: 23px;
+                height: auto;
+                margin: 0 1px;
+            }
+        }
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 288px;
+        height: auto;
+        background: $color-back-primary;
+        border: 1px solid $color-accent-primary;
+        box-sizing: border-box;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 40px;
+
+        &__caption {
+            padding: 15px 20px;
+            background: #E4CB89;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        &__picture {
+            display: flex;
+            width: 100%;
+
+            &-img {
+                width: 140px;
+                height: auto;
+                margin-right: 10px;
+            }
+
+            &-content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 15px;
+            }
+
+            &-title {
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 16px;
+                margin-bottom: 10px;
+            }
+
+            &-subtitle {
+                font-weight: normal;
+                font-size: 9px;
+                line-height: 10px;
+                margin-bottom: 10px;
+            }
+
+            &-txt {
+                font-weight: 500;
+                font-size: 9px;
+                line-height: 12px;
+            }
+        }
+
+        &__body {
+            width: 100%;
+            padding: 15px 20px 30px;
+
+            .btn {
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 25px;
+
+            li  {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding-left: 15px;
+                margin-bottom: 10px;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background-color: $color-accent-primary;
+                    top: 7px;
+                    left: 0;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                h6  {
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 20px;
+                    margin: 0;
+                    padding: 0;
+                    color: #474747;
+                }
+
+                p {
+                    width: 150px;
+                    font-weight: 500;
+                    font-size: 10px;
+                    line-height: 14px;
+                }
+
+                .button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    width: auto;
+                    height: 20px;
+                    right: 0;
+                    bottom: 0;
+                    background: $color-accent-primary;
+                    color: $color-font-secondary;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-size: 9px;
+                    line-height: 20px;
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+
+    &__consultation-txt {
+        position: relative;
+        color: #474747;
+        padding: 20px 0;
+        margin-top: 30px;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: calc(100% + 30px);
+            height: 100%;
+            left: -15px;
+            top: 0;
+            z-index: -1;
+            background: #ebdcb5 url("../img/pattern-main.svg") repeat;
+            border-top-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        p {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+            margin-bottom: 20px;
+        }
+
+        h5 {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 25px;
+            margin-bottom: 20px;
+        }
+
+        span {
+            display: block;
+            width: 100%;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 145%;
+            margin-bottom: 10px;
+        }
+
+        ul  {
+            display: flex;
+            flex-direction: column;
+        }
+
+        li {
+            font-size: 14px;
+            line-height: 140%;
+            margin-bottom: 7px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 
 .form-present {
@@ -87,7 +333,7 @@
         font-size: 18px;
         line-height: 25px;
         text-align: center;
-        margin: 0 0 10px;
+        margin: 0 0 15px;
     }
 
     &__stubtitle {

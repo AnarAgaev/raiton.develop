@@ -35,3 +35,64 @@ include form-present
 
         .col-12.animatible
             +form-present("А пока забирайте подарок")
+
+        .col-12.animatible#resultCheap
+            .results__list
+                h5  Матрасы подобранные для Вас:
+                .results__list-caption
+                    strong
+                        span 7&nbsp;
+                        | матрасов&nbsp;
+                    | в ценовой категории
+
+                .results__list-raiting
+                    include ../../../img/icon-start.svg
+                    include ../../../img/icon-start.svg
+                    include ../../../img/icon-start.svg
+
+                .results__list-slider
+
+                    .slider
+                        mark
+                            p листайте
+                            span.slide-horizontal-animation
+                                include ../../../img/i-scroll-hand.svg
+
+                        .swiper
+                            .swiper-wrapper
+                                include items/cheap/template
+                                include items/cheap/template
+                                include items/cheap/template
+                                include items/cheap/template
+
+                            .swiper-pagination
+
+        .col-12.animatible
+            +form-present("Вы всё ещё не забрали подарок?<br>Скорее забирайте!")
+
+        .col-12.animatible
+            .results__consultation-txt
+                p
+                    | Конечно, выбор матраса — сложное дело,
+                    br
+                    | и здорово получить консультацию
+                    br
+                    | специалиста, который в этом хорошо
+                    br
+                    | разбирается.
+
+                h5
+                    | Получите консультацию
+                    br
+                    | прямо сейчас
+
+                span и узнайте:
+
+                ul
+                    li - В чем различие матрасов разных  брендов?
+                    li - Какой лучше — пружинный или беспружинный, и в чем их преимущества и недостатки?
+                    li - Как долго прослужит матрас?
+                    li - Какую жесткость матраса выбрать?
+                    li - В чем особенности разных наполнителей и что подойдет именно Вам?
+
+
