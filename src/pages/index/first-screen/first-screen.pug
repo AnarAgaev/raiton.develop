@@ -15,7 +15,9 @@ section#firstScreen
             .row
                 .col-12
                     .first-screen__presentation
-                        button.first-screen__widget#showPresentation
+                        button.first-screen__widget(
+                            data-toggle="modal"
+                            data-target="#presentationModal")
                             img(src="img/widget-back.png" alt="")
                             span
 

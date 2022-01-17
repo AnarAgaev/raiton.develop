@@ -4,8 +4,15 @@ $(document).ready(() => {
     });
 
     window.showModal = function (el) {
-        let modal = $(el).data('target'),
-            video = $(modal).find('video')[0];
+        let modal = $(el).data('target');
+
+        if (!modal) {
+            modal = $(el)
+                .closest('[data-toggle="modal"]')
+                .data('target');
+        }
+
+        const video = $(modal).find('video')[0];
 
         $(modal).addClass('show');
         if (video) video.play();
@@ -47,4 +54,15 @@ $(document).ready(() => {
     const isActionNode = function (el) {
         return $(el).hasClass('modal') || $(el).hasClass('modalCloseBtn');
     };
+
+    const lazyLoadPresentVideo = () => {
+        let video = $('#presentationModal video'),
+            source = video.find('source'),
+            src = video.data('src');
+
+        video.attr('src', src);
+        source.attr('src', src);
+    }
+    // Ленивая загружаем видео в виджет видео-презентаии
+    setTimeout(lazyLoadPresentVideo, 1000);
 });
