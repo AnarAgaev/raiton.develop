@@ -120,6 +120,19 @@
             text-align: right;
             margin-bottom: 10px;
         }
+
+        .img_star {
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .img_label {
+            display: block;
+            width: 60px;
+            height: auto;
+        }
     }
 
     &__content {
