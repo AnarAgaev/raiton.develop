@@ -314,6 +314,190 @@
             }
         }
     }
+
+    &__consultation-form {
+        margin-top: 20px;
+
+        p {
+            font-size: 14px;
+            line-height: 19px;
+            text-align: center;
+            color: #474747;
+            margin-bottom: 20px;
+
+            strong {
+                display: block;
+                font-weight: 600;
+            }
+
+            span {
+                display: block;
+                margin-top: 5px;
+            }
+        }
+
+        img  {
+            display: block;
+            position: relative;
+            width: 143px;
+            height: auto;
+            margin: 0 auto -20px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid $color-accent-primary;
+            z-index: -1;
+        }
+
+        form {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            padding: 25px 20px 30px;
+            background: $color-back-primary;
+            border: 1px solid $color-accent-primary;
+            box-sizing: border-box;
+            box-shadow: 0 -20px 20px -25px rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+
+            h5 {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 22px;
+                text-align: center;
+                color: #474747;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 19px;
+                text-align: center;
+                color: #474747;
+            }
+        }
+    }
+
+    &__benefits {
+        margin-top: 30px;
+
+        h5 {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 19px;
+            text-align: center;
+            color: #474747;
+            margin-bottom: 25px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+
+        li {
+            position: relative;
+            margin-bottom: 15px;
+            padding-left: 60px;
+
+            .picture {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #e1d7ae;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            p {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 10px;
+                line-height: 14px;
+                color: #474747;
+            }
+
+            strong {
+                display: block;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 16px;
+                color: #474747;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    &__premium {
+        margin: 10px -15px 25px;
+
+        img {
+            width: calc(100% + 30px);
+            max-width: none;
+        }
+    }
+
+    &__props {
+        h5 {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #474747;
+            margin-bottom: 25px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+
+        li {
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 60px;
+
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #e1d7ae;
+                font-weight: bold;
+                font-size: 22px;
+                line-height: 30px;
+                color: #474747;
+            }
+
+            p {
+                display: flex;
+                align-items: center;
+                min-height: 40px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 19px;
+                color: #474747;
+            }
+        }
+    }
+
 }
 
 .form-present {
