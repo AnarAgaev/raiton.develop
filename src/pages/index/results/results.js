@@ -30,19 +30,42 @@ $(document).ready(() => {
 
 
 
+
+
+
+
+
+    // Перключаем карты в результатах
+    $('#maps .tabs__item').each((idx, el) => {
+        $(el).on('click', () => {
+            console.log()
+
+            maps.dataset.activeMap = idx;
+        });
+    });
+
+    // Скролл к слайдеру с результатами
+    $('#goToResults').on('click', () => {
+        let top = $('#resPlaceAnchor').offset().top;
+
+        $('body,html').animate(
+            { scrollTop: top },
+            1000
+        );
+    });
+
+
+
+
+
+
+
+
     window.initialResults = () => {
         hideProgressBar();
         lazyLoadBackground();
+        lazyLoadImg();
     };
-
-
-
-
-
-
-
-
-
 
 
 

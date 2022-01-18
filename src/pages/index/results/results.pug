@@ -5,7 +5,7 @@ include form-present
     .row
         .col-12.animatible
             .lock
-                img(src="img/lock-open.png" alt="" title="")
+                img(src="" alt="" data-lazy-load-img="img/lock-open.png")
                 span Ваша подборка матрасов
 
         .col-12.animatible
@@ -23,7 +23,7 @@ include form-present
 
                 p
                     | Система подобрала идеальные матрасы для Вас. Вы найдете их
-                    button.link(type="button") ниже
+                    button.link(type="button")#goToResults ниже
                     | .
 
                 p
@@ -36,6 +36,7 @@ include form-present
         .col-12.animatible
             +form-present("А пока забирайте подарок")
 
+        .col-12#resPlaceAnchor
         .col-12.animatible#resultCheap
             .results__list
                 h5  Матрасы подобранные для Вас:
@@ -269,6 +270,73 @@ include form-present
 
                             .swiper-pagination.swiper-pagination-feedback
 
+        .col-12
+            .results__social
+                h5
+                    | Переходите в наш Instagram,
+                    br
+                    | чтобы узнать:
 
+            .results__social-content
+                img(src="" alt="" data-lazy-load-img="img/social-screen.jpg")
 
+                ul
+                    li Зачем нужны защитные чехлы и какие они бывают
+                    li Какой матрас обеспечивает максимальную поддержку позвоночника
+                    li Актуальные акции и конкурсы для подписчиков
+                    li Более 60 отзывов о работе нашей команды
+                    li И многое другое...
 
+            a.results__social-link(href="https://www.instagram.com/" target="_blank")
+                span(data-lazy-load-background="img/icon-insta.svg")
+
+        .col-12
+            .results__pams
+                h5
+                    | И приходите в гости,
+                    br
+                    | чтобы полежать на матрасах
+
+                h4 Выбирайте ближайший салон
+
+                .tabs#maps(data-active-map="0")
+                    ul.tabs__navs
+                        li.tabs__item ТРК АЗИЯ
+                        li.tabs__item ОптимистПроф
+                        li.tabs__item Строительный
+
+                    ul.tabs__content
+                        li.tabs__map
+                            p
+                                strong Адрес
+                                | г. Якутск, ТРК Азия,
+                                br
+                                | ул.Чернышевского, 74/8, 2 этаж
+
+                                b Режим работы
+                                | Пн-Вс с 10.00 до 20.00
+
+                            span.tabs__container
+                                iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae0f7fb209b69004d96852cd31b2ae88af1cce59400888d74b7c5e8b3d19f3fb1&amp;source=constructor&z=15&l=map" width="100%" height="100%" frameborder="0")
+
+                        li.tabs__map
+                            p
+                                strong Адрес
+                                | Здесь будет адрес второго места
+
+                                b Режим работы
+                                | Пн-Вс с 10.00 до 20.00
+
+                            span.tabs__container
+                                iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae0f7fb209b69004d96852cd31b2ae88af1cce59400888d74b7c5e8b3d19f3fb1&amp;source=constructor&z=15&l=map" width="100%" height="100%" frameborder="0")
+
+                        li.tabs__map
+                            p
+                                strong Адрес
+                                | Здесь будет адрес третьего места
+
+                                b Режим работы
+                                | Пн-Вс с 10.00 до 20.00
+
+                            span.tabs__container
+                                iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae0f7fb209b69004d96852cd31b2ae88af1cce59400888d74b7c5e8b3d19f3fb1&amp;source=constructor&z=15&l=map" width="100%" height="100%" frameborder="0")
