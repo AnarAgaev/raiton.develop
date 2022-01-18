@@ -126,7 +126,7 @@ include form-present
                         br
                         | и укажите удобное время для звонка
 
-                    input(type="hidden" value="consultation" name="form")
+                    input(type="hidden" value="results-consultation" name="form")
                     .form__group
                         label
                             input.form__control(
@@ -139,7 +139,7 @@ include form-present
                                 type='text'
                                 name="time"
                                 placeholder='Удобное время для звонка ')
-                    button.btn(type='submit' disabled) записаться
+                    button.btn(type='submit' disabled data-target="#thanksModal") записаться
 
     .row.animatible
         .col-12

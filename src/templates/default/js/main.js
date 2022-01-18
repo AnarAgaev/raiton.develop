@@ -172,6 +172,7 @@ $(document).ready(() => {
 
                 if (response.error) {
                     if (formType === 'consultation') {
+
                         const dialogs = $(form)
                             .closest('.modal')
                             .find('.modal__dialog');
@@ -186,13 +187,10 @@ $(document).ready(() => {
                         setTimeout(() => {
                             $(dialogs[1]).removeClass('modal__dialog_hide');
                         }, 400);
+
+                    } else if (formType === 'results-consultation') {
+                        showModal($(form).find('[type="submit"]')[0]);
                     }
-
-                    // } else if (formType === 'consultation') {
-                    //     showModal($(form).find('[type="submit"]')[0]);
-                    // }
-
-
 
                 } else {
                     console.log('Ошибка отправки сообщения в обработчике формы!')

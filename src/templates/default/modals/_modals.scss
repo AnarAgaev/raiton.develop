@@ -181,8 +181,8 @@
 
     &_video {
         .modal__dialog {
-            width: 95%;
-            max-width: 1000px;
+            width: auto;
+            max-width: 95%;
             padding: 0;
             border-radius: 0;
             background-color: transparent;
@@ -211,6 +211,7 @@
         video {
             max-width: 100%;
             height: auto;
+            max-height: 80vh;
         }
     }
 }
