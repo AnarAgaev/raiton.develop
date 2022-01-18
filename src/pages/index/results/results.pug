@@ -10,7 +10,7 @@ include form-present
 
         .col-12.animatible
             .results__founders
-                span(data-lazy-load-background="../img/founders.jpg")
+                span(data-lazy-load-background="img/founders.jpg")
                 h5
                     | Георгий и Татьяна
                     br
@@ -58,14 +58,14 @@ include form-present
                             span.slide-horizontal-animation
                                 include ../../../img/i-scroll-hand.svg
 
-                        .swiper
+                        .swiper.swiper_results
                             .swiper-wrapper
                                 include items/cheap/template
                                 include items/cheap/template
                                 include items/cheap/template
                                 include items/cheap/template
 
-                            .swiper-pagination
+                            .swiper-pagination.swiper-pagination-results-items
 
         .col-12.animatible
             +form-present("Вы всё ещё не забрали подарок?<br>Скорее забирайте!")
@@ -115,7 +115,7 @@ include form-present
                         br.d-none.d-xl-block
                         | с учетом всех пожеланий!
 
-                img(src="" alt="" data-lazy-load-img="../img/manager.jpg")
+                img(src="" alt="" data-lazy-load-img="img/manager.jpg")
 
                 form.form(action="" method="POST")
                     h5 Записаться на консультацию
@@ -147,33 +147,33 @@ include form-present
 
                 ul
                     li
-                        span.picture(data-lazy-load-background="../img/benefits/1.svg")
+                        span.picture(data-lazy-load-background="img/benefits/1.svg")
                         p
                             strong Собственное производство
                             | Фабрика в Иваново — историческом центре текстильной промышленности
                     li
-                        span.picture(data-lazy-load-background="../img/benefits/2.svg")
+                        span.picture(data-lazy-load-background="img/benefits/2.svg")
                         p
                             strong Европейские стандарты качества
                             | Производство на оборудовании последнего поколения
                     li
-                        span.picture(data-lazy-load-background="../img/benefits/3.svg")
+                        span.picture(data-lazy-load-background="img/benefits/3.svg")
                         p
                             strong Натуральные гипоаллергенные ткани и наполнители
                             | Безопасно для Вас и окружающей среды
                     li
-                        span.picture(data-lazy-load-background="../img/benefits/4.svg")
+                        span.picture(data-lazy-load-background="img/benefits/4.svg")
                         p
                             strong Последние научные разработки для вашего сна
                             | Единая система технологий для здоровья  позвоночника
                     li
-                        span.picture(data-lazy-load-background="../img/benefits/5.svg")
+                        span.picture(data-lazy-load-background="img/benefits/5.svg")
                         p
                             strong Райтон — эксклюзивный представитель американского производителя матрасов Sealy
                             | 150  лет развития, опыта и традиций
 
         .col-12.results__premium
-            img(src="" alt="" data-lazy-load-img="../img/premium.jpg")
+            img(src="" alt="" data-lazy-load-img="img/premium.jpg")
 
         .col-12
             .results__props
@@ -210,5 +210,65 @@ include form-present
                     li
                         span 6
                         p Бесплатная доставка
+
+        .col-12
+            .results__payment
+                img(src="" alt="" data-lazy-load-img="img/payment.png")
+                h5
+                    | Рассрочка без
+                    br
+                    | процентов и переплат
+                p
+                    | позвольте себе то, что хочется, а не то,&nbsp;
+                    br.d-none.d-xl-block
+                    | на что&nbsp;
+                    br.d-xl-none
+                    | есть деньги сейчас
+
+        .col-12
+            .results__feedback
+                h5 Отзывы о матрасах Райтон
+
+                .results__feedback-slider
+
+                    .slider
+                        mark
+                            p листайте
+                            span.slide-horizontal-animation
+                                include ../../../img/i-scroll-hand.svg
+
+                        .swiper.swiper_feedback
+                            .swiper-wrapper
+                                .swiper-slide
+                                    .results__feedback-item
+                                        span.results__feedback-picture(data-lazy-load-background="img/feedback/1.jpg")
+
+                                .swiper-slide
+                                    .results__feedback-item
+                                        span.results__feedback-picture(data-lazy-load-background="img/feedback/2.jpg")
+
+                                .swiper-slide
+                                    .results__feedback-item
+                                        span.results__feedback-picture(data-lazy-load-background="img/feedback/3.jpg")
+
+                                .swiper-slide
+                                    .results__feedback-item
+                                        span.results__feedback-picture(data-lazy-load-background="img/feedback/4.jpg")
+
+                                .swiper-slide
+                                    .results__feedback-item
+                                        span.results__feedback-picture(data-lazy-load-background="img/feedback/5.jpg")
+
+                                .swiper-slide
+                                    .results__feedback-item
+                                        span.results__feedback-picture(data-lazy-load-background="img/feedback/6.jpg")
+
+                                .swiper-slide
+                                    .results__feedback-item
+                                        span.results__feedback-picture(data-lazy-load-background="img/feedback/7.jpg")
+
+                            .swiper-pagination.swiper-pagination-feedback
+
+
 
 
