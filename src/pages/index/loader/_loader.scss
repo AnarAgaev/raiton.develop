@@ -6,6 +6,10 @@
     height: 90px;
     margin: 25px auto;
 
+    @media (min-width: $md) {
+        margin: 40px auto;
+    }
+
     &__body {
         position: absolute;
         width: 100%;
