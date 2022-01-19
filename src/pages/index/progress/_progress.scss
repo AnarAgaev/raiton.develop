@@ -116,12 +116,14 @@
     &__content {
         font-weight: 800;
         font-size: 12px;
-        line-height: 16px;
+
+        @media (min-width: $md) {
+            font-weight: bold;
+            font-size: 18px;
+        }
 
         @media (min-width: $lg) {
-            font-weight: bold;
             font-size: 22px;
-            line-height: 30px;
         }
 
         #progressNumber {

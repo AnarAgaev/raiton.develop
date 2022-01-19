@@ -11,7 +11,7 @@
                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias culpa cum cupiditate dolores eaque exercitationem fugiat harum laudantium nemo odit porro quaerat quam quos repellat soluta temporibus, veritatis voluptate. Consequatur?
                     button
 
-        .col-12.animatible
+        .col-12.col-lg-6.offset-lg-1.animatible
             .question__list
 
                 h4.question__list-title Первый человек
@@ -51,66 +51,66 @@
                         data-answer="Не знаю, покажите все варианты."
                         data-next-step-id="#hardnessAdult")
                     span.question__val
-                        | Не знаю,
-                        br
-                        | покажите все
-                        br
+                        | Не знаю,&nbsp;
+                        br.d-md-none
+                        | покажите все&nbsp;
+                        br.d-md-none
                         | варианты
 
-        .col-12.animatible
-                .question__list
+        .col-12.col-lg-6.offset-lg-1.animatible
+            .question__list.question__list_second
 
-                    h4.question__list-title Второй человек
+                h4.question__list-title Второй человек
 
-                    label.question__item.question__item_simple
-                        input.controller.invisible.pluralController.secondGroup(
-                            type="radio"
-                            name="weightTwoSecond"
-                            data-question="Какой вес у спящего (Второй человек)?"
-                            data-answer="До 100 кг."
-                            data-next-step-id="#hardnessAdult")
-                        span.question__val До 100 кг
+                label.question__item.question__item_simple
+                    input.controller.invisible.pluralController.secondGroup(
+                        type="radio"
+                        name="weightTwoSecond"
+                        data-question="Какой вес у спящего (Второй человек)?"
+                        data-answer="До 100 кг."
+                        data-next-step-id="#hardnessAdult")
+                    span.question__val До 100 кг
 
-                    label.question__item.question__item_simple
-                        input.controller.invisible.pluralController.secondGroup(
-                            type="radio"
-                            name="weightTwoSecond"
-                            data-question="Какой вес у спящего (Второй человек)?"
-                            data-answer="До 120 кг."
-                            data-next-step-id="#hardnessAdult")
-                        span.question__val До 120 кг
+                label.question__item.question__item_simple
+                    input.controller.invisible.pluralController.secondGroup(
+                        type="radio"
+                        name="weightTwoSecond"
+                        data-question="Какой вес у спящего (Второй человек)?"
+                        data-answer="До 120 кг."
+                        data-next-step-id="#hardnessAdult")
+                    span.question__val До 120 кг
 
-                    label.question__item.question__item_simple
-                        input.controller.invisible.pluralController.secondGroup(
-                            type="radio"
-                            name="weightTwoSecond"
-                            data-question="Какой вес у спящего (Второй человек)?"
-                            data-answer="Больше 120 кг."
-                            data-next-step-id="#hardnessAdult")
-                        span.question__val Больше 120 кг
+                label.question__item.question__item_simple
+                    input.controller.invisible.pluralController.secondGroup(
+                        type="radio"
+                        name="weightTwoSecond"
+                        data-question="Какой вес у спящего (Второй человек)?"
+                        data-answer="Больше 120 кг."
+                        data-next-step-id="#hardnessAdult")
+                    span.question__val Больше 120 кг
 
-                    label.question__item.question__item_simple
-                        input.controller.invisible.pluralController.secondGroup(
-                            type="radio"
-                            name="weightTwoSecond"
-                            data-question="Какой вес у спящего (Второй человек)?"
-                            data-answer="Не знаю, покажите все варианты."
-                            data-next-step-id="#hardnessAdult")
-                        span.question__val
-                            | Не знаю,
-                            br
-                            | покажите все
-                            br
-                            | варианты
+                label.question__item.question__item_simple
+                    input.controller.invisible.pluralController.secondGroup(
+                        type="radio"
+                        name="weightTwoSecond"
+                        data-question="Какой вес у спящего (Второй человек)?"
+                        data-answer="Не знаю, покажите все варианты."
+                        data-next-step-id="#hardnessAdult")
+                    span.question__val
+                        | Не знаю,&nbsp;
+                        br.d-md-none
+                        | покажите все&nbsp;
+                        br.d-md-none
+                        | варианты
 
-        .col-12.animatible
-            .question__comment
+        .col-12.col-lg-5.animatible
+            .question__comment.question__comment_two-person
                 h3
                     | Система начала подбор. Продолжайте отвечать
                     img(src="img/question-spin.png" alt="img/question-spin.png")
                 p(style="background-image: url('img/question-pic-23.png');")
 
-        .col-12.animatible
+        .col-12.col-lg-10.offset-lg-2.animatible
             .question__btn
                 p
                     button.btn.btn_back.btnPrevStep.animation-line(type="button")
