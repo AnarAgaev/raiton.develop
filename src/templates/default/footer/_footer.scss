@@ -5,6 +5,10 @@
     background-color: $color-accent-primary;
     padding: 15px 0;
 
+    @media (min-width: $md) {
+        padding: 25px 0;
+    }
+
     &__content {
         display: flex;
         justify-content: space-between;
@@ -23,8 +27,17 @@
             font-size: 12px;
             line-height: 16px;
 
+            @media (min-width: $md) {
+                font-size: 14px;
+                line-height: 19px;
+            }
+
             &:first-child {
                 margin-bottom: 5px;
+
+                @media (min-width: $md) {
+                    margin-bottom: 10px;
+                }
             }
         }
     }
