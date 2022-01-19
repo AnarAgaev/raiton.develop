@@ -1,24 +1,28 @@
 //- .first-screen_invisible
-section#firstScreen
+section#firstScreen.first-screen
     .first-screen__header
         .container
             .row
                 .col-12
-                    h1 какой матрас подходит именно вам?
+                    h1
+                        | какой матрас подходит&nbsp;
+                        br.d-md-none
+                        | именно вам?
                     h2
-                        | Узнайте, ответив
-                        br
+                        | Узнайте, ответив&nbsp;
+                        br.d-md-none
                         | на 7 вопросов за 1 минуту
 
     .first-screen__body
         .container
             .row
-                .col-12
+                .col-12.col-md-6.order-md-2
                     .first-screen__presentation
                         button.first-screen__widget(
                             data-toggle="modal"
                             data-target="#presentationModal")
-                            img(src="img/widget-back.png" alt="")
+                            img.d-md-none(src="img/widget-back.png" alt="")
+                            img.d-none.d-md-block(src="img/widget-back-desc.png" alt="")
                             span
 
                         .first-screen__labels
@@ -28,18 +32,18 @@ section#firstScreen
                                 br
                                 | звезд
                             p
-                                | Легендарные
-                                br
+                                | Легендарные&nbsp;
+                                br.d-xl-none
                                 | матрасы Sealy
                                 br
-                                | эксклюзивно
-                                br
+                                | эксклюзивно&nbsp;
+                                br.d-xl-none
                                 | в Райтон
 
                             span
                                 img.img_label(src="img/label.png" alt="")
 
-                .col-12
+                .col-12.col-md-6.order-md-1
                     .first-screen__content
                         .first-screen__consultation
                             .first-screen__links

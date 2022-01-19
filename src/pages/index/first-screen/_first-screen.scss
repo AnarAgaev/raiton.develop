@@ -2,10 +2,25 @@
 
 .first-screen {
 
+    @media (min-width: $md) {
+        background: #EBDCB5 url("../img/pattern-main.svg") repeat;
+    }
+
     &__header {
-        padding: 15px 20px 20px 15px;
+        padding: 15px 0 20px 0;
         color: $color-font-secondary;
         background: #1E508B url("../img/pattern-main.svg") repeat;
+
+        @media (min-width: $md) {
+            background: none;
+            color: $color-font-lite;
+            padding-top: 60px;
+            padding-bottom: 30px;
+        }
+
+        @media (min-width: $lg) {
+            padding-bottom: 50px;
+        }
 
         h1 {
             font-weight: 800;
@@ -13,23 +28,53 @@
             line-height: 27px;
             text-transform: uppercase;
             margin-bottom: 15px;
+
+            @media (min-width: $md) {
+                font-size: 32px;
+                line-height: 44px;
+            }
         }
 
         h2 {
             font-weight: 500;
             font-size: 16px;
             line-height: 22px;
+
+            @media (min-width: $md) {
+                font-weight: 600;
+                font-size: 22px;
+                line-height: 30px;
+            }
         }
     }
 
     &__body {
         padding: 15px 0 25px;
         background: #EBDCB5 url("../img/pattern-main.svg") repeat;
+
+        @media (min-width: $md) {
+            background: none;
+            padding-top: 0;
+            padding-bottom: 50px;
+        }
+
+        @media (min-width: $lg) {
+            padding-bottom: 70px;
+        }
     }
 
     &__presentation {
         display: flex;
         justify-content: space-between;
+
+        @media (min-width: $md) {
+            justify-content: flex-end;
+            margin-top: -50px;
+        }
+
+        @media (min-width: $xl) {
+            margin-top: -100px;
+        }
     }
 
     &__widget {
@@ -48,6 +93,22 @@
             border-radius: 50%;
             animation: widget-btn-animation 3s linear infinite;
 
+            @media (min-width: $md) {
+                left: 140px;
+                bottom: auto;
+                top: 135px;
+            }
+
+            @media (min-width: $lg) {
+                width: 85px;
+                height: 85px;
+            }
+
+            @media (min-width: $xl) {
+                left: 160px;
+                top: 150px;
+            }
+
             &::before {
                 content: "";
                 display: block;
@@ -57,6 +118,13 @@
                 border: 9px solid transparent;
                 border-left: 15px solid $color-font-secondary;
                 z-index: 2;
+
+                @media (min-width: $lg) {
+                    top: 26px;
+                    left: 31px;
+                    border: 15px solid transparent;
+                    border-left: 26px solid #fff;
+                }
             }
 
             &::after {
@@ -75,7 +143,24 @@
             }
         }
 
+        @media (min-width: $md) {
+            position: absolute;
+            left: -25px;
+            top: 15px;
+            width: 300px;
+        }
+
+        @media (min-width: $lg) {
+            width: 400px;
+            left: -70px;
+            top: -20px;
+        }
+
         @media (min-width: $xl) {
+            width: 445px;
+            top: 30px;
+            left: 0;
+
             &:hover {
                 span {
                     &::after {
@@ -91,6 +176,10 @@
         flex-direction: column;
         align-items: flex-end;
 
+        @media (min-width: $md) {
+            margin-top: 15px;
+        }
+
         h5 {
             display: flex;
             align-items: center;
@@ -100,6 +189,13 @@
             line-height: 120%;
             color: #1E508B;
             margin-bottom: 10px;
+
+            @media (min-width: $xl) {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 110%;
+                margin-bottom: 20px;
+            }
 
             svg {
                 width: 41px;
@@ -119,19 +215,40 @@
             line-height: 15px;
             text-align: right;
             margin-bottom: 10px;
+
+            @media (min-width: $xl) {
+                width: 100%;
+                font-size: 18px;
+                line-height: 25px;
+                color: $color-font-lite;
+                text-align: right;
+                margin-bottom: 20px;
+            }
         }
 
         .img_star {
             display: block;
+            position: relative;
             width: 40px;
             height: 40px;
             margin-right: 10px;
+
+            @media (min-width: $xl) {
+                width: 50px;
+                height: auto;
+                margin-right: 12px;
+                top: -3px;
+            }
         }
 
         .img_label {
             display: block;
             width: 60px;
             height: auto;
+
+            @media (min-width: $xl) {
+                width: 115px;
+            }
         }
     }
 
@@ -147,11 +264,22 @@
         justify-content: space-between;
         width: 100%;
         margin-bottom: 20px;
+
+        @media (min-width: $xl) {
+            margin-bottom: 60px;
+        }
     }
 
     &__links {
         display: flex;
         align-items: center;
+
+        svg {
+            @media (min-width: $xl) {
+                width: 45px;
+                height: auto;
+            }
+        }
 
         button {
             font-size: 12px;
@@ -159,6 +287,22 @@
             text-decoration-line: underline;
             text-align: left;
             margin-left: 10px;
+
+            @media (min-width: $xl) {
+                margin-left: 20px;
+                font-size: 16px;
+                line-height: 19px;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        @media (min-width: $md) {
+            display: none;
         }
     }
 
@@ -168,6 +312,10 @@
         align-items: flex-start;
         width: 288px;
 
+        @media (min-width: $xl) {
+            width: 100%;
+        }
+
         p {
             display: block;
             position: relative;
@@ -176,15 +324,37 @@
             line-height: 19px;
             margin-bottom: 20px;
 
+            @media (min-width: $xl) {
+                font-weight: bold;
+                font-size: 22px;
+                line-height: 30px;
+                margin-bottom: 31px;
+            }
+
             svg {
                 position: absolute;
                 left: 165px;
                 bottom: -10px;
+
+                @media (min-width: $xl) {
+                    width: 60px;
+                    height: auto;
+                    left: 255px;
+                    bottom: -15px;
+                }
             }
         }
 
         button {
             font-size: 18px;
+
+            @media (min-width: $xl) {
+                width: 330px;
+                height: 55px;
+                font-weight: 800;
+                font-size: 22px;
+                line-height: 18px;
+            }
 
             span {
                 display: block;
@@ -195,6 +365,10 @@
                 border-radius: 50%;
                 position: relative;
                 margin: 0 0 0 12px;
+
+                @media (min-width: $xl) {
+                    margin-left: 15px;
+                }
 
                 svg {
                     position: absolute;
@@ -212,24 +386,47 @@
             font-size: 12px;
             line-height: 16px;
             text-align: center;
-            color: #A28B51;
+            color: #a28b51;
             margin-top: 13px;
+
+            @media (min-width: $xl) {
+                width: 330px;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 19px;
+                margin-top: 15px;
+            }
         }
     }
 
     &__result {
         margin-top: 20px;
 
+        @media (min-width: $xl) {
+            margin-top: 35px;
+        }
+
         p {
             font-weight: bold;
             font-size: 14px;
             line-height: 19px;
             margin-bottom: 10px;
+
+            @media (min-width: $xl) {
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 25px;
+                margin-bottom: 15px;
+            }
         }
 
         ul {
             display: flex;
             justify-content: space-between;
+
+            @media (min-width: $lg) {
+                justify-content: flex-start;
+            }
         }
 
         li {
@@ -241,12 +438,37 @@
             padding-left: 20px;
             position: relative;
 
+            @media (min-width: $xl) {
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 22px;
+                padding-left: 27px;
+            }
+
             &:first-child {
                 width: 51%;
+
+                @media (min-width: $lg) {
+                    width: 40%;
+                    margin-right: 10px;
+                }
+
+                @media (min-width: $xl) {
+                    width: 245px;
+                    margin-right: 30px;
+                }
             }
 
             &:last-child {
                 width: 49%;
+
+                @media (min-width: $lg) {
+                    width: 45%;
+                }
+
+                @media (min-width: $xl) {
+                    width: 245px;
+                }
             }
 
             &::before {
@@ -259,6 +481,12 @@
                 top: 1px;
                 background: $color-accent-primary url('../img/icon-check.svg') center no-repeat;
                 border-radius: 50%;
+
+                @media (min-width: $xl) {
+                    width: 17px;
+                    height: 17px;
+                    top: 2px;
+                }
             }
         }
     }
@@ -271,4 +499,3 @@
     75% { transform: scale(1.1); }
     100% { transform: scale(1); }
 }
-
