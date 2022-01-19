@@ -17,8 +17,17 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    max-width: 930px;
+    margin: 20px auto 30px;
+
+    @media (min-width: $md) {
+        margin-top: 30px;
+    }
+
+    @media (min-width: $lg) {
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
 
     &::after {
         content: "";
@@ -32,6 +41,10 @@
         height: 132px;
         background: url("../img/question-back.png") center no-repeat;
         z-index: -1;
+
+        @media (min-width: $md) {
+            display: none;
+        }
     }
 
     &__list {
@@ -44,6 +57,12 @@
         border: 1px solid $color-accent-primary;
         border-radius: 999px;
         margin-bottom: 10px;
+
+        @media (min-width: $lg) {
+            height: 40px;
+            padding: 0 10px;
+            margin-bottom: 25px;
+        }
     }
 
     &__item {
@@ -54,6 +73,11 @@
         border-radius: 999px;
         margin: 0 3px;
         overflow: hidden;
+
+        @media (min-width: $lg) {
+            height: 20px;
+            margin: 0 8px;
+        }
 
         &:first-child {
             margin-left: 0;
@@ -94,10 +118,20 @@
         font-size: 12px;
         line-height: 16px;
 
+        @media (min-width: $lg) {
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 30px;
+        }
+
         #progressNumber {
             display: inline-block;
             margin: 0 3px;
             color: $color-accent-primary;
+
+            @media (min-width: $lg) {
+                margin: 0 7px;
+            }
         }
     }
 }
