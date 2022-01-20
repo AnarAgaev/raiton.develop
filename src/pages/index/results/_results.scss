@@ -512,6 +512,10 @@
             margin-bottom: 50px;
         }
 
+        @media (min-width: $xl) {
+            margin-bottom: 70px;
+        }
+
         p {
             font-size: 14px;
             line-height: 19px;
@@ -601,6 +605,22 @@
     &__benefits {
         margin-top: 30px;
 
+        @media (min-width: $md) {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        img {
+            display: none;
+
+            @media (min-width: $xl) {
+                display: block;
+                position: absolute;
+                top: 165px;
+                left: 586px;
+            }
+        }
+
         h5 {
             font-weight: 600;
             font-size: 14px;
@@ -608,6 +628,13 @@
             text-align: center;
             color: $color-font-lite;
             margin-bottom: 25px;
+
+            @media (min-width: $md) {
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 33px;
+                margin-bottom: 40px;
+            }
         }
 
         ul {
@@ -623,6 +650,11 @@
             margin-bottom: 15px;
             padding-left: 60px;
 
+            @media (min-width: $md) {
+                padding-left: 95px;
+                margin-bottom: 30px;
+            }
+
             .picture {
                 display: block;
                 position: absolute;
@@ -634,6 +666,12 @@
                 background-color: #e1d7ae;
                 background-position: center;
                 background-repeat: no-repeat;
+
+                @media (min-width: $md) {
+                    width: 60px;
+                    height: 60px;
+                    background-size: 45%;
+                }
             }
 
             p {
@@ -642,6 +680,12 @@
                 font-size: 10px;
                 line-height: 14px;
                 color: $color-font-lite;
+
+                @media (min-width: $md) {
+                    font-size: 16px;
+                    line-height: 22px;
+                    width: 505px;
+                }
             }
 
             strong {
@@ -652,6 +696,12 @@
                 line-height: 16px;
                 color: $color-font-lite;
                 margin-bottom: 5px;
+
+                @media (min-width: $md) {
+                    font-size: 18px;
+                    line-height: 25px;
+                    margin-bottom: 10px;
+                }
             }
         }
     }
@@ -668,6 +718,11 @@
     &__props {
         margin-bottom: 10px;
 
+        @media (min-width: $md) {
+            margin-top: 70px;
+            margin-bottom: 60px;
+        }
+
         h5 {
             font-weight: 600;
             font-size: 18px;
@@ -676,6 +731,13 @@
             text-transform: uppercase;
             color: $color-font-lite;
             margin-bottom: 25px;
+
+            @media (min-width: $md) {
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 33px;
+                margin-bottom: 40px;
+            }
         }
 
         ul {
@@ -684,12 +746,22 @@
             width: 100%;
             height: auto;
             overflow: hidden;
+
+            @media (min-width: $xl) {
+                padding-left: 475px;
+            }
         }
 
         li {
             position: relative;
             margin-bottom: 20px;
             padding-left: 60px;
+
+            @media (min-width: $md) {
+                padding-left: 95px;
+                margin-bottom: 30px;
+                min-height: 60px;
+            }
 
             span {
                 display: flex;
@@ -706,6 +778,11 @@
                 font-size: 22px;
                 line-height: 30px;
                 color: $color-font-lite;
+
+                @media (min-width: $md) {
+                    width: 60px;
+                    height: 60px;
+                }
             }
 
             p {
@@ -716,6 +793,25 @@
                 font-size: 14px;
                 line-height: 19px;
                 color: $color-font-lite;
+
+                @media (min-width: $md) {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 1.3;
+                    width: 520px;
+                }
+            }
+        }
+
+        img {
+            display: none;
+
+            @media (min-width: $xl) {
+                display: block;
+                position: absolute;
+                top: 160px;
+                left: 20px;
             }
         }
     }
