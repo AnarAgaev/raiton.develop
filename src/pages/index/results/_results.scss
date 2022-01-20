@@ -817,8 +817,15 @@
     }
 
     &__payment {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
         padding: 10px 0 15px;
         color: $color-font-secondary;
+
+        @media (min-width: $md) {
+            padding: 30px 0 35px;
+        }
 
         &::before {
             content: "";
@@ -837,12 +844,24 @@
             position: relative;
             float: left;
             margin-right: 15px;
+            width: 51px;
+            height: auto;
+
+            @media (min-width: $md) {
+                width: 142px;
+                margin-right: 40px;
+            }
         }
 
         h5 {
             font-weight: bold;
             font-size: 18px;
             line-height: 25px;
+
+            @media (min-width: $md) {
+                font-size: 32px;
+                line-height: 35px;
+            }
         }
 
         p {
@@ -850,6 +869,13 @@
             font-size: 12px;
             line-height: 16px;
             margin-top: 10px;
+
+            @media (min-width: $md) {
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 25px;
+                margin-top: 15px;
+            }
         }
     }
 
