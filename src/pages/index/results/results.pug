@@ -1,7 +1,7 @@
 include form-present
 
 //- .hidden
-.container.question.results#results
+.container.question.results#results.hidden
     .row
         .col-12.animatible
             .lock
@@ -54,7 +54,9 @@ include form-present
                         | матрасов&nbsp;
                     | в ценовой категории
 
-                .results__list-raiting
+                .results__list-raiting#rating
+                    include ../../../img/icon-start.svg
+                    include ../../../img/icon-start.svg
                     include ../../../img/icon-start.svg
                     include ../../../img/icon-start.svg
                     include ../../../img/icon-start.svg
@@ -226,7 +228,7 @@ include form-present
                             | Рассрочка без процентов,&nbsp;
                             br.d-md-none
                             | и переплат
-                    li.onlyPremiumu.hidden
+                    li.onlyPremium.hidden
                         span 6
                         p Бесплатная доставка
 

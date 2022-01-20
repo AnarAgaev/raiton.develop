@@ -1626,3 +1626,18 @@
         }
     }
 }
+
+#rating {
+    &.rating-low {
+        svg:nth-child(4),
+        svg:nth-child(5) {
+            display: none;
+        }
+    }
+
+    &.rating-middle {
+        svg:nth-child(5) {
+            display: none;
+        }
+    }
+}

@@ -11,8 +11,6 @@ $(document).ready(() => {
             })
     };
 
-    lazyLoadBackground();  // !!!!!!!!!!!! Убрать когда законю с результатми
-
     const lazyLoadImg = () => {
         $('[data-lazy-load-img]')
             .each((id, el) => {
@@ -21,19 +19,6 @@ $(document).ready(() => {
                 $(el).attr('src', src);
             })
     };
-
-    lazyLoadImg();  // !!!!!!!!!!!! Убрать когда законю с результатми
-
-
-
-
-
-
-
-
-
-
-
 
     // Перключаем карты в результатах
     $('#maps .tabs__item').each((idx, el) => {
@@ -54,6 +39,35 @@ $(document).ready(() => {
         );
     });
 
+    // Показываем премиум секции
+    const showPremiumSections = () => {
+        const isQualityHigh = STORE.quality[1] === 'Высокий уровень.';
+
+        if (isQualityHigh) {
+            $('.onlyPremium').removeClass('hidden');
+        }
+    }
+
+    // Устанавливаем рейтинг в результатах (звёздочки)
+    const setResultRating = () => {
+        const rating = getRating();
+
+        $('#rating').addClass(rating);
+    }
+
+    const getRating = () => {
+        const quality = STORE.quality[1];
+
+        if (quality === 'Простым и бюджетным.')
+            return 'rating-low';
+
+        if (quality === 'Баланс цены и качества.')
+            return 'rating-middle';
+
+        if (quality === 'Высокий уровень.')
+            return 'rating-height';
+    }
+
 
 
 
@@ -65,6 +79,8 @@ $(document).ready(() => {
         hideProgressBar();
         lazyLoadBackground();
         lazyLoadImg();
+        showPremiumSections();
+        setResultRating();
     };
 
 
