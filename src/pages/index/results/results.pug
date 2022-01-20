@@ -1,14 +1,15 @@
 include form-present
 
 //- .hidden
-.container.question#results
+.container.question.results#results
     .row
         .col-12.animatible
             .lock
                 img(src="" alt="" data-lazy-load-img="img/lock-open.png")
                 span Ваша подборка матрасов
 
-        .col-12.animatible
+    .row
+        .col-12.col-md-6.animatible
             .results__founders
                 span(data-lazy-load-background="img/founders.jpg")
                 h5
@@ -17,12 +18,16 @@ include form-present
                     | Луковцевы
                 p основатели Райтон Якутск
 
-        .col-12.animatible
+        .col-12.col-md-6.animatible
             .results__caption
                 h5 Отлично!
 
                 p
-                    | Система подобрала идеальные матрасы для Вас. Вы найдете их
+                    | Система подобрала идеальные&nbsp;
+                    br.d-none.d-md-block
+                    | матрасы&nbsp;
+                    br.d-md-none
+                    | для Вас. Вы найдете их
                     button.link(type="button")#goToResults ниже
                     | .
 
@@ -33,12 +38,14 @@ include form-present
                     br
                     | и полежать на каждом.
 
+    .row
         .col-12.animatible
             +form-present("А пока забирайте подарок")
 
         .col-12#resPlaceAnchor
 
-        .col-12.animatible#resultCheap
+    .row
+        .col-12.animatible.lite-background.mt-md-5#resultCheap
             .results__list
                 h5  Матрасы подобранные для Вас:
                 .results__list-caption
@@ -69,7 +76,8 @@ include form-present
 
                             .swiper-pagination.swiper-pagination-results-items
 
-        .col-12.animatible
+    .row
+        .col-12.lite-background.animatible
             +form-present("Вы всё ещё не забрали подарок?<br>Скорее забирайте!")
 
     .row.animatible

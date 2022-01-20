@@ -127,6 +127,7 @@ button {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
+    padding-top: 2px;
 
     &:disabled {
         cursor: not-allowed;
@@ -391,6 +392,9 @@ input, .input {
     text-decoration: underline;
 
     @media (min-width: $xl) {
-        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 }

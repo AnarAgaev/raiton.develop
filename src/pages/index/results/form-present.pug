@@ -2,7 +2,9 @@ mixin form-present(title)
     form.form-present(action="#" method="GET")
         input(type="hidden" value="change-phone" name="form")
 
-        h4!= title
+        h4
+            img.mr-3.d-none.d-md-block(src="" alt="" data-lazy-load-img="img/present.jpg")
+            != title
 
         .form-present__stubtitle
             img(src="" alt=""
