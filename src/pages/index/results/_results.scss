@@ -4,6 +4,8 @@
     width: 100%;
 
     @media (min-width: $md) {
+        margin-bottom: 0;
+
         &::before {
             content: "";
             display: block;
@@ -1140,8 +1142,13 @@
         }
     }
 
-    &__pams {
+    &__maps {
         margin-top: 25px;
+
+        @media (min-width: $md) {
+            margin-top: 70px;
+            margin-bottom: 70px;
+        }
 
         h5 {
             font-weight: 600;
@@ -1150,6 +1157,13 @@
             text-align: center;
             color: $color-font-lite;
             margin-bottom: 20px;
+
+            @media (min-width: $md) {
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 33px;
+                margin-bottom: 15px;
+            }
         }
 
         h4 {
@@ -1159,6 +1173,14 @@
             text-align: center;
             color: #a3a1a1;
             margin-bottom: 25px;
+
+            @media (min-width: $md) {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 22px;
+                margin-bottom: 40px;
+            }
         }
     }
 }
@@ -1424,9 +1446,23 @@
     overflow: hidden;
     margin: 0 auto 20px;
 
+    @media (min-width: $md) {
+        width: 600px;
+        height: 300px;
+    }
+
+    @media (min-width: $lg) {
+        width: 750px;
+        height: 300px;
+    }
+
     &__navs {
         display: flex;
         height: 25px;
+
+        @media (min-width: $md) {
+            height: 35px;
+        }
 
         li {
             display: flex;
@@ -1442,6 +1478,12 @@
             border-bottom: 1px solid #45AC34;
             border-right: 1px solid #45AC34;
 
+            @media (min-width: $md) {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 19px;
+            }
+
             &:last-child {
                 border-right: none;
             }
@@ -1452,6 +1494,10 @@
         width: 100%;
         height: calc(100% - 25px);
         position: relative;
+
+        @media (min-width: $md) {
+            height: calc(100% - 35px);
+        }
     }
 
     &__map {
@@ -1472,17 +1518,29 @@
             font-size: 11px;
             line-height: 1.4;
             color: $color-font-lite;
+
+            @media (min-width: $md) {
+                font-size: 16px;
+                line-height: 22px;
+                width: 50%;
+                padding: 40px 15px 0 30px;
+            }
         }
 
         strong {
             display: block;
-            font-weight: 500;
+            font-weight: bold;
             font-size: 12px;
+
+            @media (min-width: $md) {
+                font-size: 16px;
+                line-height: 22px;
+            }
         }
 
         b {
             display: block;
-            font-weight: 500;
+            font-weight: bold;
             margin-top: 20px;
         }
     }
@@ -1492,6 +1550,10 @@
         position: relative;
         height: 100%;
         width: 130px;
+
+        @media (min-width: $md) {
+            width: 50%;
+        }
     }
 
     &[data-active-map="0"] {
@@ -1500,6 +1562,12 @@
             border-bottom-color: $color-back-primary;
             font-size: 11px;
             color: $color-accent-primary;
+
+            @media (min-width: $md) {
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 22px;
+            }
         }
 
         .tabs__map:nth-child(1) {
@@ -1514,6 +1582,12 @@
             border-bottom-color: $color-back-primary;
             font-size: 11px;
             color: $color-accent-primary;
+
+            @media (min-width: $md) {
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 22px;
+            }
         }
 
         .tabs__map:nth-child(2) {
@@ -1528,6 +1602,12 @@
             border-bottom-color: $color-back-primary;
             font-size: 11px;
             color: $color-accent-primary;
+
+            @media (min-width: $md) {
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 22px;
+            }
         }
 
         .tabs__map:nth-child(3) {
