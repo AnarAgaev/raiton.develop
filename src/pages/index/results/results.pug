@@ -49,10 +49,8 @@ include form-present
             .results__list
                 h5  Матрасы подобранные для Вас:
                 .results__list-caption
-                    strong
-                        span 7&nbsp;
-                        | матрасов&nbsp;
-                    | в ценовой категории
+                    strong#resultItemsCount
+                    | &nbsp;в ценовой категории
 
                 .results__list-raiting#rating
                     include ../../../img/icon-start.svg
@@ -70,11 +68,11 @@ include form-present
                                 include ../../../img/i-scroll-hand.svg
 
                         .swiper.swiper_results
-                            .swiper-wrapper
-                                include items/cheap/template
-                                include items/cheap/template
-                                include items/cheap/template
-                                include items/cheap/template
+                            .swiper-wrapper#resultSliderList
+                                //- include items/cheap/template
+                                //- include items/cheap/template
+                                //- include items/cheap/template
+                                //- include items/cheap/template
 
                             .swiper-pagination.swiper-pagination-results-items
 

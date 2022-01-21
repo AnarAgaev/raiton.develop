@@ -79,11 +79,21 @@ $(document).ready(() => {
             setQuestionsToBody(animationDuration, nextQuestion);
 
             /* Чекаем слудующий вопрос и если
-             * это Результаты, запускаем логику
-             * для блока с результатами
+             * это Запрос имени (т.е. пользователь
+             * уже не может вернуться назад),
+             * запускаем логику для построения
+             * блока с результатами
+             */
+            if ($(nextQuestion).attr('id') === 'getNane') {
+                initialResults();
+            }
+
+            /* Чекаем слудующий вопрос и если
+             * это Запрос результата
+             * скрываем прогерсс бар
              */
             if ($(nextQuestion).attr('id') === 'results') {
-                initialResults();
+                hideProgressBar();
             }
 
         } else {
@@ -184,4 +194,6 @@ $(document).ready(() => {
 
         setTimeout(updateCurrentQuestion, timeout);
     };
+
+    const hideProgressBar = () => $('#progress').addClass('hide');
 });

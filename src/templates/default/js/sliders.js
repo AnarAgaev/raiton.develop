@@ -10,7 +10,7 @@ $(document).ready(() => {
             observer: true,
             observeParents: true,
             observeSlideChildren: true,
-            autoHeight: false,
+            autoHeight: true,
             pagination: {
                 el: '.swiper-pagination-results-items',
                 clickable: true,

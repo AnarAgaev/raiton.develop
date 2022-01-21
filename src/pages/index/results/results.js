@@ -1,7 +1,5 @@
 $(document).ready(() => {
 
-    const hideProgressBar = () => $('#progress').addClass('hide');
-
     const lazyLoadBackground = () => {
         $('[data-lazy-load-background]')
             .each((id, el) => {
@@ -41,10 +39,12 @@ $(document).ready(() => {
 
     // Показываем премиум секции
     const showPremiumSections = () => {
-        const isQualityHigh = STORE.quality[1] === 'Высокий уровень.';
+        if (STORE.forWhom[1] === 'Взрослый.') {
+            const isQualityHigh = STORE.quality[1] === 'Высокий уровень.';
 
-        if (isQualityHigh) {
-            $('.onlyPremium').removeClass('hidden');
+            if (isQualityHigh) {
+                $('.onlyPremium').removeClass('hidden');
+            }
         }
     }
 
@@ -56,111 +56,99 @@ $(document).ready(() => {
     }
 
     const getRating = () => {
-        const quality = STORE.quality[1];
+        if (STORE.forWhom[1] === 'Взрослый.') {
+            const quality = STORE.quality[1];
 
-        if (quality === 'Простым и бюджетным.')
-            return 'rating-low';
+            if (quality === 'Простым и бюджетным.')
+                return 'rating-low';
 
-        if (quality === 'Баланс цены и качества.')
-            return 'rating-middle';
+            if (quality === 'Баланс цены и качества.')
+                return 'rating-middle';
 
-        if (quality === 'Высокий уровень.')
-            return 'rating-height';
+            if (quality === 'Высокий уровень.')
+                return 'rating-height';
+        }
     }
 
+    const buildResultItems = () => {
+        if (STORE.forWhom[1] === 'Взрослый.') {
+            buildAdultResultItems();
+        } else {
+            buildChildrenResultItems();
+        }
+    }
 
+    const buildChildrenResultItems = () => {
+        console.log('for children')
+    }
 
+    const buildAdultResultItems = () => {
+        const quality = STORE.quality[1];
 
+        switch (quality) {
+            case 'Простым и бюджетным.':
+                buildResultSlider(ITEMS.economy);
+                break;
+            case 'Баланс цены и качества.':
+                buildResultSlider(ITEMS.medium);
+                break;
+            case 'Высокий уровень.':
+                buildResultSlider(ITEMS.premium);
+                break;
+        }
+    }
 
+    const buildResultSlider = (arrItems) => {
+        const slider = $('#resultSliderList')[0],
+            countTxt = arrItems.length;
 
+        $('#resultItemsCount')[0].innerHTML = `<span>${countTxt}</span> матрасов`;
 
+        arrItems.forEach(slide => {
+
+            const htmlNode = document.createElement('div');
+
+            htmlNode.classList.add('swiper-slide');
+
+            htmlNode.innerHTML = `<div class="results-item">
+                <div class="results-item__caption">${slide.name}</div>
+                <div class="results-item__picture">
+                    <img class="results-item__picture-img" src="${slide.imgLink}" alt="${slide.name}">
+                    <div class="results-item__picture-content">
+                        <p class="results-item__picture-title">${slide.title}</p>
+                        <p class="results-item__picture-subtitle">${slide.subtitle}</p>
+                        <span class="results-item__picture-txt">${slide.weight}</span>
+                    </div>
+                </div>
+                <div class="results-item__body">
+                    <ul class="results-item__list">
+                        <li><h6>${slide.guarantee}</h6></li>
+                        <li>
+                            <h6>${slide.hardness}</h6>
+                            <p>${slide.hardnessComment}</p>
+                        </li>
+                        <li>
+                            <h6>${slide.size}</h6>
+                            <p>${slide.sizeComment}</p>
+                        </li>
+                        <li>
+                            <h6>${slide.height}</h6>
+                            <a class="button" href="${slide.descriptionLink}" target="_blank">Смотреть описание</a>
+                        </li>
+                    </ul>
+                    <a class="btn" href="https://api.whatsapp.com/send?phone=79241764428&text=Здравствуйте!%20Я%20хочу%20получить%20чек-лист" target="_blank">уточнить стоимость<br>в whatsapp</a>
+                </div>
+            </div>`;
+
+            slider.append(htmlNode);
+        });
+    }
 
     window.initialResults = () => {
-        hideProgressBar();
         lazyLoadBackground();
         lazyLoadImg();
         showPremiumSections();
         setResultRating();
+        buildResultItems();
     };
-
-
-
-
-
-
-
-    // // Рассчитваем резьльтаты прохождения Квиза
-// // и определяем какой блок результатов показывать
-
-// window.getResultCard = () => {
-//     if (checkResult_1()) {
-//         if (IS_DEBUGGING) console.log('Подобран Рузультат #1');
-//         return $('#result-1');
-//     }
-
-
-//     return console.log('!!! Ошибка определения результата!');
-// };
-
-// const checkResult_1 = () => {
-
-//     const line1 =  (
-//             // Вопрос 1: Бывает ли, что ваша кожа выглядит жирной и блестит?
-//             // STORE.questionFirst[1]
-//             (STORE.questionFirst[1] === "Жирный блеск у меня бывает только в Т-зоне."
-//                 || STORE.questionFirst[1] === "Нет, у меня такого не бывает или бывает очень редко.")
-
-//             // Вопрос 2: Какие у вас ощущения после умывания?
-//             // STORE.questionSecond[1]
-//             && (STORE.questionSecond[1] === "Комфорт и свежесть."
-//                 || STORE.questionSecond[1] === "По-разному в разных зонах.")
-
-//             // Вопрос 3: Характерны ли для вашей кожи такие проблемы? --- НЕ ИМЕЕТ ЗАНЧЕНИЯ!
-//             // STORE.questionThird[1]
-
-//             // Вопрос 4: Бывают ли у вас воспаления и подкожные прыщи?
-//             // STORE.questionFourth[1]
-//             && (STORE.questionFourth[1] === "Очень редко."
-//                 || STORE.questionFourth[1] === "Ничего такого у меня нет.")
-
-//             // Вопрос 5.1: Сколько воспалений на сегодняшний день? --- НЕ ИМЕЕТ ЗАНЧЕНИЯ!
-//             // STORE.questionFifthOne[1]
-
-//             // Вопрос 5.2: Бывают ли зуд и/или покраснения как реакция на ветер, холод, косметические средства?
-//             // STORE.questionFifthTwo[1]
-//             && (STORE.questionFifthTwo[1] === "Ничего такого у меня нет.")
-//         ),
-
-//         line2 = (
-//             // Вопрос 1: Бывает ли, что ваша кожа выглядит жирной и блестит?
-//             // STORE.questionFirst[1]
-//             (STORE.questionFirst[1] === "Жирный блеск у меня бывает только в Т-зоне."
-//                 || STORE.questionFirst[1] === "Нет, у меня такого не бывает или бывает очень редко.")
-
-//             // Вопрос 2: Какие у вас ощущения после умывания?
-//             // STORE.questionSecond[1]
-//             && (STORE.questionSecond[1] === "Ощущение стянутости."
-//                 || STORE.questionSecond[1] === "Кожа кажется жирной и липкой.")
-
-//             // Вопрос 3: Характерны ли для вашей кожи такие проблемы? --- НЕ ИМЕЕТ ЗАНЧЕНИЯ!
-//             // STORE.questionThird[1]
-
-//             // Вопрос 4: Бывают ли у вас воспаления и подкожные прыщи?
-//             // STORE.questionFourth[1]
-//             && (STORE.questionFourth[1] === "Очень редко."
-//                 || STORE.questionFourth[1] === "Ничего такого у меня нет.")
-
-//             // Вопрос 5.1: Сколько воспалений на сегодняшний день? --- НЕ ИМЕЕТ ЗАНЧЕНИЯ!
-//             // STORE.questionFifthOne[1]
-
-//             // Вопрос 5.2: Бывают ли зуд и/или покраснения как реакция на ветер, холод, косметические средства?
-//             // STORE.questionFifthTwo[1]
-//             && (STORE.questionFifthTwo[1] === "Ничего такого у меня нет.")
-//         );
-
-//     return line1 || line2;
-// };
-
-
-
 });
