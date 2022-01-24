@@ -12,7 +12,7 @@ $(document).ready(() => {
             observeSlideChildren: true,
             autoHeight: true,
             pagination: {
-                el: '.swiper-pagination-results-items',
+                el: '.swiper-pagination-results',
                 clickable: true,
                 dynamicBullets: true,
             },
