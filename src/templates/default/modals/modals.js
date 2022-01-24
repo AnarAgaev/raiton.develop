@@ -55,14 +55,20 @@ $(document).ready(() => {
         return $(el).hasClass('modal') || $(el).hasClass('modalCloseBtn');
     };
 
-    const lazyLoadPresentVideo = () => {
-        let video = $('#presentationModal video'),
+    const lazyLoadVideo = (idContainer) => {
+        let video = $(idContainer).find('video'),
             source = video.find('source'),
             src = video.data('src');
 
         video.attr('src', src);
         source.attr('src', src);
     }
-    // Ленивая загружаем видео в виджет видео-презентаии
-    setTimeout(lazyLoadPresentVideo, 1000);
+    // Ленивая загружаем виде
+    setTimeout(
+        () => {
+            lazyLoadVideo('#presentationModal');
+            lazyLoadVideo('#getContactVideo');
+        },
+        3000
+    );
 });
