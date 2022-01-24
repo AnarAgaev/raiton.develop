@@ -45,7 +45,7 @@ include form-present
         .col-12#resPlaceAnchor
 
     .row
-        .col-12.animatible.lite-background.mt-md-5#resultCheap
+        .col-12.animatible.lite-background.mt-md-5#resultsSlider
             .results__list
                 h5 Матрасы подобранные для Вас:
                 .results__list-caption#resultsCaption
@@ -69,7 +69,19 @@ include form-present
 
                         .swiper.swiper_results
                             .swiper-wrapper#resultSliderList
+                                //- include item-template
+                                //- include item-template
+                                //- include item-template
+                                //- include item-template
+                                //- include item-template
+                                //- include item-template
+                                //- include item-template
+                                //- include item-template
+
                             .swiper-pagination.swiper-pagination-results
+
+                .results__list-show-more#showMoreResultsItems
+                    button(type="button") Загрузить ещё
 
     .row
         .col-12.lite-background.animatible
