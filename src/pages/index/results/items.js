@@ -363,9 +363,8 @@ window.ITEMS = {
             height: 'Высота: 22 см.',
             descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/special-evs-m-f/90-200-sinteticheskiy-zhakkard/',
         },
-
-
     ],
+
     medium: [
         // Матрас Standart Zone
         {
@@ -730,6 +729,7 @@ window.ITEMS = {
         },
 
     ],
+
     premium: [
 
         // Sealy Base Black Edition
@@ -1140,6 +1140,51 @@ window.ITEMS = {
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 27 см.',
             descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/sealy-posture-plus-firm-black-edition/180-200/',
+        },
+    ],
+
+    children: [
+        {
+            imgLink: 'img/items/vendor-baby-base.jpg',
+            name: 'Матрас Baby Base',
+            title: 'Сочетание современных наполнителей и независимого пружинного блока',
+            subtitle: 'Идеальный микроклимат спального места',
+            weight: 'Max. вес на 1 спальное место: 100 кг.',
+            guarantee: 'Гарантия 1,5 года',
+            hardness: 'Жёсткость: средняя',
+            hardnessComment: 'универсальная средняя жесткость',
+            size: '90х200 см.',
+            sizeComment: 'любой размер с шагом 10 см по длине и ширине',
+            height: 'Высота: 13 см.',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/baby-base/90-200-print/',
+        },
+        {
+            imgLink: 'img/items/vendor-baby-care.jpg',
+            name: 'Матрас Baby Care',
+            title: 'Матрас на основе блока независимых пружин',
+            subtitle: 'Подходит для детей от 3 до 12 лет',
+            weight: 'Max. вес на 1 спальное место: 90 кг.',
+            guarantee: 'Гарантия 1,5 года',
+            hardness: 'Жёсткость: средняя',
+            hardnessComment: 'пена с ячеистой поверхностью',
+            size: '90х200 см.',
+            sizeComment: 'любой размер с шагом 10 см по длине и ширине',
+            height: 'Высота: 11 см.',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/baby-care/90-200-print/',
+        },
+        {
+            imgLink: 'img/items/vendor-baby-safe.jpg',
+            name: 'Матрас Baby Safe',
+            title: 'Матрас средней жесткости с независимым пружинным блоком',
+            subtitle: 'Модель специально для детей',
+            weight: 'Max. вес на 1 спальное место: 100 кг.',
+            guarantee: 'Гарантия 1,5 года',
+            hardness: 'Жёсткость: средняя',
+            hardnessComment: 'пена Raitex и Coconut с обеих сторон',
+            size: '90х200 см.',
+            sizeComment: 'любой размер с шагом 10 см по длине и ширине',
+            height: 'Высота: 15 см.',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/baby-safe/90-200-print/',
         },
     ],
 }
