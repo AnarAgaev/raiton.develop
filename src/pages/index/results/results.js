@@ -21,8 +21,6 @@ $(document).ready(() => {
     // Перключаем карты в результатах
     $('#maps .tabs__item').each((idx, el) => {
         $(el).on('click', () => {
-            console.log()
-
             maps.dataset.activeMap = idx;
         });
     });
@@ -68,7 +66,15 @@ $(document).ready(() => {
             if (quality === 'Высокий уровень.')
                 return 'rating-height';
         }
-    }
+
+        const caption = $('#resultsCaption'),
+            rating = $('#rating'),
+            title = caption.prev();
+
+        title.addClass('mb-5 pb-md-4');
+        rating.hide();
+        caption.hide();
+    };
 
     const buildResultItems = () => {
         if (STORE.forWhom[1] === 'Взрослый.') {
