@@ -142,13 +142,16 @@ $(document).ready(() => {
                             <a class="button" href="${slide.descriptionLink}" target="_blank">Смотреть описание</a>
                         </li>
                     </ul>
-                    <a class="btn" href="https://api.whatsapp.com/send?phone=79241764428&text=Здравствуйте!%20Я%20хочу%20получить%20чек-лист" target="_blank">уточнить стоимость<br>в whatsapp</a>
+                    <a class="btn" href="https://api.whatsapp.com/send?phone=79241653043&text=" target="_blank">уточнить стоимость<br>в whatsapp</a>
                 </div>
             </div>`;
 
             slider.append(htmlNode);
         });
     }
+
+    // Просто менеджер - https://api.whatsapp.com/send?phone=79241653043&text=
+    // Получить подарок Чеклист - https://api.whatsapp.com/send?phone=79241764428&text=Здравствуйте!%20Я%20хочу%20получить%20чек-лист
 
     window.initialResults = () => {
         lazyLoadBackground();
