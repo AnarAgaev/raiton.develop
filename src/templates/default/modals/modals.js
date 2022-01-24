@@ -54,21 +54,4 @@ $(document).ready(() => {
     const isActionNode = function (el) {
         return $(el).hasClass('modal') || $(el).hasClass('modalCloseBtn');
     };
-
-    const lazyLoadVideo = (idContainer) => {
-        let video = $(idContainer).find('video'),
-            source = video.find('source'),
-            src = video.data('src');
-
-        video.attr('src', src);
-        source.attr('src', src);
-    }
-    // Ленивая загружаем виде
-    setTimeout(
-        () => {
-            lazyLoadVideo('#presentationModal');
-            lazyLoadVideo('#getContactVideo');
-        },
-        3000
-    );
 });
