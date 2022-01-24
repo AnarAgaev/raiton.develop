@@ -156,6 +156,7 @@
     }
 
     &__presentation {
+        position: relative;
         width: 288px;
         height: 401px;
         margin: 15px auto 30px;
@@ -176,6 +177,36 @@
 
         @media (min-width: $xl) {
             left: 24px;
+        }
+
+        .wrapper {
+            position: absolute;
+            overflow: hidden;
+            transform: rotate(-6.6deg);
+            top: 38px;
+            left: 65px;
+            width: 161px;
+            height: 332px;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+
+            video {
+                position: absolute;
+                width: 100%;
+                height: auto;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            @media (min-width: $md) {
+                top: 50px;
+                left: 81px;
+                width: 201px;
+                height: 411px;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
         }
     }
 }
@@ -198,6 +229,7 @@
         margin-top: 60px;
         font-size: 22px;
         line-height: 30px;
+        margin-bottom: -10px;
 
         &::before {
             content: "";

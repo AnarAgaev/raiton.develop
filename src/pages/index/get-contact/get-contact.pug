@@ -27,6 +27,16 @@ section.container.question#getContact.hidden
 
         .col-12.col-lg-4.order-lg-1.animatible
             .get-contact__presentation
+                .wrapper
+                    video(class="video_result"
+                        controlslist="nodownload"
+                        src="video/results.mp4"
+                        playsinline=""
+                        loop="loop"
+                        muted="muted"
+                        preload="auto"
+                        autoplay="autoplay")
+                        source(src="video/results.mp4" type="video/mp4")
 
         .col-12.d-lg-none
             include ../form-get-contact/form-get-contact
