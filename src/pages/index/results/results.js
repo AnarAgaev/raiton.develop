@@ -85,7 +85,7 @@ $(document).ready(() => {
     }
 
     const buildChildrenResultItems = () => {
-        console.log('for children')
+        buildResultSlider(ITEMS.children);
     }
 
     const buildAdultResultItems = () => {

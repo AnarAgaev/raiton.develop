@@ -85,7 +85,7 @@ window.ITEMS = {
             size: '90х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 17 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/matras-special-grey-flex-m/90-200-trikotazh-trikotazh/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/matras-special-grey-flex-m/',
         },
         {
             imgLink: 'img/items/vendor-special-grey-flex.jpg',
@@ -99,7 +99,7 @@ window.ITEMS = {
             size: '120х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 17 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/matras-special-grey-flex-m/90-200-trikotazh-trikotazh/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/matras-special-grey-flex-m/',
         },
         {
             imgLink: 'img/items/vendor-special-grey-flex.jpg',
@@ -113,7 +113,7 @@ window.ITEMS = {
             size: '140х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 17 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/matras-special-grey-flex-m/90-200-trikotazh-trikotazh/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/matras-special-grey-flex-m/',
         },
         {
             imgLink: 'img/items/vendor-special-grey-flex.jpg',
@@ -127,7 +127,7 @@ window.ITEMS = {
             size: '160х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 17 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/matras-special-grey-flex-m/90-200-trikotazh-trikotazh/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/matras-special-grey-flex-m/',
         },
         {
             imgLink: 'img/items/vendor-special-grey-flex.jpg',
@@ -141,7 +141,7 @@ window.ITEMS = {
             size: '180х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 17 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/matras-special-grey-flex-m/90-200-trikotazh-trikotazh/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/matras-special-grey-flex-m/',
         },
 
         // Матрас Primary Light
@@ -157,7 +157,7 @@ window.ITEMS = {
             size: '90х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 22 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/primary-light/90-200-sinteticheskiy-zhakkard/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/primary-light/',
         },
         {
             imgLink: 'img/items/vendor-primary-light.jpg',
@@ -171,7 +171,7 @@ window.ITEMS = {
             size: '120х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 22 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/primary-light/90-200-sinteticheskiy-zhakkard/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/primary-light/',
         },
         {
             imgLink: 'img/items/vendor-primary-light.jpg',
@@ -185,7 +185,7 @@ window.ITEMS = {
             size: '140х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 22 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/primary-light/90-200-sinteticheskiy-zhakkard/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/primary-light/',
         },
         {
             imgLink: 'img/items/vendor-primary-light.jpg',
@@ -199,7 +199,7 @@ window.ITEMS = {
             size: '160х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 22 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/primary-light/90-200-sinteticheskiy-zhakkard/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/primary-light/',
         },
         {
             imgLink: 'img/items/vendor-primary-light.jpg',
@@ -213,7 +213,7 @@ window.ITEMS = {
             size: '180х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 22 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/primary-light/90-200-sinteticheskiy-zhakkard/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/primary-light/',
         },
 
         // Матрас Classic ECO EVS
@@ -229,7 +229,7 @@ window.ITEMS = {
             size: '90х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 17 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/classic-eco-evs-f/90-200-zhakkard-sinteticheskiy-100/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/classic-eco-evs-f/',
         },
         {
             imgLink: 'img/items/vendor-classic-eco-evs.jpg',
@@ -243,7 +243,7 @@ window.ITEMS = {
             size: '120х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 17 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/classic-eco-evs-f/90-200-zhakkard-sinteticheskiy-100/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/classic-eco-evs-f/',
         },
         {
             imgLink: 'img/items/vendor-classic-eco-evs.jpg',
@@ -257,7 +257,7 @@ window.ITEMS = {
             size: '140х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 17 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/classic-eco-evs-f/90-200-zhakkard-sinteticheskiy-100/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/classic-eco-evs-f/',
         },
         {
             imgLink: 'img/items/vendor-classic-eco-evs.jpg',
@@ -271,7 +271,7 @@ window.ITEMS = {
             size: '160х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 17 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/classic-eco-evs-f/90-200-zhakkard-sinteticheskiy-100/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/classic-eco-evs-f/',
         },
         {
             imgLink: 'img/items/vendor-classic-eco-evs.jpg',
@@ -285,7 +285,7 @@ window.ITEMS = {
             size: '180х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 17 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/classic-eco-evs-f/90-200-zhakkard-sinteticheskiy-100/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/classic-eco-evs-f/',
         },
 
         // Матрас Standart Zone  standart-zone
@@ -301,7 +301,7 @@ window.ITEMS = {
             size: '160х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 22 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/standart-zone-f/90-200-trikotazh-trikotazh/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/standart-zone-f/',
         },
         {
             imgLink: 'img/items/vendor-standart-zone.jpg',
@@ -315,7 +315,7 @@ window.ITEMS = {
             size: '180х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 22 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/standart-zone-f/90-200-trikotazh-trikotazh/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/standart-zone-f/',
         },
 
         // Матрас Elementary EVS420
@@ -361,7 +361,7 @@ window.ITEMS = {
             size: '140х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 22 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/special-evs-m-f/90-200-sinteticheskiy-zhakkard/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/special-evs-m-f/',
         },
     ],
 
@@ -379,7 +379,7 @@ window.ITEMS = {
             size: '90х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 22 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/standart-zone-f/90-200-trikotazh-trikotazh/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/standart-zone-f/',
         },
         {
             imgLink: 'img/items/vendor-standart-zone.jpg',
@@ -393,7 +393,7 @@ window.ITEMS = {
             size: '120х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 22 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/standart-zone-f/90-200-trikotazh-trikotazh/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/standart-zone-f/',
         },
         {
             imgLink: 'img/items/vendor-standart-zone.jpg',
@@ -407,7 +407,7 @@ window.ITEMS = {
             size: '140х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 22 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/standart-zone-f/90-200-trikotazh-trikotazh/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/standart-zone-f/',
         },
 
         // Матрас Elementary EVS420
@@ -467,7 +467,7 @@ window.ITEMS = {
             size: '90х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 22 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/special-evs-m-f/90-200-sinteticheskiy-zhakkard/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/special-evs-m-f/',
         },
         {
             imgLink: 'img/items/dev-special-evs-mf.jpg',
@@ -481,7 +481,7 @@ window.ITEMS = {
             size: '120х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 22 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/special-evs-m-f/90-200-sinteticheskiy-zhakkard/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/special-evs-m-f/',
         },
         {
             imgLink: 'img/items/dev-special-evs-mf.jpg',
@@ -495,7 +495,7 @@ window.ITEMS = {
             size: '160х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 22 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/special-evs-m-f/90-200-sinteticheskiy-zhakkard/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/special-evs-m-f/',
         },
         {
             imgLink: 'img/items/dev-special-evs-mf.jpg',
@@ -509,7 +509,7 @@ window.ITEMS = {
             size: '180х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 22 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/special-evs-m-f/90-200-sinteticheskiy-zhakkard/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/special-evs-m-f/',
         },
 
         // Матрас Special Version S1000 F/P
@@ -597,7 +597,7 @@ window.ITEMS = {
             size: '90х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 19 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-m/90-200-lagom-grey/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-m/',
         },
         {
             imgLink: 'img/items/vendor-lagom.jpg',
@@ -611,7 +611,7 @@ window.ITEMS = {
             size: '120х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 19 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-m/90-200-lagom-grey/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-m/',
         },
         {
             imgLink: 'img/items/vendor-lagom.jpg',
@@ -625,7 +625,7 @@ window.ITEMS = {
             size: '140х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 19 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-m/90-200-lagom-grey/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-m/',
         },
         {
             imgLink: 'img/items/vendor-lagom.jpg',
@@ -639,7 +639,7 @@ window.ITEMS = {
             size: '160х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 19 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-m/90-200-lagom-grey/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-m/',
         },
         {
             imgLink: 'img/items/vendor-lagom.jpg',
@@ -653,7 +653,7 @@ window.ITEMS = {
             size: '180х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 19 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-m/90-200-lagom-grey/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-m/',
         },
 
         // Матрас Lagom Memory
@@ -669,7 +669,7 @@ window.ITEMS = {
             size: '90х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 19 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-memory-m/90-200-lagom-beige/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-memory-m/',
         },
         {
             imgLink: 'img/items/vendor-lagom-memory.jpg',
@@ -683,7 +683,7 @@ window.ITEMS = {
             size: '120х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 19 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-memory-m/90-200-lagom-beige/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-memory-m/',
         },
         {
             imgLink: 'img/items/vendor-lagom-memory.jpg',
@@ -697,7 +697,7 @@ window.ITEMS = {
             size: '140х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 19 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-memory-m/90-200-lagom-beige/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-memory-m/',
         },
         {
             imgLink: 'img/items/vendor-lagom-memory.jpg',
@@ -711,7 +711,7 @@ window.ITEMS = {
             size: '160х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 19 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-memory-m/90-200-lagom-beige/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-memory-m/',
         },
         {
             imgLink: 'img/items/vendor-lagom-memory.jpg',
@@ -725,9 +725,8 @@ window.ITEMS = {
             size: '180х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 19 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-memory-m/90-200-lagom-beige/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/lagom-memory-m/',
         },
-
     ],
 
     premium: [
@@ -1123,7 +1122,7 @@ window.ITEMS = {
             size: '180х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 34 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/sealy-premier-medium-black-edition/180-200/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/sealy-premier-medium-black-edition/',
         },
 
         // Матрас Sealy Posture Plus Firm Black Edition
@@ -1139,25 +1138,11 @@ window.ITEMS = {
             size: '180х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 27 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/sealy-posture-plus-firm-black-edition/180-200/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/sealy-posture-plus-firm-black-edition/',
         },
     ],
 
     children: [
-        {
-            imgLink: 'img/items/vendor-baby-base.jpg',
-            name: 'Матрас Baby Base',
-            title: 'Сочетание современных наполнителей и независимого пружинного блока',
-            subtitle: 'Идеальный микроклимат спального места',
-            weight: 'Max. вес на 1 спальное место: 100 кг.',
-            guarantee: 'Гарантия 1,5 года',
-            hardness: 'Жёсткость: средняя',
-            hardnessComment: 'универсальная средняя жесткость',
-            size: '90х200 см.',
-            sizeComment: 'любой размер с шагом 10 см по длине и ширине',
-            height: 'Высота: 13 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/baby-base/90-200-print/',
-        },
         {
             imgLink: 'img/items/vendor-baby-care.jpg',
             name: 'Матрас Baby Care',
@@ -1170,7 +1155,21 @@ window.ITEMS = {
             size: '90х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 11 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/baby-care/90-200-print/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/baby-care/',
+        },
+        {
+            imgLink: 'img/items/vendor-baby-still.jpg',
+            name: 'Матрас Baby Still',
+            title: 'Подходит для детских и подростковых кроватей',
+            subtitle: 'Обивка из хлопка или жаккарда',
+            weight: 'Max. вес на 1 спальное место: 100 кг.',
+            guarantee: 'Гарантия 1,5 года',
+            hardness: 'Жёсткость: средняя',
+            hardnessComment: 'Оптимальная жесткость',
+            size: '90х200 см.',
+            sizeComment: 'любой размер с шагом 10 см по длине и ширине',
+            height: 'Высота: 13 см.',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/baby-still/',
         },
         {
             imgLink: 'img/items/vendor-baby-safe.jpg',
@@ -1184,7 +1183,63 @@ window.ITEMS = {
             size: '90х200 см.',
             sizeComment: 'любой размер с шагом 10 см по длине и ширине',
             height: 'Высота: 15 см.',
-            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/baby-safe/90-200-print/',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/baby-safe/',
+        },
+        {
+            imgLink: 'img/items/vendor-baby-base.jpg',
+            name: 'Матрас Baby Base',
+            title: 'Сочетание современных наполнителей и независимого пружинного блока',
+            subtitle: 'Идеальный микроклимат спального места',
+            weight: 'Max. вес на 1 спальное место: 100 кг.',
+            guarantee: 'Гарантия 1,5 года',
+            hardness: 'Жёсткость: средняя',
+            hardnessComment: 'универсальная средняя жесткость',
+            size: '90х200 см.',
+            sizeComment: 'любой размер с шагом 10 см по длине и ширине',
+            height: 'Высота: 13 см.',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/baby-base/',
+        },
+        {
+            imgLink: 'img/items/vendor-baby-sweet.jpg',
+            name: 'Матрас Baby Sweet',
+            title: 'Матрас на основе комбинированного пенного наполнителя Raitex',
+            subtitle: 'Подходит для детей от 1 до 6 лет',
+            weight: 'Max. вес на 1 спальное место: 90 кг.',
+            guarantee: 'Гарантия 1,5 года',
+            hardness: 'Жёсткость: средняя',
+            hardnessComment: 'Оптимальная жесткость',
+            size: '90х200 см.',
+            sizeComment: 'любой размер с шагом 10 см по длине и ширине',
+            height: 'Высота: 9 см.',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/baby-sweet/',
+        },
+        {
+            imgLink: 'img/items/vendor-baby-classic.jpg',
+            name: 'Матрас Baby Classic',
+            title: 'Двусторонний матрас на основе натурального природного материала Coconut',
+            subtitle: 'Наилучшая поддержка позвоночника',
+            weight: 'Max. вес на 1 спальное место: 90 кг.',
+            guarantee: 'Гарантия 1,5 года',
+            hardness: 'Жёсткость: высокая',
+            hardnessComment: 'Возможность выбора чехла',
+            size: '90х200 см.',
+            sizeComment: 'любой размер с шагом 10 см по длине и ширине',
+            height: 'Высота: 7 см.',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/baby-classic/',
+        },
+        {
+            imgLink: 'img/items/vendor-baby-comfort.jpg',
+            name: 'Матрас Baby Comfort',
+            title: 'Матрас на блоке независимых пружин со сторонами разной жесткости',
+            subtitle: 'С одной стороны койра, с другой Raitex',
+            weight: 'Max. вес на 1 спальное место: 90 кг.',
+            guarantee: 'Гарантия 1,5 года',
+            hardness: 'Жёсткость: высокая, средняя',
+            hardnessComment: 'В основе независимый пружинный блок',
+            size: '90х200 см.',
+            sizeComment: 'любой размер с шагом 10 см по длине и ширине',
+            height: 'Высота: 16 см.',
+            descriptionLink: 'https://yakutsk.raiton.ru/category/matrasy/product/baby-comfort/',
         },
     ],
 }
