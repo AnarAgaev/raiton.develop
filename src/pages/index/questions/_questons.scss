@@ -122,37 +122,48 @@
         }
 
         h2, h3 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            position: relative;
             width: calc(100% - 4px);
             height: 31px;
             background-color: $color-back-primary;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
             margin-top: 2px;
-            font-weight: 600;
+            overflow: hidden;
 
-            img {
-                display: inline-block;
-                margin-left: 5px;
-                animation: round-move 2s linear infinite both;
-            }
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                font-weight: 600;
+                opacity: 1;
+                transition: opacity .3s linear;
+                font-size: 10px;
+                line-height: 14px;
 
-            @keyframes round-move {
-                from { transform: rotate(0deg); }
-                to { transform: rotate(360deg); }
+                img {
+                    display: inline-block;
+                    margin-left: 5px;
+                    animation: round-move 2s linear infinite both;
+                }
+
+                @keyframes round-move {
+                    from { transform: rotate(0deg); }
+                    to { transform: rotate(360deg); }
+                }
             }
         }
 
         h2 {
             font-size: 12px;
             line-height: 16px;
-        }
 
-        h3 {
-            font-size: 10px;
-            line-height: 14px;
+            span.hide {
+                opacity: 0;
+            }
         }
 
         p {
@@ -160,9 +171,22 @@
             position: relative;
             width: 100%;
             height: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: auto;
+
+            span {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: auto;
+                opacity: 1;
+                transition: opacity .3s linear;
+
+                &.hide {
+                    opacity: 0;
+                }
+            }
         }
     }
 

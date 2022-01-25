@@ -22,7 +22,18 @@ $(document).ready(() => {
                     _this = $(_this).closest('.btn');
                 }
 
-                handlerBtnToggleStep(_this, true);
+                // В начале переключаем картинки
+                // с предварительными реузльтатами
+                checkPreliminaryResults(_this, true);
+
+                // откладываем переключение вопросов,
+                // т.к. в начале переключаем картинки
+                // с количеством подобранных результатов
+                // а только потом преключаем вопрос
+                setTimeout(
+                    () => handlerBtnToggleStep(_this, true),
+                    1500
+                );
             }
         );
     });
@@ -30,10 +41,12 @@ $(document).ready(() => {
     // Обрабатываем клик по кнопке назад
     $('.btnPrevStep').each((idx, el) => {
         $(el).click(
-            e => handlerBtnToggleStep(
-                e.target,
-                false
-            )
+            e => {
+                const _this = e.target;
+
+                checkPreliminaryResults(_this, false);
+                handlerBtnToggleStep(_this,false);
+            }
         );
     });
 
@@ -48,6 +61,25 @@ $(document).ready(() => {
         );
     });
 
+    // Переключаем картинки с предварительными результатами
+    const checkPreliminaryResults = (btn, direction) => {
+        const container = getPreResultsContainer(btn, direction);
+
+        container.find('h2 span').toggleClass('hide');
+        container.find('p span').toggleClass('hide');
+    };
+
+    const getPreResultsContainer = (node, direction) => {
+        const prevQuestionId = STORE
+            .stepsMap[STORE.stepsMap.length - 2];
+
+        const question = direction
+            ? $(node).closest('.question')
+            : $(prevQuestionId);
+
+        return question.find('.question__comment');
+    };
+
     const handlerClickOnPluralController = (idx, el) => {
         const isFirstGroupChecked = $('.pluralController.firstGroup:checked')
                 .length > 0,
@@ -56,7 +88,16 @@ $(document).ready(() => {
                 .length > 0;
 
         if (isFirstGroupChecked && isSecondGroupChecked) {
-            handlerBtnToggleStep(el, true);
+            checkPreliminaryResults(el, true);
+
+            // откладываем переключение вопросов,
+            // т.к. в начале переключаем картинки
+            // с количеством подобранных результатов
+            // а только потом преключаем вопрос
+            setTimeout(
+                () => handlerBtnToggleStep(el, true),
+                1500
+            );
         }
     };
 
