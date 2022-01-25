@@ -106,9 +106,9 @@ $(document).ready(() => {
 
     const buildResultSlider = (arrItems) => {
         const slider = $('#resultSliderList')[0],
-            countTxt = arrItems.length;
+            count = arrItems.length;
 
-        $('#resultItemsCount')[0].innerHTML = `<span>${countTxt}</span> матрасов`;
+        $('#resultItemsCount')[0].innerHTML = `<span>${count}</span> ${getCountWordForm(count)}`;
 
         arrItems.forEach(slide => {
 
