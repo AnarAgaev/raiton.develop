@@ -53,10 +53,11 @@
         transform-origin: center;
         stroke-dasharray: 251.327, 251.327;
         stroke-dashoffset: 251.327px;
-        transition: all 3s cubic-bezier(0.33, 1, 0.68, 1);
+        transition: all 5s cubic-bezier(0.33, 1, 0.68, 1);
 
         &.progressed {
-            stroke-dashoffset: 45px;
+            //stroke-dashoffset: 45px; - 80%
+            stroke-dashoffset: 0; // 100%
         }
     }
 }

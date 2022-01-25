@@ -26,13 +26,20 @@ $(document).ready(() => {
                 // с предварительными реузльтатами
                 checkPreliminaryResults(_this, true);
 
+                // Задержка перед переключением вопроса
+                // При переходе на результаты, переключаемся
+                // без задержки
+                const timeout = $(_this).data('nextStepId') === "#results"
+                    ? 0
+                    : 1000;
+
                 // откладываем переключение вопросов,
                 // т.к. в начале переключаем картинки
                 // с количеством подобранных результатов
                 // а только потом преключаем вопрос
                 setTimeout(
                     () => handlerBtnToggleStep(_this, true),
-                    1500
+                    timeout
                 );
             }
         );
@@ -54,10 +61,7 @@ $(document).ready(() => {
     $('.pluralController').each((idx, el) => {
         $(el).on(
             'click',
-            () => handlerClickOnPluralController(
-                idx,
-                el
-            )
+            () => handlerClickOnPluralController(idx, el)
         );
     });
 
@@ -96,7 +100,7 @@ $(document).ready(() => {
             // а только потом преключаем вопрос
             setTimeout(
                 () => handlerBtnToggleStep(el, true),
-                1500
+                1000
             );
         }
     };

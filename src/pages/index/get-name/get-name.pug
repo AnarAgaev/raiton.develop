@@ -1,8 +1,10 @@
 include ../loader/loader
 
 //- .hidden
-section.container.question#getNane.hidden
-    .row
+section.container.question.get-name#getNane.hidden
+    button.btnNextStep.invisible#showResults(data-next-step-id="#getContact")
+
+    .row#getNameForm
         .col-12.animatible
             .get-name__caption
                 h2.get-name__title
@@ -21,23 +23,27 @@ section.container.question#getNane.hidden
                             placeholder="Введите Ваше имя")
 
                     label.form__group
-                        button.btn.btnNextStep.animation-line(
-                            type="button"
-                            data-next-step-id="#getContact"
-                            disabled) к результату
+                        button.btn.animation-line#showLoader(type="button" disabled) к результату
 
+    .row.hide#getNameLoader
         .col-12.animatible
             .get-name__loader
                 h2.get-name__title.pt-md-1
-                    | Формируем предварительный&nbsp;
-                    br.d-md-none
-                    | результат
+                    span
+                        | Формируем предварительный&nbsp;
+                        br.d-md-none
+                        | результат
+
+                    span.hide
+                        | Предварительные результаты&nbsp;
+                        br.d-md-none
+                        | сформированы
 
                 +loader
 
         .col-12.animatible
             .get-name__check-list
-                ul
+                ul#buildingResults
                     li
                         include ../../../img/icon-check-list.svg
                         | Формируем подборку

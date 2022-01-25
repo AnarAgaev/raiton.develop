@@ -1,9 +1,8 @@
 $(document).ready(() => {
     window.initialProgressLoader = () => {
-        setTimeout(() => {
-            setLoaderCircle();
-            setLoaderValue();
-        }, 1500);
+        setLoaderCircle();
+        setLoaderValue();
+        showBuildingStates();
     };
 
     const setLoaderCircle = () => {
@@ -14,7 +13,7 @@ $(document).ready(() => {
         let progressValueInterval,
             progressValueCurrent = 0;
 
-        const STOP = 80;
+        const STOP = 100;
 
         progressValueInterval = setInterval (
     () => {
@@ -24,5 +23,41 @@ $(document).ready(() => {
             },
     33
         );
+    };
+
+    const showBuildingStates = () => {
+        setTimeout(
+            () => $('#buildingResults').addClass('show'),
+            1300
+        );
+    };
+
+    // Показываем лодер если в поле
+    // с именем введены какие либо
+    // данные
+    $('#showLoader').on(
+        'click',
+        () => {
+            showLoader();
+            setTimeout(initialProgressLoader, 500);
+            setTimeout(toggleLoaderTitle, 5000);
+            setTimeout(showResults, 7000);
+        }
+    );
+
+    const showLoader = () => {
+        const form = $('#getNameForm'),
+            loader = $('#getNameLoader');
+
+        form.toggleClass('hide');
+        loader.toggleClass('hide');
+    };
+
+    const toggleLoaderTitle = () => {
+        $('.get-name__title span').toggleClass('hide');
+    };
+
+    const showResults = () => {
+        $('#showResults').click();
     };
 });

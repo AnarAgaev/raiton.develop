@@ -73,11 +73,6 @@ STORE = new Proxy(STORE, {
         //     updateEmails(val);
         // }
 
-        // На вопросе преед запросом имени запускаем прогресс
-        if (prop === 'howUrgent') {
-            initialProgressLoader();
-        }
-
         if (IS_DEBUGGING) {
             setTimeout(() => console.log(target), 100);
         }
@@ -157,7 +152,7 @@ $(document).ready(() => {
         video.attr('src', src);
         source.attr('src', src);
     }
-    // Ленивая загружаем виде
+    // Ленивая загрузка видео
     setTimeout(
         () => {
             lazyLoadVideo('#presentationModal');
