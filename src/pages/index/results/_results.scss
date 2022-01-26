@@ -1706,11 +1706,10 @@
     }
 
     .slider .swiper-slide {
-        transition: all .7s ease-out;
-
         @media (min-width: $xl) {
             width: 350px;
             margin-right: 20px;
+            transition: all .7s ease-out;
 
             &:nth-child(3n + 3) {
                 margin-right: 0;

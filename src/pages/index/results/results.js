@@ -85,7 +85,7 @@ $(document).ready(() => {
     }
 
     const buildChildrenResultItems = () => {
-        buildResultSlider(ITEMS.children);
+        buildResultSlider(ITEMS.filter(i => i.age === 'children'));
     }
 
     const buildAdultResultItems = () => {
@@ -93,13 +93,13 @@ $(document).ready(() => {
 
         switch (quality) {
             case 'Простым и бюджетным.':
-                buildResultSlider(ITEMS.economy);
+                buildResultSlider(ITEMS.filter(i => i.price === 'economy'));
                 break;
             case 'Баланс цены и качества.':
-                buildResultSlider(ITEMS.medium);
+                buildResultSlider(ITEMS.filter(i => i.price === 'medium'));
                 break;
             case 'Высокий уровень.':
-                buildResultSlider(ITEMS.premium);
+                buildResultSlider(ITEMS.filter(i => i.price === 'premium'));
                 break;
         }
     }
@@ -112,6 +112,14 @@ $(document).ready(() => {
 
         arrItems.forEach(slide => {
 
+            let hardness = ''; // очень высокая, высокая, средняя, низкая
+
+            hardness += slide.hardnessToHard ? ', очень высокая' : '';
+            hardness += slide.hardnessHard ? ', высокая' : '';
+            hardness += slide.hardnessMiddle ? ', средняя' : '';
+            hardness += slide.hardnessSoft ? ', низкая' : '';
+            hardness = hardness.substring(1);
+
             const htmlNode = document.createElement('div');
 
             htmlNode.classList.add('swiper-slide');
@@ -119,26 +127,26 @@ $(document).ready(() => {
             htmlNode.innerHTML = `<div class="results-item">
                 <div class="results-item__caption">${slide.name}</div>
                 <div class="results-item__picture">
-                    <img class="results-item__picture-img" src="${slide.imgLink}" alt="${slide.name}">
+                    <img class="results-item__picture-img" src="${slide.imgLink}" alt="${slide.name}" title="${slide.name}">
                     <div class="results-item__picture-content">
                         <p class="results-item__picture-title">${slide.title}</p>
                         <p class="results-item__picture-subtitle">${slide.subtitle}</p>
-                        <span class="results-item__picture-txt">${slide.weight}</span>
+                        <span class="results-item__picture-txt">Max. вес на 1 спальное место: ${slide.weightMax} кг.</span>
                     </div>
                 </div>
                 <div class="results-item__body">
                     <ul class="results-item__list">
-                        <li><h6>${slide.guarantee}</h6></li>
+                        <li><h6>Гарантия ${slide.guarantee.toString().replace('.', ',')} года</h6></li>
                         <li>
-                            <h6>${slide.hardness}</h6>
+                            <h6>Жёсткость: ${hardness}</h6>
                             <p>${slide.hardnessComment}</p>
                         </li>
                         <li>
-                            <h6>${slide.size}</h6>
+                            <h6>${slide.size[0]}х${slide.size[1]} см.</h6>
                             <p>${slide.sizeComment}</p>
                         </li>
                         <li>
-                            <h6>${slide.height}</h6>
+                            <h6>Высота: ${slide.height} см.</h6>
                             <a class="button" href="${slide.descriptionLink}" target="_blank">Смотреть описание</a>
                         </li>
                     </ul>

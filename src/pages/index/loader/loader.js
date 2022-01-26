@@ -40,8 +40,8 @@ $(document).ready(() => {
         () => {
             showLoader();
             setTimeout(initialProgressLoader, 500);
-            setTimeout(toggleLoaderTitle, 5000);
-            setTimeout(showResults, 7000);
+            setTimeout(toggleLoaderTitle, 4500);
+            setTimeout(showResults, 4800);
         }
     );
 
