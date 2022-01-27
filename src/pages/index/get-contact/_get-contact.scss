@@ -157,15 +157,15 @@
 
     &__presentation {
         position: relative;
-        width: 288px;
+        width: 290px;
         height: 401px;
         margin: 15px auto 30px;
-        background: url("../img/phone-back.png") center no-repeat;
+        background: url("../img/phone-custom.png") center no-repeat;
+        background-size: 87%;
 
         @media (min-width: $md) {
-            height: 499px;
-            width: 358px;
-            background: url("../img/phone-back-desc.png") center no-repeat;
+            height: 500px;
+            width: 360px;
             margin-bottom: 50px;
         }
 
@@ -182,30 +182,34 @@
         .wrapper {
             position: absolute;
             overflow: hidden;
-            transform: rotate(-6.6deg);
-            top: 38px;
-            left: 65px;
-            width: 161px;
-            height: 332px;
+            transform: rotate(-10deg);
+            top: 59px;
+            left: 67px;
+            width: 162px;
+            height: 318px;
             border-bottom-left-radius: 16px;
             border-bottom-right-radius: 16px;
 
-            video {
-                position: absolute;
-                width: 100%;
-                height: auto;
-                top: 0;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
             @media (min-width: $md) {
-                top: 50px;
-                left: 81px;
+                top: 75px;
+                left: 83px;
                 width: 201px;
-                height: 411px;
+                height: 394px;
                 border-bottom-left-radius: 20px;
                 border-bottom-right-radius: 20px;
+            }
+
+            video {
+                position: absolute;
+                width: 120%;
+                height: auto;
+                top: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                @media (min-width: $md) {
+                    top: -24px;
+                }
             }
         }
     }

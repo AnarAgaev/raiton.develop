@@ -1,4 +1,11 @@
 $(document).ready(() => {
+    window.initialResults = () => {
+        lazyLoadBackground();
+        lazyLoadImg();
+        showPremiumSections();
+        setResultRating();
+        buildResultItems();
+    };
 
     const lazyLoadBackground = () => {
         $('[data-lazy-load-background]')
@@ -160,12 +167,4 @@ $(document).ready(() => {
 
     // Просто менеджер - https://api.whatsapp.com/send?phone=79241653043&text=
     // Получить подарок Чеклист - https://api.whatsapp.com/send?phone=79241764428&text=Здравствуйте!%20Я%20хочу%20получить%20чек-лист
-
-    window.initialResults = () => {
-        lazyLoadBackground();
-        lazyLoadImg();
-        showPremiumSections();
-        setResultRating();
-        buildResultItems();
-    };
 });
