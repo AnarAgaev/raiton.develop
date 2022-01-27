@@ -102,7 +102,6 @@ $(document).ready(() => {
         // Фильтруем дети взрослые
         arrItems = ITEMS.filter(i => i.age === 'children');
 
-
         // Фильтруем жесткость
         switch (STORE.hardnessChildren[1]) {
             case "Жесткий." :
@@ -133,19 +132,119 @@ $(document).ready(() => {
     }
 
     const buildAdultResultItems = () => {
+        let arrItems, weight;
+
+        // Фильтруем дети взрослые
+       arrItems = ITEMS.filter(i => i.age === 'adult');
+
+        // Фильтруем максимальный вес
+        const getWeight = (stringWeight) => {
+            switch (stringWeight) {
+                case "До 100 кг." :
+                    return 100;
+                case "До 120 кг." :
+                    return 120;
+                case "Больше 120 кг." :
+                    return 150;
+            }
+        };
+
+        // Получаем максимальный вес для одного или двух
+        if (STORE.forWhom[1] === "Ребенок.") {
+            weight = 100; // Для ребенка ставим макс. вес в 100 кг.
+        } else {
+            if (STORE.hasOwnProperty('weightOne')) {
+                weight = getWeight(STORE.weightOne[1]);
+            } else {
+                let weightFirst = getWeight(STORE.weightTwoFirst[1]),
+                    weightSecond = getWeight(STORE.weightTwoSecond[1]);
+
+                weight = Math.max(weightFirst, weightSecond);
+            }
+        }
+
+        /* Фильтруем по весу:
+        * Если человек весит до 100 кг., показываем матрасы до 110 кг.
+        * Если человек весит до 120 кг., показваем матрасы от 120 и до 130 кг.
+        * Если человек весит более 120 кг, показываем матрасы более 120 кг.
+        * */
+        switch (weight) {
+            case 100 :
+                arrItems = arrItems.filter(i => i.weightMax <= 110);
+                break;
+            case 120 :
+                arrItems = arrItems.filter(i => (i.weightMax >= 120 && i.weightMax <= 130));
+                break;
+            case 150 :
+                arrItems = arrItems.filter(i => i.weightMax >= 125);
+                break;
+        }
+
+        // Фильтруем жесткость
+        switch (STORE.hardnessAdult[1]) {
+            case "Жесткий." :
+                arrItems = arrItems.filter(i => i.hardnessHard);
+                break;
+            case "Средний." :
+                arrItems = arrItems.filter(i => i.hardnessMiddle);
+                break;
+            case "Мягкий." :
+                arrItems = arrItems.filter(i => i.hardnessMiddle); // Для магких показываем средние
+                break;
+            case "Двусторонний. Одна сторана мягкая, другая жесткая." :
+                arrItems = arrItems.filter(i => i.twoSides);
+                break;
+        }
+
+        // Фильтруем по цене
         const quality = STORE.quality[1];
 
         switch (quality) {
             case 'Простым и бюджетным.':
-                buildResultSlider(ITEMS.filter(i => i.price === 'economy'));
+                arrItems = arrItems.filter(i => i.price === 'economy');
                 break;
             case 'Баланс цены и качества.':
-                buildResultSlider(ITEMS.filter(i => i.price === 'medium'));
+                arrItems = arrItems.filter(i => i.price === 'medium');
                 break;
             case 'Высокий уровень.':
-                buildResultSlider(ITEMS.filter(i => i.price === 'premium'));
+                arrItems = arrItems.filter(i => i.price === 'premium');
                 break;
         }
+
+        // Удаляем лишние размеры
+        if (STORE.forWhom[1] === "Ребенок.") {
+            arrItems.forEach(i => {
+                delete i.size['1'];
+                delete i.size['2'];
+                delete i.size['3'];
+            });
+        } else {
+            switch (STORE.numberOfPersons[1]) {
+                case "1 человек." :
+                    arrItems.forEach(i => {
+                        delete i.size['1418'];
+                        delete i.size['2'];
+                        delete i.size['3'];
+                    });
+                    break;
+                case "Двое." :
+                    arrItems.forEach(i => {
+                        delete i.size['1418'];
+                        delete i.size['1'];
+                        delete i.size['3'];
+                    });
+                    break;
+                case "Двое, и иногда ребенок с нами." :
+                    arrItems.forEach(i => {
+                        delete i.size['1418'];
+                        delete i.size['1'];
+                        delete i.size['2'];
+                    });
+                    break;
+            }
+        }
+
+        buildResultSlider(arrItems);
     }
 
     const buildResultSlider = (arrItems) => {
