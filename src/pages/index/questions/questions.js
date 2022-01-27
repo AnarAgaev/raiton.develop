@@ -1,5 +1,7 @@
 $(document).ready(() => {
 
+    let isToggleQuestionLock = true;
+
     // Открываем и закрываем текст
     // подзаголовка в вопросе
     const toggleSubtitle = e => {
@@ -106,58 +108,68 @@ $(document).ready(() => {
     };
 
     const handlerBtnToggleStep = (btn, direction) => {
-        const thisQuestion = $(btn).closest('.question'),
-            nextQuestionId = $(btn).data('nextStepId'),
-            nextQuestion = nextQuestionId ? $(nextQuestionId) : undefined,
-            prevQuestionId = STORE.stepsMap[STORE.stepsMap.length - 2],
-            prevQuestion = prevQuestionId ? $(prevQuestionId) : undefined;
+        if (isToggleQuestionLock) {
 
-        let animationDuration = hideQuestions(thisQuestion);
+            isToggleQuestionLock = false;
 
-        scrollToQuestionsStart();
+            setTimeout(
+                () => isToggleQuestionLock = true,
+                1000
+            );
 
-        if (direction) {
-            updateQuestionWrapperHeight(nextQuestion);
-            toggleQuestions(animationDuration, thisQuestion, nextQuestion);
-            showQuestion(animationDuration, nextQuestion);
-            pushQuestionToStepsMap(nextQuestion);
-            setQuestionsToBody(animationDuration, nextQuestion);
+            const thisQuestion = $(btn).closest('.question'),
+                nextQuestionId = $(btn).data('nextStepId'),
+                nextQuestion = nextQuestionId ? $(nextQuestionId) : undefined,
+                prevQuestionId = STORE.stepsMap[STORE.stepsMap.length - 2],
+                prevQuestion = prevQuestionId ? $(prevQuestionId) : undefined;
 
-            /* Чекаем слудующий вопрос и если
-             * это Запрос имени (т.е. пользователь
-             * уже не может вернуться назад),
-             * запускаем логику для построения
-             * блока с результатами
-             */
-            if ($(nextQuestion).attr('id') === 'getNane') {
-                initialResults();
+            let animationDuration = hideQuestions(thisQuestion);
+
+            scrollToQuestionsStart();
+
+            if (direction) {
+                updateQuestionWrapperHeight(nextQuestion);
+                toggleQuestions(animationDuration, thisQuestion, nextQuestion);
+                showQuestion(animationDuration, nextQuestion);
+                pushQuestionToStepsMap(nextQuestion);
+                setQuestionsToBody(animationDuration, nextQuestion);
+
+                /* Чекаем слудующий вопрос и если
+                 * это Запрос имени (т.е. пользователь
+                 * уже не может вернуться назад),
+                 * запускаем логику для построения
+                 * блока с результатами
+                 */
+                if ($(nextQuestion).attr('id') === 'getNane') {
+                    initialResults();
+                }
+
+                /* Чекаем слудующий вопрос и если
+                 * это Запрос результата
+                 * скрываем прогерсс бар
+                 */
+                if ($(nextQuestion).attr('id') === 'results') {
+                    hideProgressBar();
+                }
+
+            } else {
+                updateQuestionWrapperHeight(prevQuestion);
+                toggleQuestions(animationDuration, thisQuestion, prevQuestion);
+                showQuestion(animationDuration, prevQuestion);
+                removeLastStepFromStepsMap();
+                resetAllControllers();
+                setQuestionsToBody(animationDuration, prevQuestion);
+
+                /* Удаляем ТЕКУЩИЕ ответы из STORE на тот случаей
+                 * елси ПЕРЕШЛИ НАЗАД ИЗ ВОПРОСА с множественными
+                 * ответами (с radio контроллерами)
+                 */
+                resetAnswerFromStore(thisQuestion);
+
+                // Удаляем ПРЕДЫДУЩИЕ ответы из STORE
+                // т.к. он будет выбран заново
+                resetAnswerFromStore(prevQuestion);
             }
-
-            /* Чекаем слудующий вопрос и если
-             * это Запрос результата
-             * скрываем прогерсс бар
-             */
-            if ($(nextQuestion).attr('id') === 'results') {
-                hideProgressBar();
-            }
-
-        } else {
-            updateQuestionWrapperHeight(prevQuestion);
-            toggleQuestions(animationDuration, thisQuestion, prevQuestion);
-            showQuestion(animationDuration, prevQuestion);
-            removeLastStepFromStepsMap();
-            resetAllControllers();
-            setQuestionsToBody(animationDuration, prevQuestion);
-
-            /* Удаляем ТЕКУЩИЕ ответы из STORE на тот случаей
-             * елси ПЕРЕШЛИ НАЗАД ИЗ ВОПРОСА с множественными
-             * ответами (с radio контроллерами)
-             */
-            resetAnswerFromStore(thisQuestion);
-
-            // Удаляем ПРЕДЫДУЩИЕ ответы из STORE
-            // т.к. он будет выбран заново
-            resetAnswerFromStore(prevQuestion);
         }
     };
 
