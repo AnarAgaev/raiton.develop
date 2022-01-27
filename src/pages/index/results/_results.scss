@@ -140,7 +140,7 @@
             height: 100%;
             top: 0;
             left: -15px;
-            z-index: -1;
+            z-index: 0;
             opacity: 0.5;
             background: url("../img/pattern-reviews.svg") repeat;
 
@@ -150,11 +150,13 @@
         }
 
         h5  {
+            position: relative;
             font-weight: 600;
             font-size: 18px;
             line-height: 25px;
             text-align: center;
             margin-bottom: 10px;
+            z-index: 1;
 
             @media (min-width: $md) {
                 font-weight: bold;
@@ -165,6 +167,8 @@
         }
 
         &-caption {
+            position: relative;
+            z-index: 1;
             font-weight: normal;
             font-size: 16px;
             line-height: 22px;
@@ -186,6 +190,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+            z-index: 1;
 
             @media (min-width: $md) {
                 padding-bottom: 20px;
@@ -202,8 +208,15 @@
             }
         }
 
+        &-slider {
+            position: relative;
+            z-index: 1;
+        }
+
         &-show-more {
             display: none;
+            position: relative;
+            z-index: 1;
 
             @media (min-width: $xl) {
                 display: flex;
