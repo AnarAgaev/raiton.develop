@@ -45,69 +45,36 @@ $(document).ready(() => {
                     spaceBetween: 20,
                     slidesPerView: 2,
                 },
-
-                // Добавить, если нужен слайдер на десктопах
-                // 1140: {
-                //     spaceBetween: 20,
-                //     slidesPerView: 3,
-                // }
             }
         });
     };
 
-    initResultSlider();
-
     const destroyResultsSlider = () => {
         if (resultsSlider !== undefined) {
-
             resultsSlider.length
                 ? resultsSlider.forEach(slider => slider.destroy())
                 : resultsSlider.destroy();
         }
     };
 
-    $(window).resize(() => {
-       const windowWidth = $(window).width(),
-           breakPointXL = 1140,
-           screenVersion = document.body.dataset.screen,
-
-           currentScreenVersion = (windowWidth > breakPointXL)
-               ? 'desktop'
-               : 'mobile';
-
-       if (screenVersion !== currentScreenVersion) {
-           setScreenVersion();
-           checkResultsSlider();
-       }
-    });
-
-    const setScreenVersion = () => {
-        const windowWidth = $(window).width(),
-            breakPointXL = 1140;
-
-        document
-            .body
-            .dataset
-            .screen = (windowWidth > breakPointXL)
-            ? 'desktop'
-            : 'mobile';
-    };
-
-    // Устанавливаем значение для
-    // ширины экрана при первой загрузке
-    setScreenVersion();
-
     const checkResultsSlider = () => {
         const windowWidth = $(window).width(),
             breakPointXL = 1140;
 
-        windowWidth > breakPointXL
-            ? destroyResultsSlider()
-            : initResultSlider();
+        if (windowWidth > breakPointXL) {
+            destroyResultsSlider();
+            window.resultsSlider = undefined;
+        } else {
+            if (window.resultsSlider === undefined) {
+                initResultSlider();
+            }
+        }
     };
 
     // Чекаем слайдер при первой загрузке
     checkResultsSlider();
+
+    $(window).resize(checkResultsSlider);
 
 
     // Для десктопов при клике на Загрузить
@@ -138,9 +105,7 @@ $(document).ready(() => {
     };
 
     const checkShowMoreResultsBtn = () => {
-        const invisibleItemsCount = getInvisibleItems().length;
-
-        if (invisibleItemsCount === 0) {
+        if (getInvisibleItems().length === 0) {
             $('#showMoreResultsItems').hide();
         }
     };
