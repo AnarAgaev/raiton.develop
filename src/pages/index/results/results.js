@@ -5,6 +5,7 @@ $(document).ready(() => {
         showPremiumSections();
         setResultRating();
         buildResultItems();
+        checkShowMoreResultsBtn();
     };
 
     const lazyLoadBackground = () => {
@@ -84,15 +85,51 @@ $(document).ready(() => {
     };
 
     const buildResultItems = () => {
-        if (STORE.forWhom[1] === 'Взрослый.') {
-            buildAdultResultItems();
-        } else {
+        if (STORE.forWhom[1] === "Ребенок."
+            && (STORE.childrenAge[1] === "0-5"
+                || STORE.childrenAge[1] === "6-13"
+                || STORE.childrenAge[1] === "Покажите все варианты.")) {
+
             buildChildrenResultItems();
+        } else {
+            buildAdultResultItems();
         }
     }
 
     const buildChildrenResultItems = () => {
-        buildResultSlider(ITEMS.filter(i => i.age === 'children'));
+        let arrItems;
+
+        // Фильтруем дети взрослые
+        arrItems = ITEMS.filter(i => i.age === 'children');
+
+
+        // Фильтруем жесткость
+        switch (STORE.hardnessChildren[1]) {
+            case "Жесткий." :
+                arrItems = arrItems.filter(i => i.hardnessHard);
+                break;
+            case "Средний." :
+                arrItems = arrItems.filter(i => i.hardnessMiddle);
+                break;
+            case "Мягкий." :
+                arrItems = arrItems.filter(i => i.hardnessMiddle); // Для магких показываем средние
+                break;
+            case "Двусторонний. Одна сторана мягкая, другая жесткая." :
+                arrItems = arrItems.filter(i => i.twoSides);
+                break;
+        }
+
+        // Удаляем лишние размеры
+        switch (STORE.childrenAge[1]) {
+            case "0-5" :
+                arrItems.forEach(i => delete i.size['612']);
+                break;
+            case "6-13" :
+                arrItems.forEach(i => delete i.size['6']);
+                break;
+        }
+
+        buildResultSlider(arrItems);
     }
 
     const buildAdultResultItems = () => {
@@ -118,6 +155,14 @@ $(document).ready(() => {
         $('#resultItemsCount')[0].innerHTML = `<span>${count}</span> ${getCountWordForm(count)}`;
 
         arrItems.forEach(slide => {
+
+            let sizes = '';
+
+            for (let key in slide.size) {
+                slide.size[key].forEach(vals =>
+                    sizes += vals[0] + 'x' + vals[1] + 'см. '
+                );
+            }
 
             let hardness = ''; // очень высокая, высокая, средняя, низкая
 
@@ -149,7 +194,7 @@ $(document).ready(() => {
                             <p>${slide.hardnessComment}</p>
                         </li>
                         <li>
-                            <h6>${slide.size[0]}х${slide.size[1]} см.</h6>
+                            <h6>${sizes}</h6>
                             <p>${slide.sizeComment}</p>
                         </li>
                         <li>

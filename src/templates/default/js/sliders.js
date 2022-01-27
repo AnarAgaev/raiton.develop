@@ -104,7 +104,7 @@ $(document).ready(() => {
         });
     };
 
-    const checkShowMoreResultsBtn = () => {
+    window.checkShowMoreResultsBtn = () => {
         if (getInvisibleItems().length === 0) {
             $('#showMoreResultsItems').hide();
         }
