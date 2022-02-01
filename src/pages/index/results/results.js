@@ -113,7 +113,7 @@ $(document).ready(() => {
             case "Мягкий." :
                 arrItems = arrItems.filter(i => i.hardnessMiddle); // Для магких показываем средние
                 break;
-            case "Двусторонний. Одна сторана мягкая, другая жесткая." :
+            case "Двусторонний. Одна сторона мягкая, другая жесткая." :
                 arrItems = arrItems.filter(i => i.twoSides);
                 break;
         }
@@ -191,7 +191,7 @@ $(document).ready(() => {
             case "Мягкий." :
                 arrItems = arrItems.filter(i => i.hardnessMiddle); // Для магких показываем средние
                 break;
-            case "Двусторонний. Одна сторана мягкая, другая жесткая." :
+            case "Двусторонний. Одна сторона мягкая, другая жесткая." :
                 arrItems = arrItems.filter(i => i.twoSides);
                 break;
         }
@@ -282,7 +282,7 @@ $(document).ready(() => {
                     <div class="results-item__picture-content">
                         <p class="results-item__picture-title">${slide.title}</p>
                         <p class="results-item__picture-subtitle">${slide.subtitle}</p>
-                        <span class="results-item__picture-txt">Max. вес на 1 спальное место: ${slide.weightMax} кг.</span>
+                        <span class="results-item__picture-txt">Макс. вес на 1 спальное место: ${slide.weightMax} кг.</span>
                     </div>
                 </div>
                 <div class="results-item__body">
